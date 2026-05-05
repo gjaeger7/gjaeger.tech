@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>St. George Website Redesign Vision</title>
+  <meta name="description" content="Interactive Parish Council presentation created by Gage Jaeger for the St. George Orthodox Christian Church website redesign." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">✚</span>
+      <span><strong>St. George</strong><em>Redesign Vision</em></span>
+    </a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="#research">Research</a>
+      <a href="#examples">Examples</a>
+      <a href="#aesthetic">Aesthetic</a>
+      <a href="#outreach">Outreach</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#blueprint">Blueprint</a>
+      <a href="#plan">Plan</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle high contrast mode">Glow</button>
+  </header>
+
+  <main id="top">
+    <section class="hero section snap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Created by Gage Jaeger • For Parish Council Review</p>
+        <h1>Ancient Faith. Living Community. A better digital front door.</h1>
+        <p class="hero-text">This presentation lays out a vision for redesigning the St. George Orthodox Christian Church website: why the redesign matters, what information visitors and parishioners need, what strong Orthodox parish sites do well, how the site can support rural outreach, and how we can move from idea to implementation.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#recommendation">See platform direction</a>
+          <a class="button ghost" href="#examples">Explore examples</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal delay-1" aria-label="Core website priorities">
+        <div class="icon-window">
+          <div class="dome"></div>
+          <div class="cross">✚</div>
+          <div class="arches"><span></span><span></span><span></span></div>
+        </div>
+        <h2>The redesign should clearly serve three groups:</h2>
+        <ul class="check-list">
+          <li><strong>Visitors</strong> who are curious but nervous.</li>
+          <li><strong>Parishioners</strong> who need schedules, events, and updates.</li>
+          <li><strong>The community</strong> searching for Orthodox Christianity in Central Nebraska.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section compact stats-section" aria-label="Snapshot">
+      <div class="stat-card reveal"><strong>5</strong><span>Orthodox parish examples reviewed</span></div>
+      <div class="stat-card reveal delay-1"><strong>4</strong><span>major platform directions compared</span></div>
+      <div class="stat-card reveal delay-2"><strong>8</strong><span>core pages recommended</span></div>
+      <div class="stat-card reveal delay-3"><strong>1</strong><span>shared vision: front door, not bulletin board</span></div>
+    </section>
+
+    <section id="research" class="section split">
+      <div class="section-kicker reveal">Current state</div>
+      <div class="split-copy reveal">
+        <h2>St. George has the warmth. The new site needs structure.</h2>
+        <p>The current site communicates a basic welcome, but it appears thin from the public homepage: welcome text, a parish photo, and an invitation to visit. That is a good start — but the redesign should make the parish easy to find, easy to visit, and easy to understand.</p>
+      </div>
+      <div class="diagnostic-card reveal delay-1">
+        <h3>What the new site must answer fast</h3>
+        <div class="question-grid">
+          <span>When are services?</span>
+          <span>Can I visit?</span>
+          <span>What should I expect?</span>
+          <span>Where do I park?</span>
+          <span>What is Orthodoxy?</span>
+          <span>How do I contact someone?</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Research from other Orthodox sites</p>
+        <h2>What good parish websites are already doing</h2>
+        <p>These examples are not about copying a design exactly. They show patterns St. George can borrow: clarity, local identity, visitor confidence, and easy parish updates.</p>
+      </div>
+
+      <div class="example-tabs reveal" role="tablist" aria-label="Orthodox website examples">
+        <button class="tab active" data-target="riverside" type="button">Riverside</button>
+        <button class="tab" data-target="holycross" type="button">Holy Cross</button>
+        <button class="tab" data-target="dionysios" type="button">St. Dionysios</button>
+        <button class="tab" data-target="hawaii" type="button">Hawaii</button>
+        <button class="tab" data-target="cathedral" type="button">Cathedral</button>
+      </div>
+
+      <div class="example-panel reveal delay-1">
+        <article class="example-content active" id="riverside" data-url="https://www.saintandrew.net">
+          <div class="example-copy">
+            <p class="tag">Antiochian example</p>
+            <h3>Saint Andrew Orthodox Christian Church — Riverside, CA</h3>
+            <p class="source"><a href="https://www.saintandrew.net" target="_blank" rel="noreferrer">saintandrew.net</a></p>
+            <ul>
+              <li>Strong positioning: “Ancient Faith. Living Community.”</li>
+              <li>Explicit Antiochian identity rooted in Antioch and Acts 11:26.</li>
+              <li>Simple service schedule and direct contact info.</li>
+              <li>Modern feel without becoming flashy or shallow.</li>
+            </ul>
+            <blockquote>Takeaway: St. George can be modern and inviting while still feeling deeply Orthodox.</blockquote>
+          </div>
+        </article>
+        <article class="example-content" id="holycross" data-url="https://www.holycrosswilliamsport.org">
+          <div class="example-copy"><p class="tag">Visitor pathway</p><h3>Holy Cross Orthodox Church — Williamsport, PA</h3><p class="source"><a href="https://www.holycrosswilliamsport.org" target="_blank" rel="noreferrer">holycrosswilliamsport.org</a></p><ul><li>Uses “Come and see!” language.</li><li>Clear “Visit Us” pathway.</li><li>Links to schedule, clergy, bulletins, calendar, readings, video, photos.</li><li>Explains Orthodoxy in a way visitors can approach.</li></ul><blockquote>Takeaway: build around the newcomer’s next step.</blockquote></div>
+        </article>
+        <article class="example-content" id="dionysios" data-url="https://stdionysios.org">
+          <div class="example-copy"><p class="tag">Schedule clarity</p><h3>St. Dionysios Greek Orthodox Church</h3><p class="source"><a href="https://stdionysios.org" target="_blank" rel="noreferrer">stdionysios.org</a></p><ul><li>Homepage immediately shows service schedule.</li><li>Upcoming events are visible and current.</li><li>The site feels alive and useful for parishioners.</li></ul><blockquote>Takeaway: the homepage should answer “When is church?” in five seconds.</blockquote></div>
+        </article>
+        <article class="example-content" id="hawaii" data-url="https://orthodoxhawaii.org">
+          <div class="example-copy"><p class="tag">Local identity</p><h3>Holy Theotokos of Iveron Orthodox Church — Hawaii</h3><p class="source"><a href="https://orthodoxhawaii.org" target="_blank" rel="noreferrer">orthodoxhawaii.org</a></p><ul><li>Warm local parish story.</li><li>Clear address, phone, email, livestream, and donation links.</li><li>Strong sense of place and welcome.</li></ul><blockquote>Takeaway: the site should feel like St. George in Kearney, not a generic church template.</blockquote></div>
+        </article>
+        <article class="example-content" id="cathedral" data-url="https://www.thecathedralnyc.org">
+          <div class="example-copy"><p class="tag">Breadth of parish life</p><h3>Greek Orthodox Archdiocesan Cathedral — NYC</h3><p class="source"><a href="https://www.thecathedralnyc.org" target="_blank" rel="noreferrer">thecathedralnyc.org</a></p><ul><li>Clearly states jurisdiction and identity.</li><li>Shows services, school, youth, classes, cultural events, social services, and fellowship.</li><li>Communicates that a parish is more than Sunday morning.</li></ul><blockquote>Takeaway: even a smaller parish can present community life clearly and beautifully.</blockquote></div>
+        </article>
+
+        <aside class="site-preview" aria-label="Live website preview">
+          <div class="browser-bar"><span></span><span></span><span></span><strong id="previewLabel">Live preview</strong></div>
+          <iframe id="exampleFrame" title="Selected parish website preview" src="https://www.saintandrew.net" loading="lazy"></iframe>
+          <div class="preview-fallback">
+            <p>Some sites block embedded previews. If this window stays blank, open the site directly.</p>
+            <a id="previewLink" class="button ghost" href="https://www.saintandrew.net" target="_blank" rel="noreferrer">Open full site</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="aesthetic" class="section aesthetic-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Aesthetic research</p>
+        <h2>What strong Orthodox websites and media visually communicate</h2>
+        <p>Instead of choosing a style arbitrarily, St. George can borrow the visual patterns that already work across Orthodox parish websites and media: reverence, clarity, warmth, local identity, and immediate practical usefulness.</p>
+      </div>
+      <div class="aesthetic-grid research-grid">
+        <article class="aesthetic-card primary-direction reveal">
+          <span class="badge">Strongest overall direction</span>
+          <div class="palette"><span class="swatch gold"></span><span class="swatch red"></span><span class="swatch parchment"></span><span class="swatch midnight"></span></div>
+          <h3>Reverent, warm, and readable</h3>
+          <p>Across the better parish examples, the most successful sites do not feel like generic nonprofit pages. They use warm color, dignified typography, sacred visual cues, and simple structure so the site feels Orthodox while still being easy for a nervous visitor to use.</p>
+          <ul><li>Use burgundy, gold, parchment, deep blue, and warm neutrals with restraint.</li><li>Pair Orthodox visual language with clean modern spacing.</li><li>Make service times, visitor info, and contact details impossible to miss.</li></ul>
+        </article>
+        <article class="aesthetic-card reveal delay-1">
+          <div class="research-mark icon-research"></div>
+          <h3>Icons and sacred architecture as accents</h3>
+          <p>Orthodox media often carries its identity through icons, crosses, arches, candlelight, domes, wood, gold, and liturgical texture. Those should guide the feeling of the site without turning every page into a heavy decorative frame.</p>
+          <ul><li>Use icons and parish imagery as anchors, not wallpaper.</li><li>Repeat subtle arch shapes and Orthodox geometry.</li><li>Let feast days and patron-saint pages carry richer visual treatment.</li></ul>
+        </article>
+        <article class="aesthetic-card reveal delay-2">
+          <div class="research-mark photo-research"></div>
+          <h3>Real parish life over stock imagery</h3>
+          <p>The most trustworthy church sites show the actual parish: worship, coffee hour, clergy, families, candles, the building, and community life. For St. George, real photos also communicate that Orthodoxy is actually present in Central Nebraska.</p>
+          <ul><li>Feature St. George people and spaces wherever possible.</li><li>Show the church as welcoming, active, and approachable.</li><li>Use local Kearney/Central Nebraska context as a strength.</li></ul>
+        </article>
+      </div>
+      <div class="design-principles reveal">
+        <h3>Design principles pulled from the research</h3>
+        <div><strong>Clarity is pastoral</strong><span>Visitors should find service times, address, and “what to expect” without digging.</span></div>
+        <div><strong>Beauty should invite</strong><span>The design should feel sacred and warm, not intimidating or museum-like.</span></div>
+        <div><strong>Local identity matters</strong><span>St. George should feel like an Orthodox parish in Kearney, not a copied template.</span></div>
+        <div><strong>Current equals alive</strong><span>Calendars, bulletins, photos, and announcements signal that the parish is active.</span></div>
+      </div>
+    </section>
+
+    <section id="outreach" class="section outreach-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Rural outreach vision</p>
+        <h2>A better website can help St. George reach people far beyond Kearney.</h2>
+        <p>Because St. George is geographically distant from the diocese and from other nearby Antiochian Orthodox parishes, the website has to do more than announce events. It can become the first point of contact for people across Central Nebraska who are curious, isolated, searching, or unsure if Orthodoxy is even available near them.</p>
+      </div>
+      <div class="outreach-layout">
+        <article class="outreach-card reveal">
+          <span>01</span>
+          <h3>Be findable for rural seekers</h3>
+          <p>Use clear local search language like Orthodox Church in Kearney, Orthodox Christianity Central Nebraska, Antiochian Orthodox Nebraska, and Divine Liturgy near me so people outside town can actually discover St. George.</p>
+        </article>
+        <article class="outreach-card reveal delay-1">
+          <span>02</span>
+          <h3>Reduce the first-visit anxiety</h3>
+          <p>For someone driving an hour or more, uncertainty is a major barrier. A strong Visit page can explain what to expect, where to park, when to arrive, what children can do, and how coffee hour works.</p>
+        </article>
+        <article class="outreach-card reveal delay-2">
+          <span>03</span>
+          <h3>Serve the disconnected</h3>
+          <p>Livestream links, homilies, catechism resources, bulletins, feast-day explanations, and a simple “ask Father a question” pathway can help people stay connected before they are ready or able to attend regularly.</p>
+        </article>
+        <article class="outreach-card reveal delay-3">
+          <span>04</span>
+          <h3>Show that St. George is a regional parish</h3>
+          <p>The site can name the reality plainly: St. George serves Kearney and the surrounding rural communities. That helps people understand they are not outsiders if they come from Hastings, Holdrege, Grand Island, Lexington, or a farm road in between.</p>
+        </article>
+      </div>
+      <div class="outreach-statement reveal">
+        <h3>The website can become a quiet missionary tool.</h3>
+        <p>Not flashy. Not salesy. Just clear, beautiful, current, and easy to trust — so someone who is alone in their search for the Orthodox faith has a real next step.</p>
+      </div>
+    </section>
+
+    <section id="platforms" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Platform strategy</p>
+        <h2>Choose the platform volunteers can actually use.</h2>
+        <p>Since St. George already uses Tithe.ly for giving, the website platform does not need to solve donations from scratch. It needs to design well, update easily, embed Tithe.ly cleanly, and avoid locking the parish into another frustrating editor.</p>
+      </div>
+
+      <div class="platform-grid">
+        <article class="platform-card winner reveal">
+          <span class="badge">Recommended first prototype</span>
+          <h3>Squarespace</h3>
+          <p>Best balance of visual polish, simplicity, and volunteer maintainability.</p>
+          <div class="meter"><span style="width: 92%"></span></div>
+          <ul><li>Beautiful templates</li><li>Easy editing</li><li>Strong mobile defaults</li><li>Embeds Tithe.ly, Google Calendar, YouTube, forms</li></ul>
+        </article>
+        <article class="platform-card reveal delay-1">
+          <span class="badge muted">Most flexible</span>
+          <h3>Managed WordPress</h3>
+          <p>Best long-term control if someone owns maintenance or the parish pays for managed support.</p>
+          <div class="meter"><span style="width: 84%"></span></div>
+          <ul><li>Maximum customization</li><li>Strong SEO</li><li>Great content control</li><li>Needs updates/security ownership</li></ul>
+        </article>
+        <article class="platform-card reveal delay-2">
+          <span class="badge muted">Usable alternative</span>
+          <h3>Wix</h3>
+          <p>Easy drag-and-drop freedom, but can get inconsistent if many people edit casually.</p>
+          <div class="meter"><span style="width: 72%"></span></div>
+          <ul><li>Visual editor</li><li>Quick to build</li><li>Flexible layouts</li><li>Less elegant unless disciplined</li></ul>
+        </article>
+        <article class="platform-card caution reveal delay-3">
+          <span class="badge caution-badge">Do not force it</span>
+          <h3>Orthodox Web Solutions</h3>
+          <p>Orthodox-specific, but currently restrictive and unintuitive for the redesign goals.</p>
+          <div class="meter caution-meter"><span style="width: 45%"></span></div>
+          <ul><li>Orthodox context</li><li>Built-in parish tools</li><li>Restrictive editor</li><li>Harder to make visually excellent</li></ul>
+        </article>
+      </div>
+
+      <div id="recommendation" class="recommendation reveal">
+        <div>
+          <p class="eyebrow">Recommended platform direction</p>
+          <h2>Prototype in Squarespace first.</h2>
+        </div>
+        <p>If the group wants a beautiful, low-drama website that volunteers can update, Squarespace is the strongest first platform to test. If the group decides it needs deeper customization and has a maintenance plan, managed WordPress is the stronger long-term control option. Since St. George already uses Tithe.ly for giving, the website can simply embed or link Tithe.ly cleanly instead of replacing it.</p>
+      </div>
+    </section>
+
+    <section id="blueprint" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Website blueprint</p>
+        <h2>What the St. George website should/could have</h2>
+      </div>
+      <div class="blueprint-layout">
+        <aside class="phone-preview reveal" aria-label="Homepage mockup preview">
+          <div class="phone-bar"></div>
+          <div class="mock-hero">St. George<br><span>Ancient Faith in Kearney</span></div>
+          <div class="mock-card"><strong>Sunday</strong><span>Orthros • Divine Liturgy</span></div>
+          <div class="mock-row"></div><div class="mock-row short"></div>
+          <div class="mock-button">Plan Your Visit</div>
+        </aside>
+        <div class="feature-accordion reveal delay-1">
+          <button class="accordion open" type="button">Homepage essentials</button>
+          <div class="accordion-panel open"><p>Hero photo, service times, Plan Your Visit, What is Orthodoxy, directions/contact, welcome note, upcoming events.</p></div>
+          <button class="accordion" type="button">Visitor / inquirer pathway</button>
+          <div class="accordion-panel"><p>What to expect, what to wear, children/families, communion note, parking, coffee hour, and a simple way to ask questions.</p></div>
+          <button class="accordion" type="button">Parishioner tools</button>
+          <div class="accordion-panel"><p>Calendar, bulletins, announcements, livestream/media, parish life, email/text signup, Tithe.ly giving link or embed.</p></div>
+          <button class="accordion" type="button">Antiochian + local identity</button>
+          <div class="accordion-panel"><p>Antiochian Archdiocese connection, Acts 11:26, St. George patron page, Kearney/Central Nebraska language, real parish photos.</p></div>
+          <button class="accordion" type="button">SEO and public discovery</button>
+          <div class="accordion-panel"><p>Use phrases like Orthodox Church in Kearney Nebraska, Eastern Orthodox Church Kearney NE, Orthodox Christian Church Central Nebraska, and Divine Liturgy Kearney Nebraska.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sitemap-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Recommended structure</p>
+        <h2>A simple sitemap that can grow</h2>
+      </div>
+      <div class="sitemap reveal">
+        <div>Home</div><div>Visit</div><div>Service Times</div><div>Calendar</div><div>About Orthodoxy</div><div>About St. George</div><div>Parish Life</div><div>Media</div><div>Give</div><div>Contact</div>
+      </div>
+    </section>
+
+    <section id="plan" class="section timeline-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Group plan</p>
+        <h2>How to move from research to launch</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span>01</span><h3>Discovery</h3><p>Review example sites, decide what feels right, define the audience, and agree on must-have pages.</p></article>
+        <article class="timeline-item reveal"><span>02</span><h3>Platform test</h3><p>Try the same tasks in Squarespace, WordPress, Wix, and OWS: add event, update service time, add photo, embed calendar/video.</p></article>
+        <article class="timeline-item reveal"><span>03</span><h3>Content gathering</h3><p>Collect photos, service schedule, clergy bio, parish history, Tithe.ly link, livestream links, contact info, and feast-day update process.</p></article>
+        <article class="timeline-item reveal"><span>04</span><h3>Prototype</h3><p>Build Home, Visit, and Service Times first. Those pages prove the design and usability.</p></article>
+        <article class="timeline-item reveal"><span>05</span><h3>Build + launch</h3><p>Finish pages, test mobile, connect domain, verify Google listing, assign maintenance owner, then launch.</p></article>
+      </div>
+    </section>
+
+    <section class="section closing snap">
+      <div class="closing-card reveal">
+        <p class="eyebrow">Core principle</p>
+        <h2>The site should not be a digital bulletin board. It should be a front door.</h2>
+        <p>For St. George, the winning site will be reverent, clear, welcoming, current, and easy to maintain — a place where someone in Kearney can move from curiosity to actually walking through the doors.</p>
+        <a class="button primary" href="#top">Back to top</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Gage Jaeger for St. George Orthodox Christian Church Parish Council discussion</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
