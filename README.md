@@ -1,17 +1,14 @@
-# St. George Kearney Website Prototype
+# St. George Orthodox Church Website Prototype
 
-Static mock website prototype for St. George Orthodox Christian Church in Kearney, Nebraska.
+A polished static website prototype for St. George Orthodox Christian Church in Kearney, Nebraska.
 
-This is no longer a presentation deck. It is a clickable one-page parish website concept meant to explore design direction, page structure, visitor flow, service schedule placement, parish-life sections, giving/contact placement, and future feature ideas.
+This replaces the earlier presentation-style concept with an actual one-page parish website mockup built from the research themes: reverent Orthodox visual language, warm visitor pathway, clear service times, parish life, Central Nebraska outreach, calendar, and contact sections.
 
 Files:
-- `index.html` — website content and page sections
+- `index.html` — site content
 - `styles.css` — visual design
-- `script.js` — accordions, reveal animations, glow toggle
-
-Hosting:
-Upload the contents of this folder to any static host, GitHub Pages repository, or Hostinger public directory.
+- `script.js` — smooth scrolling
 
 Notes:
-- Service times and contact information are sample placeholders and should be replaced with official parish details before public use.
-- The site intentionally keeps the Orthodox/reverent aesthetic direction from the earlier research while functioning like a real mock website instead of a committee presentation.
+- Service times, email, phone, and final copy are placeholders for prototype review.
+- Upload the folder contents to GitHub Pages, Hostinger, or any static host.
