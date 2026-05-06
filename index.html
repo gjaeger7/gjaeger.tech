@@ -3,27 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>St. George Orthodox Church | Kearney, Nebraska</title>
-  <meta name="description" content="A polished prototype website for St. George Orthodox Christian Church in Kearney, Nebraska." />
+  <title>St. George Orthodox Christian Church | Kearney, Nebraska</title>
+  <meta name="description" content="A comprehensive mock website concept for St. George Orthodox Christian Church in Kearney, Nebraska." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="top-ribbon">Prototype concept • Replace sample service times and contact details before public launch</div>
+  <div class="top-ribbon">Mock redesign concept using public information from saintgeorgekearney.com</div>
 
   <header class="nav-shell">
     <a class="brand" href="#home" aria-label="St. George Orthodox Church home">
       <span class="brand-seal">✚</span>
-      <span><strong>St. George</strong><em>Orthodox Christian Church</em></span>
+      <span><strong>Saint George</strong><em>Orthodox Christian Church</em></span>
     </a>
+    <button class="menu-toggle" aria-label="Open menu">Menu</button>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="#visit">Visit</a>
-      <a href="#services">Services</a>
-      <a href="#faith">Our Faith</a>
-      <a href="#life">Parish Life</a>
-      <a href="#calendar">Calendar</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#story">History</a>
+      <a href="#faith">Orthodoxy</a>
+      <a href="#classes">Classes</a>
+      <a href="#hall">Church Hall</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#visit">Plan a Visit</a>
@@ -31,70 +33,70 @@
 
   <main id="home">
     <section class="hero">
-      <div class="hero-art" aria-hidden="true">
-        <div class="icon-card icon-card-one"></div>
-        <div class="icon-card icon-card-two"></div>
-        <div class="gold-disc"></div>
-      </div>
+      <div class="hero-image" role="img" aria-label="St. George parish photo"></div>
       <div class="hero-inner">
         <p class="kicker">Antiochian Orthodox Christian Archdiocese • Kearney, Nebraska</p>
-        <h1>Ancient worship. Real community. A place to come and see.</h1>
-        <p class="lead">St. George is an Orthodox Christian parish serving Kearney and the surrounding Central Nebraska communities through prayer, sacramental life, hospitality, and the faith handed down from the apostles.</p>
+        <h1>Welcome to Saint George.</h1>
+        <p class="lead">A warm Orthodox Christian parish at 1505 Avenue G, rooted in the ancient Church of Antioch and serving Kearney and Central Nebraska since 1903.</p>
         <div class="hero-buttons">
           <a class="button primary" href="#visit">I’m New Here</a>
-          <a class="button secondary" href="#services">Service Times</a>
+          <a class="button secondary" href="#schedule">View Service Times</a>
         </div>
       </div>
       <aside class="service-panel">
-        <span class="panel-label">This week at St. George</span>
-        <h2>Worship with us</h2>
-        <div class="service-row"><strong>Saturday</strong><span>Great Vespers</span><b>5:00 PM</b></div>
-        <div class="service-row"><strong>Sunday</strong><span>Orthros</span><b>9:00 AM</b></div>
-        <div class="service-row"><strong>Sunday</strong><span>Divine Liturgy</span><b>10:00 AM</b></div>
-        <a class="text-link" href="#calendar">View full parish calendar →</a>
+        <span class="panel-label">This week</span>
+        <h2>Come worship with us</h2>
+        <div class="service-row"><strong>Wed</strong><span>Supplicatory Canon to Saint George</span><b>5:15 PM</b></div>
+        <div class="service-row"><strong>Sat</strong><span>9th Hour + Vespers</span><b>4:45 / 5:00 PM</b></div>
+        <div class="service-row"><strong>Sun</strong><span>Orthros + Divine Liturgy</span><b>8:45 / 10:00 AM</b></div>
+        <a class="text-link" href="#schedule">What are these services? →</a>
       </aside>
     </section>
 
     <section class="welcome-band">
-      <div>
-        <span>For visitors</span>
-        <strong>You are welcome even if you do not know the service.</strong>
-      </div>
-      <div>
-        <span>For parishioners</span>
-        <strong>Find services, events, announcements, and giving in one place.</strong>
-      </div>
-      <div>
-        <span>For Central Nebraska</span>
-        <strong>A clear digital front door for people searching for Orthodoxy.</strong>
-      </div>
+      <div><span>Address</span><strong>1505 Avenue G<br>Kearney, Nebraska</strong></div>
+      <div><span>Parish family</span><strong>Founded by Syrian and Lebanese Orthodox Christians in 1903.</strong></div>
+      <div><span>Invitation</span><strong>“Please come and worship with us.”</strong></div>
     </section>
 
     <section id="visit" class="section visit-section">
       <div class="section-copy">
         <p class="kicker">Plan your visit</p>
         <h2>First time at an Orthodox church?</h2>
-        <p>Orthodox worship can feel unfamiliar at first — icons, candles, chanting, incense, standing, and ancient prayers. You do not need to know what to do before you come. You can simply be present, listen, and ask questions afterward.</p>
-        <a class="button primary" href="#contact">Ask a question before visiting</a>
+        <p>Visitors are welcome even if Orthodox worship is completely new to you. You will see icons, candles, incense, chanting, standing, and ancient prayers. You do not need to know every custom before you come — simply be present, listen, pray as you are able, and ask questions afterward.</p>
+        <p>Sunday Divine Liturgy is the central worship service of the Orthodox Church and usually lasts about an hour and fifteen minutes. Coffee hour and conversation afterward are often the easiest way to meet the parish.</p>
+        <a class="button primary" href="#directions">Get directions</a>
       </div>
       <div class="visit-grid">
-        <article><span>01</span><h3>Come as you are</h3><p>Dress respectfully and comfortably. Visitors are not expected to know every custom.</p></article>
+        <article><span>01</span><h3>Come as you are</h3><p>Dress respectfully and comfortably. Visitors are not expected to know the service or every gesture.</p></article>
         <article><span>02</span><h3>Children are welcome</h3><p>Families are part of parish life. A little movement and sound is normal.</p></article>
-        <article><span>03</span><h3>Stay afterward</h3><p>Coffee hour is often the easiest place to meet people and ask simple questions.</p></article>
+        <article><span>03</span><h3>Ask questions</h3><p>Orthodoxy is ancient and deep. A good first visit starts with curiosity, not pressure.</p></article>
         <article><span>04</span><h3>Communion note</h3><p>Holy Communion is received by Orthodox Christians, but everyone is welcome to pray with us.</p></article>
       </div>
     </section>
 
-    <section id="services" class="section services-section">
+    <section id="schedule" class="section services-section">
       <div class="section-heading centered">
-        <p class="kicker">Service times</p>
-        <h2>The rhythm of parish life</h2>
-        <p>One of the most important homepage jobs is answering “When is church?” fast. This section could be manually updated or connected to a shared parish calendar.</p>
+        <p class="kicker">Service schedule</p>
+        <h2>The rhythm of Orthodox worship</h2>
+        <p>This redesign gives visitors a clear answer to “when is church?” while also explaining what each service means.</p>
       </div>
       <div class="schedule-cards">
-        <article><small>Saturday evening</small><h3>Great Vespers</h3><p>Evening prayer that prepares the parish for the Lord’s Day.</p><strong>5:00 PM</strong></article>
-        <article><small>Sunday morning</small><h3>Orthros</h3><p>Morning prayers and hymns before the Divine Liturgy.</p><strong>9:00 AM</strong></article>
-        <article><small>Sunday morning</small><h3>Divine Liturgy</h3><p>The central worship service of the Orthodox Church.</p><strong>10:00 AM</strong></article>
+        <article><small>Saturday evening</small><h3>Vespers</h3><p>The evening prayer service of the Orthodox Church, centered around the setting of the sun and preparation for the Lord’s Day.</p><strong>5:00 PM</strong></article>
+        <article><small>Sunday morning</small><h3>Orthros</h3><p>Morning prayer, psalms, hymns, and Gospel reading. Orthros prepares the parish for Divine Liturgy.</p><strong>8:45 AM</strong></article>
+        <article><small>Sunday morning</small><h3>Divine Liturgy</h3><p>The central worship service of the Orthodox Church, centered around the Eucharist and the gathered people of God.</p><strong>10:00 AM</strong></article>
+        <article><small>Special services</small><h3>Akathists & fast seasons</h3><p>Prayer services for feasts, saints, Advent, Great Lent, the Apostles Fast, and the Dormition Fast.</p><strong>Seasonal</strong></article>
+      </div>
+    </section>
+
+    <section id="story" class="section story-section">
+      <div class="story-media"></div>
+      <div class="section-copy">
+        <p class="kicker">Our story</p>
+        <h2>Orthodox Christianity in America’s heartland since 1903.</h2>
+        <p>Between 1889 and 1903, a number of Arab Christian families moved to the Kearney area from Syria and Lebanon. They organized themselves into the St. George Society and founded St. George Orthodox Christian Church in 1903.</p>
+        <p>Fr. Nicola Yanney, one of the early immigrants to the Kearney area, was ordained the following year, becoming the first resident Orthodox Christian priest to serve an Arab Christian community west of the Mississippi River.</p>
+        <p>Today, St. George continues as a diverse parish community within the Antiochian Orthodox Christian Archdiocese of North America, sharing the Apostolic Faith of the Early Church with all who want to learn more.</p>
       </div>
     </section>
 
@@ -102,49 +104,79 @@
       <div class="faith-card">
         <div class="faith-visual" aria-hidden="true"><span>IC</span><b>XC</b><em>✚</em></div>
         <div>
-          <p class="kicker">Our faith</p>
-          <h2>The Orthodox Church is ancient Christianity, alive today.</h2>
-          <p>For many people in Central Nebraska, Orthodoxy may be unfamiliar. A good parish website should offer a simple, welcoming starting point: not overwhelming, not watered down, but clear enough that a curious visitor knows what to do next.</p>
+          <p class="kicker">About Orthodoxy</p>
+          <h2>Ancient Christianity, alive today.</h2>
+          <p>Saint George belongs to the family of Christian communities descended from the Church of Antioch — the place where the followers of Christ were first called Christians. The parish website should help seekers understand worship, icons, sacraments, fasting, prayer, Scripture, and the life of the Church without overwhelming them.</p>
           <div class="faith-links">
-            <a href="#">What is Orthodoxy?</a>
-            <a href="#">What to expect in worship</a>
-            <a href="#">Talk with Father</a>
+            <a href="https://www.saintgeorgekearney.com/about_orthodoxy.html">Explore Orthodox teaching</a>
+            <a href="https://www.saintgeorgekearney.com/schedule.html">Learn about Orthodox services</a>
+            <a href="https://www.saintgeorgekearney.com/patrons_and_founders.html">Read about Saint George and Saint Raphael</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="life" class="section life-section">
+    <section class="section patron-section">
+      <div class="section-heading centered">
+        <p class="kicker">Patron & founders</p>
+        <h2>A parish blessed by saints and faithful founders.</h2>
+      </div>
+      <div class="feature-grid two">
+        <article><h3>The Greatmartyr George</h3><p>The patron of the parish is Saint George the Great-martyr, one of the most beloved saints of the Church, commemorated on April 23.</p></article>
+        <article><h3>St. Raphael of Brooklyn</h3><p>St. Raphael helped organize the local Arab Christian community into a parish during missionary journeys across the United States.</p></article>
+      </div>
+    </section>
+
+    <section id="classes" class="section classes-section">
       <div class="section-heading">
-        <p class="kicker">Parish life</p>
-        <h2>A living community, not just a Sunday schedule.</h2>
+        <p class="kicker">Learning & formation</p>
+        <h2>Classes, catechism, and resources for inquirers.</h2>
+        <p>The current site includes Orthodox PT audio, a church history class library, catechism material, special lectures, elder videos, and journeys to Orthodoxy. This section turns those deep archives into a clearer resource hub.</p>
       </div>
       <div class="life-layout">
-        <article class="large-life"><span>Hospitality</span><h3>Coffee hour, meals, conversations, and the ordinary work of becoming family.</h3></article>
-        <article><span>Formation</span><h3>Classes and resources for inquirers, catechumens, youth, and adults.</h3></article>
-        <article><span>Feasts</span><h3>The liturgical year gives shape to worship, fasting, celebration, and prayer.</h3></article>
-        <article><span>Service</span><h3>Practical ways to care for one another and the wider Kearney community.</h3></article>
+        <article class="large-life"><span>Orthodox PT</span><h3>Audio classes covering revelation, the nature of God, the Body of Christ, saints, sacraments, spirituality, confession, marriage, and ordination.</h3></article>
+        <article><span>Church history</span><h3>Classes from early Christian foundations through the Great Schism and Protestant Reformation.</h3></article>
+        <article><span>Catechism</span><h3>Short-form resources for people beginning to learn the Orthodox Faith.</h3></article>
+        <article><span>Testimonies</span><h3>Journeys to Orthodoxy and stories from people who came into the Church.</h3></article>
       </div>
     </section>
 
-    <section id="calendar" class="section calendar-section">
-      <div class="section-heading centered">
-        <p class="kicker">Upcoming</p>
-        <h2>Calendar and announcements</h2>
-        <p>A real version could use Google Calendar, a website CMS calendar, or a simple weekly update block maintained by a volunteer.</p>
-      </div>
-      <div class="event-list">
-        <article><time>Sun</time><div><h3>Divine Liturgy + Coffee Hour</h3><p>Regular Sunday worship followed by fellowship.</p></div></article>
-        <article><time>Wed</time><div><h3>Inquirer Class</h3><p>A beginner-friendly evening for questions about Orthodox Christianity.</p></div></article>
-        <article><time>Fri</time><div><h3>Parish Work Night</h3><p>Cleaning, projects, setup, and practical service together.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section region-section">
+    <section id="hall" class="section hall-section">
       <div class="region-card">
-        <p class="kicker">Serving beyond Kearney</p>
-        <h2>A regional parish for Central Nebraska seekers.</h2>
-        <p>Because Orthodox parishes can be far apart, the website should make it clear that people from surrounding communities are not outsiders. St. George can be presented as a spiritual home for Kearney, Hastings, Holdrege, Grand Island, Lexington, and the rural roads in between.</p>
+        <p class="kicker">Saint George Church Hall Project</p>
+        <h2>Preparing for the next chapter of parish life.</h2>
+        <p>Saint George is planning a new church hall designed with local architectural firm Wilkins ADP. Priorities include handicap accessibility to the hall and church, fellowship space for 160 people, classrooms, educational space, a large kitchen, and a courtyard for outdoor fellowship.</p>
+        <div class="stats-grid">
+          <div><strong>$2.5M</strong><span>Estimated Phase 1: access, fellowship hall, kitchen, bathrooms</span></div>
+          <div><strong>$1M</strong><span>Estimated Phase 2: classrooms, conference room, priest’s office</span></div>
+          <div><strong>2028</strong><span>Fundraising goal tied to the 125th anniversary of Saint George Church</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stewardship" class="section stewardship-section">
+      <div class="section-heading centered">
+        <p class="kicker">Stewardship</p>
+        <h2>How can you support Saint George?</h2>
+        <p>The current parish site invites people to support the church by worshiping with the parish, spreading the word, pledging financial support, and praying for the community.</p>
+      </div>
+      <div class="feature-grid four">
+        <article><h3>Worship with us</h3><p>Whether parish member or visitor, prayer strengthens and encourages the parish.</p></article>
+        <article><h3>Invite a friend</h3><p>A personal invitation to “come and see” remains one of the clearest ways the Church grows.</p></article>
+        <article><h3>Pledge support</h3><p>Financial support helps the parish meet growing needs and continue its ministry.</p></article>
+        <article><h3>Pray for us</h3><p>Ask the Lord to strengthen, help, and guide Saint George according to His will.</p></article>
+      </div>
+    </section>
+
+    <section id="directions" class="section directions-section">
+      <div class="directions-card">
+        <div>
+          <p class="kicker">Driving directions</p>
+          <h2>Find us at 1505 Avenue G.</h2>
+          <p><strong>From I‑80:</strong> Take Kearney Exit 272. Go north on Highway 44 / 2nd Avenue to 16th Street. Turn east, go about 1/2 mile to Avenue G, then turn south.</p>
+          <p><strong>From Highway 30:</strong> Enter Kearney on Highway 30 / 25th Street, turn south on 2nd Avenue, then east on 16th Street to Avenue G.</p>
+        </div>
+        <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=1505+Avenue+G+Kearney+NE+68847">Open in Google Maps</a>
       </div>
     </section>
 
@@ -152,14 +184,14 @@
       <div class="contact-card">
         <p class="kicker">Contact</p>
         <h2>Questions before you visit?</h2>
-        <p>Send a message, ask about the schedule, or let someone know you are planning to come.</p>
+        <p>Use the live parish site for current contact forms, clergy updates, calendar details, and announcements. This mockup shows how that information could be presented in a cleaner, more visitor-friendly way.</p>
         <div class="contact-grid">
-          <div><span>Location</span><strong>Kearney, Nebraska</strong></div>
-          <div><span>Email</span><strong>info@example-parish.org</strong></div>
-          <div><span>Phone</span><strong>(000) 000-0000</strong></div>
+          <div><span>Location</span><strong>1505 Avenue G<br>Kearney, NE 68847</strong></div>
+          <div><span>Tradition</span><strong>Antiochian Orthodox Christian Archdiocese</strong></div>
+          <div><span>Live site</span><strong>saintgeorgekearney.com</strong></div>
         </div>
         <div class="hero-buttons centered-buttons">
-          <a class="button primary" href="mailto:info@example-parish.org">Email the Parish</a>
+          <a class="button primary" href="https://www.saintgeorgekearney.com/contact.html">Contact the Parish</a>
           <a class="button secondary" href="#home">Back to Top</a>
         </div>
       </div>
@@ -168,7 +200,7 @@
 
   <footer class="site-footer">
     <strong>St. George Orthodox Christian Church</strong>
-    <span>Mock website prototype for design and feature exploration</span>
+    <span>Mock website prototype • Kearney, Nebraska • Not an official parish launch</span>
   </footer>
 
   <script src="script.js"></script>
