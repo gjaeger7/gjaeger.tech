@@ -70,8 +70,8 @@ function render() {
     const previous = item.previousSale ? money(item.previousSale) : '—';
     const city = item.city || cityFromAddress(item.address);
     const photo = item.photoUrl
-      ? `<img src="${escapeHtml(item.photoUrl)}" alt="County record photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
-      : '<span>Photo unavailable</span>';
+      ? `<img src="${escapeHtml(item.photoUrl)}" alt="Property photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
+      : `<a class="photo-fallback" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer"><strong>View Zillow photos</strong><span>County photo not found yet</span></a>`;
     return `
       <article class="listing-card">
         <div class="photo ${item.photoUrl ? '' : 'no-photo'}">
