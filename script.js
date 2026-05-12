@@ -70,16 +70,17 @@ function buildComps(item) {
 }
 
 function dealTemperature(item, intel) {
-  if (!item.priceValue) return { label: 'Needs price', className: 'neutral', score: 0, note: 'No current list price available' };
+  if (!item.priceValue) return { label: 'Needs price', className: 'neutral', score: 50, gauge: 50, posture: 'More data needed', note: 'No current list price available' };
   let score = 50;
   if (typeof intel.spreadPct === 'number') score -= Math.max(-30, Math.min(30, intel.spreadPct));
   if (typeof item.differencePct === 'number') score -= Math.max(-18, Math.min(18, item.differencePct / 12));
   if (daysListed(item) > 45) score += 8;
   if (!item.detailUrl) score -= 5;
   score = Math.round(Math.max(0, Math.min(100, score)));
-  if (score >= 62) return { label: 'Interesting', className: 'good', score, note: 'Worth a closer look against available local signals' };
-  if (score >= 43) return { label: 'Fair range', className: 'neutral', score, note: 'Roughly aligned with the current prototype signals' };
-  return { label: 'Aggressive', className: 'hot', score, note: 'Priced high versus available comparison signals' };
+  const gauge = Math.round(Math.max(8, Math.min(92, 100 - score)));
+  if (score >= 62) return { label: 'Interesting', className: 'good', score, gauge, posture: 'Buyer-favorable', note: 'Worth a closer look against available local signals' };
+  if (score >= 43) return { label: 'Fair range', className: 'neutral', score, gauge, posture: 'Market-aligned', note: 'Roughly aligned with the current prototype signals' };
+  return { label: 'Aggressive', className: 'hot', score, gauge, posture: 'Seller-leaning', note: 'Priced high versus available comparison signals' };
 }
 
 function enrich(item) {
@@ -180,9 +181,9 @@ function render() {
           </div>
         </div>
         <div class="card-body">
-          <div class="deal-strip ${item.intel.temp.className}">
-            <div><span>Deal temperature</span><strong>${escapeHtml(item.intel.temp.label)}</strong></div>
-            <b>${item.intel.temp.score}/100</b>
+          <div class="market-gauge ${item.intel.temp.className}" style="--gauge:${item.intel.temp.gauge}">
+            <div class="gauge-copy"><span>Market gauge</span><strong>${escapeHtml(item.intel.temp.label)}</strong><small>${escapeHtml(item.intel.temp.posture)}</small></div>
+            <div class="gauge" aria-label="Market gauge: ${escapeHtml(item.intel.temp.label)}"><i></i></div>
           </div>
           <div class="meta">
             <div>
