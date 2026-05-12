@@ -1,4 +1,5 @@
 const LISTING_LIMIT = 50;
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const listings = (window.HOUSE_LISTINGS || []).slice(0, LISTING_LIMIT).map((home, index) => ({ ...home, rank: index + 1 }));
 
 const $ = (id) => document.getElementById(id);
@@ -6,6 +7,7 @@ const money = (value) => {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
   return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Number(value));
 };
+const pct = (value) => (typeof value === 'number' && Number.isFinite(value) ? `${value > 0 ? '+' : ''}${value.toFixed(1)}%` : '—');
 const dateFmt = (value) => new Date(`${value}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 
@@ -13,31 +15,123 @@ function cityFromAddress(address) {
   return (address.split(',')[1] || 'Unknown').trim();
 }
 
+function median(values) {
+  const sorted = values.filter((value) => typeof value === 'number' && Number.isFinite(value)).sort((a, b) => a - b);
+  if (!sorted.length) return null;
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2);
+}
+
+function daysListed(item) {
+  if (!item.dateListed) return null;
+  return Math.max(0, Math.round((Date.now() - new Date(`${item.dateListed}T12:00:00`).getTime()) / MS_PER_DAY));
+}
+
+function ownerSignal(item) {
+  const owner = String(item.owner || '').toUpperCase();
+  if (!owner || owner === 'NOT AVAILABLE') return { label: 'Owner unknown', className: 'neutral', note: 'No verified county owner yet' };
+  if (/\b(LLC|INC|L\.L\.C|CORP|COMPANY|CO\.|GROUP|HOLDINGS|PARTNERS|TRUST|BANK|SCHOOL DISTRICT)\b/.test(owner)) {
+    return { label: 'Entity-owned', className: 'warn', note: 'Possible investor, trust, company, or institution' };
+  }
+  return { label: 'Individual owner', className: 'good', note: 'County record names individual owner(s)' };
+}
+
+function confidenceBadges(item) {
+  const badges = [];
+  badges.push(item.detailUrl && item.found !== false ? ['Verified county match', 'good'] : ['Zillow-first match', 'neutral']);
+  badges.push(item.photoUrl ? ['Assessor photo', 'good'] : ['Zillow photo fallback', 'neutral']);
+  if (item.recordNote) badges.push(['Record suppressed', 'warn']);
+  if (typeof item.previousSale === 'number') badges.push(['Prior sale found', 'good']);
+  else badges.push(['Prior sale missing', 'neutral']);
+  return badges;
+}
+
+function buildComps(item) {
+  const city = item.city || cityFromAddress(item.address);
+  const pool = listings
+    .filter((other) => other !== item)
+    .filter((other) => (other.city || cityFromAddress(other.address)) === city)
+    .filter((other) => typeof other.previousSale === 'number' || typeof other.priceValue === 'number')
+    .map((other) => ({
+      address: other.address,
+      priceValue: other.priceValue,
+      previousSale: other.previousSale,
+      compValue: typeof other.previousSale === 'number' ? other.previousSale : other.priceValue,
+      dateListed: other.dateListed,
+      zillowUrl: other.zillowUrl,
+    }))
+    .filter((other) => typeof other.compValue === 'number')
+    .sort((a, b) => Math.abs((item.priceValue || 0) - a.compValue) - Math.abs((item.priceValue || 0) - b.compValue));
+
+  const picked = pool.slice(0, 4);
+  const medianComp = median(picked.map((comp) => comp.compValue));
+  const spreadPct = item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
+  return { comps: picked, medianComp, spreadPct };
+}
+
+function dealTemperature(item, intel) {
+  if (!item.priceValue) return { label: 'Needs price', className: 'neutral', score: 0, note: 'No current list price available' };
+  let score = 50;
+  if (typeof intel.spreadPct === 'number') score -= Math.max(-30, Math.min(30, intel.spreadPct));
+  if (typeof item.differencePct === 'number') score -= Math.max(-18, Math.min(18, item.differencePct / 12));
+  if (daysListed(item) > 45) score += 8;
+  if (!item.detailUrl) score -= 5;
+  score = Math.round(Math.max(0, Math.min(100, score)));
+  if (score >= 62) return { label: 'Interesting', className: 'good', score, note: 'Worth a closer look against available local signals' };
+  if (score >= 43) return { label: 'Fair range', className: 'neutral', score, note: 'Roughly aligned with the current prototype signals' };
+  return { label: 'Aggressive', className: 'hot', score, note: 'Priced high versus available comparison signals' };
+}
+
+function enrich(item) {
+  const comps = buildComps(item);
+  const temp = dealTemperature(item, comps);
+  const owner = ownerSignal(item);
+  return { ...item, intel: { ...comps, temp, owner, days: daysListed(item), confidence: confidenceBadges(item) } };
+}
+
+const enrichedListings = listings.map(enrich);
+
 function summarize() {
-  const priced = listings.filter((item) => item.priceValue);
+  const priced = enrichedListings.filter((item) => item.priceValue);
   const total = priced.reduce((sum, item) => sum + item.priceValue, 0);
-  const sortedPrices = priced.map((item) => item.priceValue).sort((a, b) => a - b);
-  const median = sortedPrices.length ? sortedPrices[Math.floor(sortedPrices.length / 2)] : null;
-  const deltas = listings.filter((item) => typeof item.difference === 'number');
-  const largest = deltas.sort((a, b) => b.difference - a.difference)[0];
-  const cityCounts = listings.reduce((acc, item) => {
+  const medianPriceValue = median(priced.map((item) => item.priceValue));
+  const deltas = enrichedListings.filter((item) => typeof item.difference === 'number');
+  const largest = [...deltas].sort((a, b) => b.difference - a.difference)[0];
+  const cityCounts = enrichedListings.reduce((acc, item) => {
     acc[item.city || cityFromAddress(item.address)] = (acc[item.city || cityFromAddress(item.address)] || 0) + 1;
     return acc;
   }, {});
   const topCity = Object.entries(cityCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
 
-  $('heroCount').textContent = listings.length < LISTING_LIMIT ? `${listings.length}/${LISTING_LIMIT}` : LISTING_LIMIT;
+  $('heroCount').textContent = enrichedListings.length < LISTING_LIMIT ? `${enrichedListings.length}/${LISTING_LIMIT}` : LISTING_LIMIT;
   $('avgPrice').textContent = money(Math.round(total / priced.length));
   $('topCity').textContent = topCity;
   $('totalValue').textContent = money(total);
-  $('medianPrice').textContent = money(median);
+  $('medianPrice').textContent = money(medianPriceValue);
   $('largestDelta').textContent = largest ? money(largest.difference) : '—';
-  $('ownerCount').textContent = listings.filter((item) => item.owner && item.owner !== 'Not available').length;
+  $('ownerCount').textContent = enrichedListings.filter((item) => item.owner && item.owner !== 'Not available').length;
 }
 
 function buildFilters() {
-  const cities = [...new Set(listings.map((item) => item.city || cityFromAddress(item.address)))].sort();
+  const cities = [...new Set(enrichedListings.map((item) => item.city || cityFromAddress(item.address)))].sort();
   $('cityFilter').innerHTML = '<option value="all">All towns</option>' + cities.map((city) => `<option value="${escapeHtml(city)}">${escapeHtml(city)}</option>`).join('');
+}
+
+function renderComps(item) {
+  const { comps, medianComp, spreadPct } = item.intel;
+  const compRows = comps.length
+    ? comps.map((comp) => `<li><span>${escapeHtml(comp.address.split(',')[0])}</span><b>${money(comp.compValue)}</b></li>`).join('')
+    : '<li><span>No local proxy comps yet</span><b>—</b></li>';
+  return `
+    <div class="intel-panel comps-panel">
+      <div class="intel-head"><span>Nearby comp proxy</span><b>${money(medianComp)}</b></div>
+      <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} tracked same-town sale/list signals.` : 'Waiting on more verified nearby sales.'}</p>
+      <ul>${compRows}</ul>
+    </div>`;
+}
+
+function renderBadges(item) {
+  return item.intel.confidence.map(([label, className]) => `<span class="trust ${className}">${escapeHtml(label)}</span>`).join('');
 }
 
 function render() {
@@ -45,8 +139,8 @@ function render() {
   const city = $('cityFilter').value;
   const sort = $('sortSelect').value;
 
-  let visible = listings.filter((item) => {
-    const haystack = `${item.address} ${item.owner || ''} ${item.mls || ''} ${item.city || ''}`.toLowerCase();
+  let visible = enrichedListings.filter((item) => {
+    const haystack = `${item.address} ${item.owner || ''} ${item.mls || ''} ${item.city || ''} ${item.intel.temp.label} ${item.intel.owner.label}`.toLowerCase();
     return (!query || haystack.includes(query)) && (city === 'all' || (item.city || cityFromAddress(item.address)) === city);
   });
 
@@ -54,6 +148,9 @@ function render() {
     if (sort === 'price-desc') return (b.priceValue || 0) - (a.priceValue || 0);
     if (sort === 'price-asc') return (a.priceValue || Infinity) - (b.priceValue || Infinity);
     if (sort === 'delta-desc') return (b.difference ?? -Infinity) - (a.difference ?? -Infinity);
+    if (sort === 'deal-desc') return b.intel.temp.score - a.intel.temp.score;
+    if (sort === 'comp-gap-desc') return (b.intel.spreadPct ?? -Infinity) - (a.intel.spreadPct ?? -Infinity);
+    if (sort === 'days-desc') return (b.intel.days ?? 0) - (a.intel.days ?? 0);
     return new Date(b.dateListed) - new Date(a.dateListed);
   });
 
@@ -69,11 +166,12 @@ function render() {
     const price = item.price || money(item.priceValue);
     const previous = item.previousSale ? money(item.previousSale) : '—';
     const city = item.city || cityFromAddress(item.address);
+    const days = typeof item.intel.days === 'number' ? `${item.intel.days} days` : '—';
     const photo = item.photoUrl
       ? `<img src="${escapeHtml(item.photoUrl)}" alt="Property photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
       : `<a class="photo-fallback" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer"><strong>View Zillow photos</strong><span>County photo not found yet</span></a>`;
     return `
-      <article class="listing-card">
+      <article class="listing-card temp-${item.intel.temp.className}">
         <div class="photo ${item.photoUrl ? '' : 'no-photo'}">
           ${photo}
           <div class="badge-row">
@@ -82,6 +180,10 @@ function render() {
           </div>
         </div>
         <div class="card-body">
+          <div class="deal-strip ${item.intel.temp.className}">
+            <div><span>Deal temperature</span><strong>${escapeHtml(item.intel.temp.label)}</strong></div>
+            <b>${item.intel.temp.score}/100</b>
+          </div>
           <div class="meta">
             <div>
               <small>List price</small>
@@ -96,9 +198,15 @@ function render() {
           <div class="facts">
             <div class="fact"><span>Previous sale</span><b>${previous}</b></div>
             <div class="fact delta ${diffClass}"><span>Difference</span><b>${diffLabel}</b></div>
-            <div class="fact"><span>Date listed</span><b>${escapeHtml(dateFmt(item.dateListed))}</b></div>
+            <div class="fact"><span>Days listed</span><b>${escapeHtml(days)}</b></div>
             <div class="fact"><span>Source</span><b>${escapeHtml(item.dateSource || 'Zillow index')}</b></div>
           </div>
+          ${renderComps(item)}
+          <div class="intel-grid">
+            <div class="intel-panel"><span>Owner signal</span><strong class="${item.intel.owner.className}">${escapeHtml(item.intel.owner.label)}</strong><p>${escapeHtml(item.intel.owner.note)}</p></div>
+            <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs same-town proxy median.</p></div>
+          </div>
+          <div class="trust-row">${renderBadges(item)}</div>
           <div class="owner"><strong>Current owner:</strong><br>${escapeHtml(item.owner || 'Not available')}</div>
           <div class="card-actions">
             <a class="zillow" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer">Zillow listing</a>
