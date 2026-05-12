@@ -22,6 +22,7 @@
       </a>
       <div class="nav-actions">
         <a href="#listings">Listings</a>
+        <a href="#transparency">Transparency</a>
         <a href="#method">Method</a>
       </div>
     </nav>
@@ -95,12 +96,54 @@
 
     <section id="listingGrid" class="listing-grid" aria-live="polite"></section>
 
+
+
+    <section id="transparency" class="transparency">
+      <div class="section-kicker">
+        <p class="eyebrow">How to read the intelligence</p>
+        <h2>Transparent signals, not magic numbers.</h2>
+        <p>Listing Wizard is designed to make property context easier to scan, but every signal has limits. Here’s what the more advanced sections are actually looking at.</p>
+      </div>
+      <div class="explain-grid">
+        <article>
+          <span class="explain-icon">⌁</span>
+          <h3>Market Read</h3>
+          <p>A directional pricing read based primarily on list price per square foot compared with nearby sold records. It also considers comp depth, sale recency, new-build/newer-home premiums, and confidence.</p>
+        </article>
+        <article>
+          <span class="explain-icon">◎</span>
+          <h3>Proximity-weighted sold context</h3>
+          <p>Sold records are selected by physical proximity first, then refined by square footage, year built, beds, baths, and sale recency. We start close and expand only when the comp set is too thin.</p>
+        </article>
+        <article>
+          <span class="explain-icon">◫</span>
+          <h3>Confidence levels</h3>
+          <p>Confidence rises when we have multiple nearby sold records with matching property facts. Thin comps, missing square footage, missing year built, or older sales lower confidence.</p>
+        </article>
+        <article>
+          <span class="explain-icon">⌂</span>
+          <h3>New build & property facts</h3>
+          <p>Square footage, beds, baths, year built, photos, brokerage, and agent data are pulled only when an accessible public source exposes them. New builds are marked when source data supports it.</p>
+        </article>
+        <article>
+          <span class="explain-icon">✓</span>
+          <h3>Verification</h3>
+          <p>Listing details are tied back to public sources like Nebraska Realty, Coldwell Banker, county assessor records, or other accessible platforms. If we can’t verify something, the card says so.</p>
+        </article>
+        <article>
+          <span class="explain-icon">!</span>
+          <h3>Known limits</h3>
+          <p>This is not MLS and not an appraisal. Some sites block automated access, some county records are stale, and recent upgrades may not be visible in public data yet. Treat this as a sharper first pass.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="method" class="method">
       <div>
         <p class="eyebrow">How this board is built</p>
         <h2>Simple, useful, not pretending to be MLS.</h2>
       </div>
-      <p>Listing Wizard delivers high-speed context the moment a property hits your radar. Instead of digging through fragmented data, you get an immediate intelligence briefing that covers the essentials: what’s fresh on the market, precise location details, owner signals, and direct connections to official county records.<br><br>The comp and deal-temperature tools are experimental: today they use verified tracked listings and county sale/list signals as a local proxy. The next evolution is true radius-based comps from recent nearby sales once we have reliable address coordinates and sale-date feeds.</p>
+      <p>Listing Wizard delivers high-speed context the moment a property hits your radar. Instead of digging through fragmented data, you get an immediate intelligence briefing that covers the essentials: what’s fresh on the market, precise location details, owner signals, and direct connections to official county records.<br><br>The advanced signals are experimental but increasingly evidence-based: they use verified listing sources, county sale records, property facts, geocoded proximity, and confidence labels to keep the read honest. The goal is not to replace a formal CMA or appraisal — it is to make the first pass faster, clearer, and more transparent.</p>
     </section>
   </main>
 
