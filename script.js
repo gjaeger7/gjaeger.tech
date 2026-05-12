@@ -58,6 +58,7 @@ function buildComps(item) {
       previousSale: other.previousSale,
       compValue: typeof other.previousSale === 'number' ? other.previousSale : other.priceValue,
       dateListed: other.dateListed,
+      saleDate: other.previousSaleDate || other.saleDate || null,
       zillowUrl: other.zillowUrl,
     }))
     .filter((other) => typeof other.compValue === 'number')
@@ -121,7 +122,11 @@ function buildFilters() {
 function renderComps(item) {
   const { comps, medianComp, spreadPct } = item.intel;
   const compRows = comps.length
-    ? comps.map((comp) => `<li><span>${escapeHtml(comp.address.split(',')[0])}</span><b>${money(comp.compValue)}</b></li>`).join('')
+    ? comps.map((comp) => {
+        const compDate = comp.saleDate || comp.dateListed;
+        const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : `Listed ${dateFmt(comp.dateListed)}`;
+        return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}</em></span><b>${money(comp.compValue)}</b></li>`;
+      }).join('')
     : '<li><span>No local proxy comps yet</span><b>—</b></li>';
   return `
     <div class="intel-panel comps-panel">
@@ -168,6 +173,11 @@ function render() {
     const previous = item.previousSale ? money(item.previousSale) : '—';
     const city = item.city || cityFromAddress(item.address);
     const days = typeof item.intel.days === 'number' ? `${item.intel.days} days` : '—';
+    const listingType = item.isNewBuild || item.newBuild || /new construction/i.test(`${item.description || ''} ${item.status || ''}`)
+      ? 'New build'
+      : 'Existing home';
+    const agentName = item.listingAgent || item.agent || 'Not verified yet';
+    const brokerage = item.listingBrokerage || item.brokerage || item.company || 'Not verified yet';
     const photo = item.photoUrl
       ? `<img src="${escapeHtml(item.photoUrl)}" alt="Property photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
       : `<a class="photo-fallback" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer"><strong>View Zillow photos</strong><span>County photo not found yet</span></a>`;
@@ -207,14 +217,18 @@ function render() {
             <div class="fact"><span>Previous sale</span><b>${previous}</b></div>
             <div class="fact delta ${diffClass}"><span>Difference</span><b>${diffLabel}</b></div>
             <div class="fact"><span>Days listed</span><b>${escapeHtml(days)}</b></div>
-            <div class="fact"><span>Source</span><b>${escapeHtml(item.dateSource || 'Zillow index')}</b></div>
+            <div class="fact"><span>Build type</span><b>${escapeHtml(listingType)}</b></div>
           </div>
           ${renderComps(item)}
           <div class="intel-grid">
             <div class="intel-panel"><span>Owner signal</span><strong class="${item.intel.owner.className}">${escapeHtml(item.intel.owner.label)}</strong><p>${escapeHtml(item.intel.owner.note)}</p></div>
             <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs same-town proxy median.</p></div>
           </div>
-          <div class="trust-row">${renderBadges(item)}</div>
+          <div class="agent-panel">
+            <div><span>Listing agent</span><strong>${escapeHtml(agentName)}</strong></div>
+            <div><span>Company</span><strong>${escapeHtml(brokerage)}</strong></div>
+          </div>
+          <div class="trust-row">${renderBadges(item)}<span class="trust neutral">${escapeHtml(item.dateSource || 'Zillow index')}</span></div>
           <div class="owner"><strong>Current owner:</strong><br>${escapeHtml(item.owner || 'Not available')}</div>
           <div class="card-actions">
             <a class="zillow" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer">Zillow listing</a>
