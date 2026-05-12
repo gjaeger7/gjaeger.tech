@@ -46,8 +46,26 @@ function confidenceBadges(item) {
   return badges;
 }
 
+function compSimilarityScore(item, other) {
+  let score = 0;
+  if (item.livingAreaSqft && other.livingAreaSqft) {
+    score += Math.min(80, Math.abs(item.livingAreaSqft - other.livingAreaSqft) / Math.max(item.livingAreaSqft, other.livingAreaSqft) * 100);
+  } else {
+    score += 38;
+  }
+  if (item.yearBuilt && other.yearBuilt) {
+    score += Math.min(45, Math.abs(item.yearBuilt - other.yearBuilt) * 1.15);
+  } else {
+    score += 22;
+  }
+  if (item.beds && other.beds) score += Math.min(12, Math.abs(item.beds - other.beds) * 4);
+  if (item.baths && other.baths) score += Math.min(12, Math.abs(item.baths - other.baths) * 4);
+  return score;
+}
+
 function buildComps(item) {
   const city = item.city || cityFromAddress(item.address);
+  const hasSubjectFacts = Boolean(item.livingAreaSqft || item.yearBuilt);
   const pool = listings
     .filter((other) => other !== item)
     .filter((other) => (other.city || cityFromAddress(other.address)) === city)
@@ -57,14 +75,20 @@ function buildComps(item) {
       previousSale: other.previousSale,
       compValue: other.previousSale,
       saleDate: other.previousSaleDate || other.saleDate || null,
+      livingAreaSqft: other.livingAreaSqft || null,
+      yearBuilt: other.yearBuilt || null,
+      beds: other.beds || null,
+      baths: other.baths || null,
       detailUrl: other.detailUrl,
+      similarityScore: compSimilarityScore(item, other),
     }))
-    .sort((a, b) => Math.abs((item.priceValue || 0) - a.compValue) - Math.abs((item.priceValue || 0) - b.compValue));
+    .sort((a, b) => a.similarityScore - b.similarityScore);
 
   const picked = pool.slice(0, 4);
   const medianComp = median(picked.map((comp) => comp.compValue));
   const spreadPct = item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
-  return { comps: picked, medianComp, spreadPct };
+  const compQuality = hasSubjectFacts && picked.some((comp) => comp.livingAreaSqft || comp.yearBuilt) ? 'similarity-weighted' : 'same-town sold';
+  return { comps: picked, medianComp, spreadPct, compQuality };
 }
 
 function dealTemperature(item, intel) {
@@ -117,17 +141,18 @@ function buildFilters() {
 }
 
 function renderComps(item) {
-  const { comps, medianComp, spreadPct } = item.intel;
+  const { comps, medianComp, spreadPct, compQuality } = item.intel;
   const compRows = comps.length
     ? comps.map((comp) => {
         const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : 'Sold date pending';
-        return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}</em></span><b>${money(comp.compValue)}</b></li>`;
+        const facts = [comp.livingAreaSqft ? `${comp.livingAreaSqft.toLocaleString()} sqft` : null, comp.yearBuilt ? `built ${comp.yearBuilt}` : null].filter(Boolean).join(' • ');
+        return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}${facts ? ` • ${escapeHtml(facts)}` : ''}</em></span><b>${money(comp.compValue)}</b></li>`;
       }).join('')
     : '<li><span>No verified same-town sold comps yet</span><b>—</b></li>';
   return `
     <div class="intel-panel comps-panel">
-      <div class="intel-head"><span>Verified sold context</span><b>${money(medianComp)}</b></div>
-      <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} same-town county sale records.` : 'Waiting on more verified nearby sales.'}</p>
+      <div class="intel-head"><span>Similar sold context</span><b>${money(medianComp)}</b></div>
+      <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} ${escapeHtml(compQuality)} records.` : 'Waiting on more verified nearby sales.'}</p>
       <ul>${compRows}</ul>
     </div>`;
 }
@@ -215,11 +240,13 @@ function render() {
             <div class="fact delta ${diffClass}"><span>Difference</span><b>${diffLabel}</b></div>
             <div class="fact"><span>Days listed</span><b>${escapeHtml(days)}</b></div>
             <div class="fact"><span>Build type</span><b>${escapeHtml(listingType)}</b></div>
+            <div class="fact"><span>Sq ft</span><b>${item.livingAreaSqft ? escapeHtml(item.livingAreaSqft.toLocaleString()) : '—'}</b></div>
+            <div class="fact"><span>Year built</span><b>${item.yearBuilt || '—'}</b></div>
           </div>
           ${renderComps(item)}
           <div class="intel-grid">
             <div class="intel-panel"><span>Owner signal</span><strong class="${item.intel.owner.className}">${escapeHtml(item.intel.owner.label)}</strong><p>${escapeHtml(item.intel.owner.note)}</p></div>
-            <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs same-town proxy median.</p></div>
+            <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs similarity-weighted sold median.</p></div>
           </div>
           <div class="agent-panel">
             <div><span>Listing agent</span><strong>${escapeHtml(agentName)}</strong></div>

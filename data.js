@@ -22,7 +22,12 @@ window.HOUSE_LISTINGS = [
     "listingBrokerage": "American Real Estate & Associates",
     "isNewBuild": false,
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2025-03-14"
+    "previousSaleDate": "2025-03-14",
+    "livingAreaSqft": 2965,
+    "yearBuilt": 1909,
+    "beds": 4.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "406 C Ave, Axtell, NE 68924",
@@ -46,7 +51,12 @@ window.HOUSE_LISTINGS = [
     "listingAgent": "Laurie Riessland",
     "listingBrokerage": "SRS & Company",
     "isNewBuild": false,
-    "photoVerifiedSource": "Coldwell Banker"
+    "photoVerifiedSource": "Coldwell Banker",
+    "livingAreaSqft": 2652,
+    "yearBuilt": 1906,
+    "beds": 3.0,
+    "baths": 2.0,
+    "propertyFactsSource": "Coldwell Banker"
   },
   {
     "address": "5207 18th Avenue Pl, Kearney, NE 68845",
@@ -71,7 +81,12 @@ window.HOUSE_LISTINGS = [
     "listingBrokerage": "Rooted Realty Group",
     "isNewBuild": true,
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2020-05-15"
+    "previousSaleDate": "2020-05-15",
+    "livingAreaSqft": 3510,
+    "yearBuilt": 2026,
+    "beds": 5.0,
+    "baths": 2.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "1306 12th Ave, Kearney, NE 68845",
@@ -95,7 +110,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/1306-12th-avenue-kearney-ne-68845-20260665",
     "listingBrokerage": "C21 Midlands",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2025-06-13"
+    "previousSaleDate": "2025-06-13",
+    "livingAreaSqft": 2080,
+    "yearBuilt": 1980,
+    "beds": 3.0,
+    "baths": 2.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "714 3rd St, Gibbon, NE 68840",
@@ -121,7 +141,12 @@ window.HOUSE_LISTINGS = [
     "listingBrokerage": "Keller Williams Heartland",
     "isNewBuild": false,
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2020-12-01"
+    "previousSaleDate": "2020-12-01",
+    "livingAreaSqft": 2718,
+    "yearBuilt": 1930,
+    "beds": 4.0,
+    "baths": 1.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "34740 Hawk Rd, Pleasanton, NE 68844",
@@ -146,7 +171,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/34740-hawk-road-hazard-ne-68844-20260656",
     "listingBrokerage": "NP Realty, Inc.",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "1994-08-01"
+    "previousSaleDate": "1994-08-01",
+    "livingAreaSqft": 2744,
+    "yearBuilt": 1925,
+    "beds": 3.0,
+    "baths": 1.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "415 E 48th St, Kearney, NE 68847",
@@ -171,7 +201,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/415-e-48th-street-kearney-ne-68847-20260635",
     "listingBrokerage": "Kearney Realty, L.L.C.",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2021-09-30"
+    "previousSaleDate": "2021-09-30",
+    "livingAreaSqft": 2618,
+    "yearBuilt": 1993,
+    "beds": 5.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "703 2nd Ave, Axtell, NE 68924",
@@ -196,7 +231,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/703-2nd-avenue-axtell-ne-68924-20260593",
     "listingBrokerage": "NP Realty, Inc.",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2019-02-27"
+    "previousSaleDate": "2019-02-27",
+    "livingAreaSqft": 3840,
+    "yearBuilt": 1903,
+    "beds": 4.0,
+    "baths": 4.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "1207 D Ave, Kearney, NE 68847",
@@ -219,7 +259,12 @@ window.HOUSE_LISTINGS = [
     "listingAgent": "Angie O\u2019Brien",
     "listingBrokerage": "C21 Midlands",
     "isNewBuild": false,
-    "photoVerifiedSource": "Coldwell Banker"
+    "photoVerifiedSource": "Coldwell Banker",
+    "livingAreaSqft": 1630,
+    "yearBuilt": 2021,
+    "beds": 3.0,
+    "baths": 2.5,
+    "propertyFactsSource": "Coldwell Banker"
   },
   {
     "address": "20460 Maple Rd, Gibbon, NE 68840",
@@ -285,7 +330,12 @@ window.HOUSE_LISTINGS = [
     "listingAgent": "Susan Gierhan",
     "listingBrokerage": "Coldwell Banker Town & Country",
     "isNewBuild": false,
-    "photoVerifiedSource": "Coldwell Banker"
+    "photoVerifiedSource": "Coldwell Banker",
+    "livingAreaSqft": 3656,
+    "yearBuilt": 2007,
+    "beds": 5.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Coldwell Banker"
   },
   {
     "address": "6825 58th Ave, Kearney, NE 68845",
@@ -309,7 +359,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/6825-58th-avenue-kearney-ne-68845-20260399",
     "listingBrokerage": "Coldwell Banker Town & Country",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2021-07-01"
+    "previousSaleDate": "2021-07-01",
+    "livingAreaSqft": 4183,
+    "yearBuilt": 2022,
+    "beds": 6.0,
+    "baths": 4.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "1245 W 102nd Street Pl, Kearney, NE 68845",
@@ -333,7 +388,12 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/1245-w-102nd-street-place-kearney-ne-68845-20260271",
     "listingBrokerage": "C21 Midlands",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2022-04-26"
+    "previousSaleDate": "2022-04-26",
+    "livingAreaSqft": 3496,
+    "yearBuilt": 2004,
+    "beds": 5.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Nebraska Realty"
   },
   {
     "address": "688 21st Rd, Axtell, NE 68924",
@@ -394,7 +454,12 @@ window.HOUSE_LISTINGS = [
     "listingAgent": "Scott Anderson",
     "listingBrokerage": "Coldwell Banker Town & Country",
     "isNewBuild": false,
-    "photoVerifiedSource": "Coldwell Banker"
+    "photoVerifiedSource": "Coldwell Banker",
+    "livingAreaSqft": 3048,
+    "yearBuilt": 2025,
+    "beds": 4.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Coldwell Banker"
   },
   {
     "address": "700 D Ave, Axtell, NE 68924",
@@ -421,7 +486,12 @@ window.HOUSE_LISTINGS = [
     "listingAgent": "Barbara Petersen",
     "listingBrokerage": "Coldwell Banker Town & Country",
     "isNewBuild": false,
-    "photoVerifiedSource": "Coldwell Banker"
+    "photoVerifiedSource": "Coldwell Banker",
+    "livingAreaSqft": 2993,
+    "yearBuilt": 2021,
+    "beds": 5.0,
+    "baths": 3.0,
+    "propertyFactsSource": "Coldwell Banker"
   },
   {
     "address": "600 B Ave, Axtell, NE 68924",
@@ -560,6 +630,11 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/2103-e-41st-street-kearney-ne-68847-20251494",
     "listingBrokerage": "Rooted Realty Group",
     "photoVerifiedSource": "Nebraska Realty",
-    "previousSaleDate": "2022-05-11"
+    "previousSaleDate": "2022-05-11",
+    "livingAreaSqft": 2760,
+    "yearBuilt": 2025,
+    "beds": 3.0,
+    "baths": 2.0,
+    "propertyFactsSource": "Nebraska Realty"
   }
 ];

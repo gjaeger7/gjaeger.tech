@@ -49,3 +49,4 @@
   label span{font-size:.62rem;margin:0 0 .22rem .25rem}
   input,select{border-radius:.78rem;padding:.68rem .75rem;font-size:.9rem}
 }
+.facts{grid-template-columns:1fr 1fr}.comps-panel li em{white-space:normal;line-height:1.25}
