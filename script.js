@@ -191,15 +191,12 @@ function render() {
           </div>
         </div>
         <div class="card-body">
-          <div class="market-read ${item.intel.temp.className}">
+          <div class="market-read ${item.intel.temp.className}" style="--gauge:${item.intel.temp.gauge}">
             <div class="read-mark">✦</div>
             <div class="read-copy">
-              <span>Market read</span>
-              <strong>${escapeHtml(item.intel.temp.label)}</strong>
+              <div class="read-heading"><span>Market read</span><strong>${escapeHtml(item.intel.temp.label)}</strong></div>
               <small>${escapeHtml(item.intel.temp.posture)} • ${escapeHtml(item.intel.temp.note)}</small>
-            </div>
-            <div class="read-segments" aria-label="Market read: ${escapeHtml(item.intel.temp.label)}">
-              <i class="good"></i><i class="neutral"></i><i class="hot"></i>
+              <div class="temperature-bar" aria-label="Market read: ${escapeHtml(item.intel.temp.label)}"><i></i></div>
             </div>
           </div>
           <div class="meta">
