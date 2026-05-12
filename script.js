@@ -1,4 +1,5 @@
-const listings = (window.HOUSE_LISTINGS || []).map((home, index) => ({ ...home, rank: index + 1 }));
+const LISTING_LIMIT = 50;
+const listings = (window.HOUSE_LISTINGS || []).slice(0, LISTING_LIMIT).map((home, index) => ({ ...home, rank: index + 1 }));
 
 const $ = (id) => document.getElementById(id);
 const money = (value) => {
@@ -25,7 +26,7 @@ function summarize() {
   }, {});
   const topCity = Object.entries(cityCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
 
-  $('heroCount').textContent = listings.length;
+  $('heroCount').textContent = listings.length < LISTING_LIMIT ? `${listings.length}/${LISTING_LIMIT}` : LISTING_LIMIT;
   $('avgPrice').textContent = money(Math.round(total / priced.length));
   $('topCity').textContent = topCity;
   $('totalValue').textContent = money(total);
