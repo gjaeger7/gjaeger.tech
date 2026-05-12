@@ -21,7 +21,8 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/1117-5th-avenue-kearney-ne-68845-20260679",
     "listingBrokerage": "American Real Estate & Associates",
     "isNewBuild": false,
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2025-03-14"
   },
   {
     "address": "406 C Ave, Axtell, NE 68924",
@@ -69,7 +70,8 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/5207-18th-avenue-place-kearney-ne-68845-20260651",
     "listingBrokerage": "Rooted Realty Group",
     "isNewBuild": true,
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2020-05-15"
   },
   {
     "address": "1306 12th Ave, Kearney, NE 68845",
@@ -92,7 +94,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/1306-12th-avenue-kearney-ne-68845-20260665",
     "listingBrokerage": "C21 Midlands",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2025-06-13"
   },
   {
     "address": "714 3rd St, Gibbon, NE 68840",
@@ -117,7 +120,8 @@ window.HOUSE_LISTINGS = [
     "verifiedUrl": "https://www.nebraskarealty.com/properties/714-3rd-street-gibbon-ne-68840-20260658",
     "listingBrokerage": "Keller Williams Heartland",
     "isNewBuild": false,
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2020-12-01"
   },
   {
     "address": "34740 Hawk Rd, Pleasanton, NE 68844",
@@ -141,7 +145,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/34740-hawk-road-hazard-ne-68844-20260656",
     "listingBrokerage": "NP Realty, Inc.",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "1994-08-01"
   },
   {
     "address": "415 E 48th St, Kearney, NE 68847",
@@ -165,7 +170,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/415-e-48th-street-kearney-ne-68847-20260635",
     "listingBrokerage": "Kearney Realty, L.L.C.",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2021-09-30"
   },
   {
     "address": "703 2nd Ave, Axtell, NE 68924",
@@ -189,7 +195,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/703-2nd-avenue-axtell-ne-68924-20260593",
     "listingBrokerage": "NP Realty, Inc.",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2019-02-27"
   },
   {
     "address": "1207 D Ave, Kearney, NE 68847",
@@ -232,7 +239,8 @@ window.HOUSE_LISTINGS = [
     "city": "Gibbon",
     "priceValue": 219000,
     "difference": null,
-    "differencePct": null
+    "differencePct": null,
+    "previousSaleDate": "2008-04-09"
   },
   {
     "address": "113 Center St, Gibbon, NE 68840",
@@ -252,7 +260,8 @@ window.HOUSE_LISTINGS = [
     "city": "Gibbon",
     "priceValue": 179900,
     "difference": 114900,
-    "differencePct": 176.8
+    "differencePct": 176.8,
+    "previousSaleDate": "2023-12-11"
   },
   {
     "address": "5126 E Ave, Kearney, NE 68847",
@@ -299,7 +308,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/6825-58th-avenue-kearney-ne-68845-20260399",
     "listingBrokerage": "Coldwell Banker Town & Country",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2021-07-01"
   },
   {
     "address": "1245 W 102nd Street Pl, Kearney, NE 68845",
@@ -322,7 +332,8 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/1245-w-102nd-street-place-kearney-ne-68845-20260271",
     "listingBrokerage": "C21 Midlands",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2022-04-26"
   },
   {
     "address": "688 21st Rd, Axtell, NE 68924",
@@ -429,7 +440,8 @@ window.HOUSE_LISTINGS = [
     "city": "Axtell",
     "priceValue": 385000,
     "difference": 243500,
-    "differencePct": 172.1
+    "differencePct": 172.1,
+    "previousSaleDate": "2018-07-25"
   },
   {
     "address": "5006 15th Avenue Pl, Kearney, NE 68845",
@@ -463,7 +475,8 @@ window.HOUSE_LISTINGS = [
     "city": "Kearney",
     "priceValue": 424900,
     "difference": 194900,
-    "differencePct": 84.7
+    "differencePct": 84.7,
+    "previousSaleDate": "2021-04-30"
   },
   {
     "address": "5710 53rd Ave, Kearney, NE 68845",
@@ -481,7 +494,8 @@ window.HOUSE_LISTINGS = [
     "city": "Kearney",
     "priceValue": 929500,
     "difference": 839500,
-    "differencePct": 932.8
+    "differencePct": 932.8,
+    "previousSaleDate": "2024-04-18"
   },
   {
     "address": "11272 Maple Rd, Gibbon, NE 68840",
@@ -501,7 +515,8 @@ window.HOUSE_LISTINGS = [
     "city": "Gibbon",
     "priceValue": 750000,
     "difference": 600900,
-    "differencePct": 403.0
+    "differencePct": 403.0,
+    "previousSaleDate": "2012-03-21"
   },
   {
     "address": "W 70th St, Kearney, NE 68845",
@@ -520,7 +535,8 @@ window.HOUSE_LISTINGS = [
     "city": "Kearney",
     "priceValue": 89900,
     "difference": 84999,
-    "differencePct": 1734.3
+    "differencePct": 1734.3,
+    "previousSaleDate": "2003-05-21"
   },
   {
     "address": "2103 E 41st St, Kearney, NE 68847",
@@ -543,6 +559,7 @@ window.HOUSE_LISTINGS = [
     "verifiedSource": "Nebraska Realty",
     "verifiedUrl": "https://www.nebraskarealty.com/properties/2103-e-41st-street-kearney-ne-68847-20251494",
     "listingBrokerage": "Rooted Realty Group",
-    "photoVerifiedSource": "Nebraska Realty"
+    "photoVerifiedSource": "Nebraska Realty",
+    "previousSaleDate": "2022-05-11"
   }
 ];
