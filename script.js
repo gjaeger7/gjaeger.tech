@@ -27,6 +27,23 @@ function daysListed(item) {
   return Math.max(0, Math.round((Date.now() - new Date(`${item.dateListed}T12:00:00`).getTime()) / MS_PER_DAY));
 }
 
+function pricePerSqft(price, sqft) {
+  return price && sqft ? price / sqft : null;
+}
+
+function confidenceLevel(item, intel) {
+  let points = 0;
+  if (intel.comps.length >= 3) points += 2;
+  else if (intel.comps.length >= 1) points += 1;
+  if (item.livingAreaSqft && item.yearBuilt) points += 1;
+  if (intel.comps.filter((comp) => comp.livingAreaSqft && comp.yearBuilt).length >= 2) points += 1;
+  if (intel.comps.filter((comp) => typeof comp.distance === 'number' && comp.distance <= 1).length >= 2) points += 1;
+  if (intel.comps.filter((comp) => monthsSince(comp.saleDate) !== null && monthsSince(comp.saleDate) <= 36).length >= 2) points += 1;
+  if (points >= 5) return { label: 'High confidence', className: 'good' };
+  if (points >= 3) return { label: 'Medium confidence', className: 'neutral' };
+  return { label: 'Low confidence', className: 'warn' };
+}
+
 function ownerSignal(item) {
   const owner = String(item.owner || '').toUpperCase();
   if (!owner || owner === 'NOT AVAILABLE') return { label: 'Owner unknown', className: 'neutral', note: 'No verified county owner yet' };
@@ -101,6 +118,7 @@ function buildComps(item) {
       previousSale: other.previousSale,
       compValue: other.previousSale,
       saleDate: other.previousSaleDate || other.saleDate || null,
+      soldPricePerSqft: pricePerSqft(other.previousSale, other.livingAreaSqft),
       livingAreaSqft: other.livingAreaSqft || null,
       yearBuilt: other.yearBuilt || null,
       beds: other.beds || null,
@@ -119,23 +137,45 @@ function buildComps(item) {
 
   const picked = pool.slice(0, 4);
   const medianComp = median(picked.map((comp) => comp.compValue));
-  const spreadPct = item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
+  const medianCompPpsf = median(picked.map((comp) => comp.soldPricePerSqft));
+  const subjectPpsf = pricePerSqft(item.priceValue, item.livingAreaSqft);
+  const spreadPct = subjectPpsf && medianCompPpsf ? ((subjectPpsf - medianCompPpsf) / medianCompPpsf) * 100 : item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
   const compQuality = hasSubjectCoords ? 'within 2.5 mi, proximity-weighted sold' : hasSubjectFacts ? 'same-town similarity-weighted sold' : 'same-town sold';
-  return { comps: picked, medianComp, spreadPct, compQuality };
+  return { comps: picked, medianComp, medianCompPpsf, subjectPpsf, spreadPct, compQuality };
 }
 
 function dealTemperature(item, intel) {
-  if (!item.priceValue) return { label: 'Needs price', className: 'neutral', score: 50, gauge: 50, posture: 'More data needed', note: 'No current list price available' };
+  if (!item.priceValue) return { label: 'Needs more data', className: 'neutral', score: 50, gauge: 50, posture: 'More data needed', note: 'No current list price available' };
+  const confidence = confidenceLevel(item, intel);
+  if (!intel.comps.length || typeof intel.spreadPct !== 'number') {
+    return { label: 'Needs more data', className: 'neutral', score: 50, gauge: 50, posture: confidence.label, note: 'Not enough nearby sold context yet', confidence };
+  }
+
   let score = 50;
-  if (typeof intel.spreadPct === 'number') score -= Math.max(-30, Math.min(30, intel.spreadPct));
-  if (typeof item.differencePct === 'number') score -= Math.max(-18, Math.min(18, item.differencePct / 12));
-  if (daysListed(item) > 45) score += 8;
-  if (!item.detailUrl) score -= 5;
+  // Primary signal: list $/sqft vs proximity/similarity-weighted sold $/sqft.
+  score -= Math.max(-26, Math.min(26, intel.spreadPct * 0.75));
+
+  // Newer/new-build homes often command a premium, especially in tight markets.
+  const currentYear = new Date().getFullYear();
+  const age = item.yearBuilt ? currentYear - item.yearBuilt : null;
+  if (item.isNewBuild || age <= 2) score += 12;
+  else if (age !== null && age <= 8) score += 6;
+
+  // Sparse comps should soften the judgment instead of screaming “aggressive.”
+  if (intel.comps.length < 3) score = (score * 0.72) + (50 * 0.28);
+  if (confidence.className === 'warn') score = (score * 0.62) + (50 * 0.38);
+
+  // Stale listings can improve buyer leverage, but gently.
+  if (daysListed(item) > 60) score += 6;
+  else if (daysListed(item) > 35) score += 3;
+
   score = Math.round(Math.max(0, Math.min(100, score)));
   const gauge = Math.round(Math.max(8, Math.min(92, 100 - score)));
-  if (score >= 62) return { label: 'Interesting', className: 'good', score, gauge, posture: 'Buyer-favorable', note: 'Worth a closer look against available local signals' };
-  if (score >= 43) return { label: 'Fair range', className: 'neutral', score, gauge, posture: 'Market-aligned', note: 'Roughly aligned with the current prototype signals' };
-  return { label: 'Aggressive', className: 'hot', score, gauge, posture: 'Seller-leaning', note: 'Priced high versus available comparison signals' };
+
+  if (confidence.className === 'warn') return { label: 'Needs more data', className: 'neutral', score, gauge, posture: confidence.label, note: 'Comp set is thin; read cautiously', confidence };
+  if (score >= 61) return { label: 'Value watch', className: 'good', score, gauge, posture: confidence.label, note: 'List $/sqft trails nearby sold context' , confidence};
+  if (score >= 42) return { label: 'Market-aligned', className: 'neutral', score, gauge, posture: confidence.label, note: 'List $/sqft sits near nearby sold context', confidence };
+  return { label: 'Premium ask', className: 'hot', score, gauge, posture: confidence.label, note: 'List $/sqft is above nearby sold context', confidence };
 }
 
 function enrich(item) {
@@ -174,18 +214,18 @@ function buildFilters() {
 }
 
 function renderComps(item) {
-  const { comps, medianComp, spreadPct, compQuality } = item.intel;
+  const { comps, medianComp, medianCompPpsf, spreadPct, compQuality } = item.intel;
   const compRows = comps.length
     ? comps.map((comp) => {
         const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : 'Sold date pending';
         const distance = typeof comp.distance === 'number' ? `${comp.distance.toFixed(comp.distance < 10 ? 1 : 0)} mi` : null;
-        const facts = [distance, comp.livingAreaSqft ? `${comp.livingAreaSqft.toLocaleString()} sqft` : null, comp.yearBuilt ? `built ${comp.yearBuilt}` : null].filter(Boolean).join(' • ');
+        const facts = [distance, comp.livingAreaSqft ? `${comp.livingAreaSqft.toLocaleString()} sqft` : null, comp.soldPricePerSqft ? `${money(comp.soldPricePerSqft)}/sqft` : null, comp.yearBuilt ? `built ${comp.yearBuilt}` : null].filter(Boolean).join(' • ');
         return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}${facts ? ` • ${escapeHtml(facts)}` : ''}</em></span><b>${money(comp.compValue)}</b></li>`;
       }).join('')
     : '<li><span>No verified same-town sold comps yet</span><b>—</b></li>';
   return `
     <div class="intel-panel comps-panel">
-      <div class="intel-head"><span>Proximity-weighted sold context</span><b>${money(medianComp)}</b></div>
+      <div class="intel-head"><span>Proximity-weighted sold context</span><b>${medianCompPpsf ? `${money(medianCompPpsf)}/sqft` : money(medianComp)}</b></div>
       <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} ${escapeHtml(compQuality)} records.` : 'Waiting on more verified nearby sales.'}</p>
       <ul>${compRows}</ul>
     </div>`;
@@ -288,7 +328,7 @@ function render() {
             <div class="source-cell"><span>Listing verification</span>${verifiedUrl ? `<a href="${escapeHtml(verifiedUrl)}" target="_blank" rel="noreferrer">${escapeHtml(verifiedLabel)}</a>` : `<strong>${escapeHtml(verifiedLabel)}</strong>`}</div>
             <div><span>Photo status</span><strong>${escapeHtml(item.photoVerifiedSource ? `Verified via ${item.photoVerifiedSource}` : item.photoUrl ? 'Assessor image' : 'Needs current image')}</strong></div>
           </div>
-          <div class="trust-row">${renderBadges(item)}<span class="trust neutral">${escapeHtml(item.dateSource || 'Zillow index')}</span></div>
+          <div class="trust-row">${renderBadges(item)}<span class="trust ${item.intel.temp.confidence?.className || 'neutral'}">${escapeHtml(item.intel.temp.confidence?.label || 'Confidence pending')}</span><span class="trust neutral">${escapeHtml(item.dateSource || 'Zillow index')}</span></div>
           <div class="owner"><strong>Current owner:</strong><br>${escapeHtml(item.owner || 'Not available')}</div>
           <div class="card-actions">
             <a class="zillow" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer">Zillow listing</a>
