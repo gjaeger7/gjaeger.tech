@@ -112,7 +112,7 @@ function buildComps(item) {
       similarityScore: compSimilarityScore(item, other),
     }))
     .filter((other) => {
-      if (hasSubjectCoords && typeof other.distance === 'number') return other.distance <= 0.5;
+      if (hasSubjectCoords && typeof other.distance === 'number') return other.distance <= 2.5;
       return true;
     })
     .sort((a, b) => a.similarityScore - b.similarityScore);
@@ -120,7 +120,7 @@ function buildComps(item) {
   const picked = pool.slice(0, 4);
   const medianComp = median(picked.map((comp) => comp.compValue));
   const spreadPct = item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
-  const compQuality = hasSubjectCoords ? 'within 0.5 mi, proximity-weighted sold' : hasSubjectFacts ? 'same-town similarity-weighted sold' : 'same-town sold';
+  const compQuality = hasSubjectCoords ? 'within 2.5 mi, proximity-weighted sold' : hasSubjectFacts ? 'same-town similarity-weighted sold' : 'same-town sold';
   return { comps: picked, medianComp, spreadPct, compQuality };
 }
 
