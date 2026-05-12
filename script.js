@@ -178,6 +178,9 @@ function render() {
       : 'Existing home';
     const agentName = item.listingAgent || item.agent || 'Not verified yet';
     const brokerage = item.listingBrokerage || item.brokerage || item.company || 'Not verified yet';
+    const verifiedSource = item.verifiedSource || item.sourcePlatform || null;
+    const verifiedUrl = item.verifiedUrl || item.sourceUrl || item.realtorUrl || item.brokerageUrl || null;
+    const verifiedLabel = verifiedSource ? `Verified via ${verifiedSource}` : 'Verification needed';
     const photo = item.photoUrl
       ? `<img src="${escapeHtml(item.photoUrl)}" alt="Property photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
       : `<a class="photo-fallback" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer"><strong>View Zillow photos</strong><span>County photo not found yet</span></a>`;
@@ -224,6 +227,8 @@ function render() {
           <div class="agent-panel">
             <div><span>Listing agent</span><strong>${escapeHtml(agentName)}</strong></div>
             <div><span>Company</span><strong>${escapeHtml(brokerage)}</strong></div>
+            <div class="source-cell"><span>Listing verification</span>${verifiedUrl ? `<a href="${escapeHtml(verifiedUrl)}" target="_blank" rel="noreferrer">${escapeHtml(verifiedLabel)}</a>` : `<strong>${escapeHtml(verifiedLabel)}</strong>`}</div>
+            <div><span>Photo status</span><strong>${escapeHtml(item.photoVerifiedSource ? `Verified via ${item.photoVerifiedSource}` : item.photoUrl ? 'Assessor image' : 'Needs current image')}</strong></div>
           </div>
           <div class="trust-row">${renderBadges(item)}<span class="trust neutral">${escapeHtml(item.dateSource || 'Zillow index')}</span></div>
           <div class="owner"><strong>Current owner:</strong><br>${escapeHtml(item.owner || 'Not available')}</div>
