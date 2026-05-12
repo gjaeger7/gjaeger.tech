@@ -83,22 +83,35 @@ function monthsSince(value) {
 function compSimilarityScore(item, other) {
   let score = 0;
   const distance = distanceMiles(item, other);
-  if (typeof distance === 'number') score += Math.min(120, distance * 18);
-  else score += 55;
+
+  // Heavily prefer truly nearby properties. Roughly: 0.5 mi = 20, 2.5 mi = 100.
+  if (typeof distance === 'number') score += Math.min(180, distance * 40);
+  else score += 95;
+
+  // Heavily prefer similar-sized homes. A 20% size gap is meaningful.
   if (item.livingAreaSqft && other.livingAreaSqft) {
-    score += Math.min(70, Math.abs(item.livingAreaSqft - other.livingAreaSqft) / Math.max(item.livingAreaSqft, other.livingAreaSqft) * 100);
+    const sizeGapPct = Math.abs(item.livingAreaSqft - other.livingAreaSqft) / Math.max(item.livingAreaSqft, other.livingAreaSqft) * 100;
+    score += Math.min(120, sizeGapPct * 1.6);
   } else {
-    score += 34;
+    score += 65;
   }
+
+  // Age/build era matters a lot, but should not overpower location + size.
   if (item.yearBuilt && other.yearBuilt) {
-    score += Math.min(38, Math.abs(item.yearBuilt - other.yearBuilt) * 0.95);
+    score += Math.min(70, Math.abs(item.yearBuilt - other.yearBuilt) * 1.45);
   } else {
-    score += 20;
+    score += 38;
   }
-  if (item.beds && other.beds) score += Math.min(10, Math.abs(item.beds - other.beds) * 3.5);
-  if (item.baths && other.baths) score += Math.min(10, Math.abs(item.baths - other.baths) * 3.5);
+
+  // Room/bath count refines the comp set.
+  if (item.beds && other.beds) score += Math.min(28, Math.abs(item.beds - other.beds) * 8);
+  else score += 8;
+  if (item.baths && other.baths) score += Math.min(28, Math.abs(item.baths - other.baths) * 8);
+  else score += 8;
+
+  // Recency matters, but is intentionally secondary to physical similarity.
   const recency = monthsSince(other.previousSaleDate || other.saleDate);
-  if (typeof recency === 'number') score += Math.min(28, recency / 5);
+  if (typeof recency === 'number') score += Math.min(24, recency / 7);
   else score += 12;
   return score;
 }
