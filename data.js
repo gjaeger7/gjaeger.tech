@@ -27,7 +27,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1909,
     "beds": 4.0,
     "baths": 3.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.6852881,
+    "lng": -99.0887917,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "1117 5TH AVE, KEARNEY, NE, 68845"
   },
   {
     "address": "406 C Ave, Axtell, NE 68924",
@@ -56,7 +60,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1906,
     "beds": 3.0,
     "baths": 2.0,
-    "propertyFactsSource": "Coldwell Banker"
+    "propertyFactsSource": "Coldwell Banker",
+    "lat": 40.479467,
+    "lng": -99.1305974,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "406 C AVE, AXTELL, NE, 68924"
   },
   {
     "address": "5207 18th Avenue Pl, Kearney, NE 68845",
@@ -86,7 +94,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2026,
     "beds": 5.0,
     "baths": 2.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.724997,
+    "lng": -99.1059356,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "5207 18TH AVE PL, KEARNEY, NE, 68845"
   },
   {
     "address": "1306 12th Ave, Kearney, NE 68845",
@@ -115,7 +127,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1980,
     "beds": 3.0,
     "baths": 2.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.6870438,
+    "lng": -99.0979837,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "1306 12TH AVE, KEARNEY, NE, 68845"
   },
   {
     "address": "714 3rd St, Gibbon, NE 68840",
@@ -146,7 +162,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1930,
     "beds": 4.0,
     "baths": 1.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.7469258,
+    "lng": -98.8422851,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "714 3RD ST, GIBBON, NE, 68840"
   },
   {
     "address": "34740 Hawk Rd, Pleasanton, NE 68844",
@@ -176,7 +196,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1925,
     "beds": 3.0,
     "baths": 1.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 41.0106158,
+    "lng": -99.0640374,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "34740 HAWK RD, HAZARD, NE, 68844"
   },
   {
     "address": "415 E 48th St, Kearney, NE 68847",
@@ -206,7 +230,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1993,
     "beds": 5.0,
     "baths": 3.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.7225816,
+    "lng": -99.0753628,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "415 E 48TH ST, KEARNEY, NE, 68847"
   },
   {
     "address": "703 2nd Ave, Axtell, NE 68924",
@@ -236,7 +264,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 1903,
     "beds": 4.0,
     "baths": 4.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.4824408,
+    "lng": -99.1232172,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "703 N 2ND AVE, AXTELL, NE, 68924"
   },
   {
     "address": "1207 D Ave, Kearney, NE 68847",
@@ -264,7 +296,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2021,
     "beds": 3.0,
     "baths": 2.5,
-    "propertyFactsSource": "Coldwell Banker"
+    "propertyFactsSource": "Coldwell Banker",
+    "lat": 40.6860961,
+    "lng": -99.0764412,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "1207 AVE D, KEARNEY, NE, 68847"
   },
   {
     "address": "20460 Maple Rd, Gibbon, NE 68840",
@@ -285,7 +321,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 219000,
     "difference": null,
     "differencePct": null,
-    "previousSaleDate": "2008-04-09"
+    "previousSaleDate": "2008-04-09",
+    "lat": 40.8730406,
+    "lng": -98.8931605,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "20460 MAPLE RD, GIBBON, NE, 68840"
   },
   {
     "address": "113 Center St, Gibbon, NE 68840",
@@ -306,7 +346,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 179900,
     "difference": 114900,
     "differencePct": 176.8,
-    "previousSaleDate": "2023-12-11"
+    "previousSaleDate": "2023-12-11",
+    "lat": 40.7501103,
+    "lng": -98.8456791,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "113 CENTER ST, GIBBON, NE, 68840"
   },
   {
     "address": "5126 E Ave, Kearney, NE 68847",
@@ -335,7 +379,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2007,
     "beds": 5.0,
     "baths": 3.0,
-    "propertyFactsSource": "Coldwell Banker"
+    "propertyFactsSource": "Coldwell Banker",
+    "lat": 40.7254916,
+    "lng": -99.0744338,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "5126 E AVE, KEARNEY, NE, 68847"
   },
   {
     "address": "6825 58th Ave, Kearney, NE 68845",
@@ -364,7 +412,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2022,
     "beds": 6.0,
     "baths": 4.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.7416549,
+    "lng": -99.1535326,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "6825 58TH AVE, KEARNEY, NE, 68845"
   },
   {
     "address": "1245 W 102nd Street Pl, Kearney, NE 68845",
@@ -393,7 +445,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2004,
     "beds": 5.0,
     "baths": 3.0,
-    "propertyFactsSource": "Nebraska Realty"
+    "propertyFactsSource": "Nebraska Realty",
+    "lat": 40.7734526,
+    "lng": -99.0966693,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "1245 W 102ND STREET PL, KEARNEY, NE, 68845"
   },
   {
     "address": "688 21st Rd, Axtell, NE 68924",
@@ -411,7 +467,11 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "",
+    "lat": 40.4376263,
+    "lng": -99.1605961,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "688 21 RD, AXTELL, NE, 68924"
   },
   {
     "address": "335 N Beecroft St, Elm Creek, NE 68836",
@@ -431,7 +491,11 @@ window.HOUSE_LISTINGS = [
     "city": "Elm Creek",
     "priceValue": 205000,
     "difference": null,
-    "differencePct": null
+    "differencePct": null,
+    "lat": 40.7197666,
+    "lng": -99.3721275,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "335 N BEECROFT ST, ELM CREEK, NE, 68836"
   },
   {
     "address": "1014 W 42nd St, Kearney, NE 68845",
@@ -491,7 +555,11 @@ window.HOUSE_LISTINGS = [
     "yearBuilt": 2021,
     "beds": 5.0,
     "baths": 3.0,
-    "propertyFactsSource": "Coldwell Banker"
+    "propertyFactsSource": "Coldwell Banker",
+    "lat": 40.482365,
+    "lng": -99.1319364,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "700 D AVE, AXTELL, NE, 68924"
   },
   {
     "address": "600 B Ave, Axtell, NE 68924",
@@ -511,7 +579,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 385000,
     "difference": 243500,
     "differencePct": 172.1,
-    "previousSaleDate": "2018-07-25"
+    "previousSaleDate": "2018-07-25",
+    "lat": 40.481394,
+    "lng": -99.1292693,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "600 B AVE, AXTELL, NE, 68924"
   },
   {
     "address": "5006 15th Avenue Pl, Kearney, NE 68845",
@@ -527,7 +599,11 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "",
+    "lat": 40.7228868,
+    "lng": -99.1008753,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "5006 15TH AVENUE PL, KEARNEY, NE, 68845"
   },
   {
     "address": "4707 10th Avenue Pl, Kearney, NE 68845",
@@ -546,7 +622,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 424900,
     "difference": 194900,
     "differencePct": 84.7,
-    "previousSaleDate": "2021-04-30"
+    "previousSaleDate": "2021-04-30",
+    "lat": 40.7207687,
+    "lng": -99.0939116,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "4707 10TH AVE PL, KEARNEY, NE, 68845"
   },
   {
     "address": "5710 53rd Ave, Kearney, NE 68845",
@@ -565,7 +645,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 929500,
     "difference": 839500,
     "differencePct": 932.8,
-    "previousSaleDate": "2024-04-18"
+    "previousSaleDate": "2024-04-18",
+    "lat": 40.7292398,
+    "lng": -99.1509901,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "5710 53RD AVE, KEARNEY, NE, 68845"
   },
   {
     "address": "11272 Maple Rd, Gibbon, NE 68840",
@@ -586,7 +670,11 @@ window.HOUSE_LISTINGS = [
     "priceValue": 750000,
     "difference": 600900,
     "differencePct": 403.0,
-    "previousSaleDate": "2012-03-21"
+    "previousSaleDate": "2012-03-21",
+    "lat": 40.7839113,
+    "lng": -98.8933961,
+    "geocodeSource": "US Census Geocoder",
+    "geocodeMatchedAddress": "11272 MAPLE RD, GIBBON, NE, 68840"
   },
   {
     "address": "W 70th St, Kearney, NE 68845",

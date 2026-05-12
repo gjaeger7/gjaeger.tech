@@ -46,29 +46,51 @@ function confidenceBadges(item) {
   return badges;
 }
 
+function distanceMiles(a, b) {
+  if (!a.lat || !a.lng || !b.lat || !b.lng) return null;
+  const toRad = (deg) => deg * Math.PI / 180;
+  const R = 3958.8;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function monthsSince(value) {
+  if (!value) return null;
+  return Math.max(0, (Date.now() - new Date(`${value}T12:00:00`).getTime()) / (MS_PER_DAY * 30.44));
+}
+
 function compSimilarityScore(item, other) {
   let score = 0;
+  const distance = distanceMiles(item, other);
+  if (typeof distance === 'number') score += Math.min(120, distance * 18);
+  else score += 55;
   if (item.livingAreaSqft && other.livingAreaSqft) {
-    score += Math.min(80, Math.abs(item.livingAreaSqft - other.livingAreaSqft) / Math.max(item.livingAreaSqft, other.livingAreaSqft) * 100);
+    score += Math.min(70, Math.abs(item.livingAreaSqft - other.livingAreaSqft) / Math.max(item.livingAreaSqft, other.livingAreaSqft) * 100);
   } else {
-    score += 38;
+    score += 34;
   }
   if (item.yearBuilt && other.yearBuilt) {
-    score += Math.min(45, Math.abs(item.yearBuilt - other.yearBuilt) * 1.15);
+    score += Math.min(38, Math.abs(item.yearBuilt - other.yearBuilt) * 0.95);
   } else {
-    score += 22;
+    score += 20;
   }
-  if (item.beds && other.beds) score += Math.min(12, Math.abs(item.beds - other.beds) * 4);
-  if (item.baths && other.baths) score += Math.min(12, Math.abs(item.baths - other.baths) * 4);
+  if (item.beds && other.beds) score += Math.min(10, Math.abs(item.beds - other.beds) * 3.5);
+  if (item.baths && other.baths) score += Math.min(10, Math.abs(item.baths - other.baths) * 3.5);
+  const recency = monthsSince(other.previousSaleDate || other.saleDate);
+  if (typeof recency === 'number') score += Math.min(28, recency / 5);
+  else score += 12;
   return score;
 }
 
 function buildComps(item) {
-  const city = item.city || cityFromAddress(item.address);
   const hasSubjectFacts = Boolean(item.livingAreaSqft || item.yearBuilt);
+  const hasSubjectCoords = Boolean(item.lat && item.lng);
   const pool = listings
     .filter((other) => other !== item)
-    .filter((other) => (other.city || cityFromAddress(other.address)) === city)
     .filter((other) => typeof other.previousSale === 'number')
     .map((other) => ({
       address: other.address,
@@ -79,15 +101,19 @@ function buildComps(item) {
       yearBuilt: other.yearBuilt || null,
       beds: other.beds || null,
       baths: other.baths || null,
+      lat: other.lat || null,
+      lng: other.lng || null,
+      distance: distanceMiles(item, other),
       detailUrl: other.detailUrl,
       similarityScore: compSimilarityScore(item, other),
     }))
+    .filter((other) => typeof other.distance !== 'number' || other.distance <= 30)
     .sort((a, b) => a.similarityScore - b.similarityScore);
 
   const picked = pool.slice(0, 4);
   const medianComp = median(picked.map((comp) => comp.compValue));
   const spreadPct = item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
-  const compQuality = hasSubjectFacts && picked.some((comp) => comp.livingAreaSqft || comp.yearBuilt) ? 'similarity-weighted' : 'same-town sold';
+  const compQuality = hasSubjectCoords ? 'proximity-weighted sold' : hasSubjectFacts ? 'similarity-weighted sold' : 'sold';
   return { comps: picked, medianComp, spreadPct, compQuality };
 }
 
@@ -145,13 +171,14 @@ function renderComps(item) {
   const compRows = comps.length
     ? comps.map((comp) => {
         const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : 'Sold date pending';
-        const facts = [comp.livingAreaSqft ? `${comp.livingAreaSqft.toLocaleString()} sqft` : null, comp.yearBuilt ? `built ${comp.yearBuilt}` : null].filter(Boolean).join(' • ');
+        const distance = typeof comp.distance === 'number' ? `${comp.distance.toFixed(comp.distance < 10 ? 1 : 0)} mi` : null;
+        const facts = [distance, comp.livingAreaSqft ? `${comp.livingAreaSqft.toLocaleString()} sqft` : null, comp.yearBuilt ? `built ${comp.yearBuilt}` : null].filter(Boolean).join(' • ');
         return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}${facts ? ` • ${escapeHtml(facts)}` : ''}</em></span><b>${money(comp.compValue)}</b></li>`;
       }).join('')
     : '<li><span>No verified same-town sold comps yet</span><b>—</b></li>';
   return `
     <div class="intel-panel comps-panel">
-      <div class="intel-head"><span>Similar sold context</span><b>${money(medianComp)}</b></div>
+      <div class="intel-head"><span>Proximity-weighted sold context</span><b>${money(medianComp)}</b></div>
       <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} ${escapeHtml(compQuality)} records.` : 'Waiting on more verified nearby sales.'}</p>
       <ul>${compRows}</ul>
     </div>`;
@@ -246,7 +273,7 @@ function render() {
           ${renderComps(item)}
           <div class="intel-grid">
             <div class="intel-panel"><span>Owner signal</span><strong class="${item.intel.owner.className}">${escapeHtml(item.intel.owner.label)}</strong><p>${escapeHtml(item.intel.owner.note)}</p></div>
-            <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs similarity-weighted sold median.</p></div>
+            <div class="intel-panel"><span>Price posture</span><strong>${pct(item.intel.spreadPct)}</strong><p>List price vs proximity/similarity-weighted sold median.</p></div>
           </div>
           <div class="agent-panel">
             <div><span>Listing agent</span><strong>${escapeHtml(agentName)}</strong></div>
