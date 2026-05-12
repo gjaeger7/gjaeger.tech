@@ -51,17 +51,14 @@ function buildComps(item) {
   const pool = listings
     .filter((other) => other !== item)
     .filter((other) => (other.city || cityFromAddress(other.address)) === city)
-    .filter((other) => typeof other.previousSale === 'number' || typeof other.priceValue === 'number')
+    .filter((other) => typeof other.previousSale === 'number')
     .map((other) => ({
       address: other.address,
-      priceValue: other.priceValue,
       previousSale: other.previousSale,
-      compValue: typeof other.previousSale === 'number' ? other.previousSale : other.priceValue,
-      dateListed: other.dateListed,
+      compValue: other.previousSale,
       saleDate: other.previousSaleDate || other.saleDate || null,
-      zillowUrl: other.zillowUrl,
+      detailUrl: other.detailUrl,
     }))
-    .filter((other) => typeof other.compValue === 'number')
     .sort((a, b) => Math.abs((item.priceValue || 0) - a.compValue) - Math.abs((item.priceValue || 0) - b.compValue));
 
   const picked = pool.slice(0, 4);
@@ -123,15 +120,14 @@ function renderComps(item) {
   const { comps, medianComp, spreadPct } = item.intel;
   const compRows = comps.length
     ? comps.map((comp) => {
-        const compDate = comp.saleDate || comp.dateListed;
-        const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : `Listed ${dateFmt(comp.dateListed)}`;
+        const dateLabel = comp.saleDate ? `Sold ${dateFmt(comp.saleDate)}` : 'Sold date pending';
         return `<li><span>${escapeHtml(comp.address.split(',')[0])}<em>${escapeHtml(dateLabel)}</em></span><b>${money(comp.compValue)}</b></li>`;
       }).join('')
-    : '<li><span>No local proxy comps yet</span><b>—</b></li>';
+    : '<li><span>No verified same-town sold comps yet</span><b>—</b></li>';
   return `
     <div class="intel-panel comps-panel">
-      <div class="intel-head"><span>Nearby comp proxy</span><b>${money(medianComp)}</b></div>
-      <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} tracked same-town sale/list signals.` : 'Waiting on more verified nearby sales.'}</p>
+      <div class="intel-head"><span>Verified sold context</span><b>${money(medianComp)}</b></div>
+      <p>${typeof spreadPct === 'number' ? `${pct(spreadPct)} vs ${comps.length} same-town county sale records.` : 'Waiting on more verified nearby sales.'}</p>
       <ul>${compRows}</ul>
     </div>`;
 }
@@ -180,7 +176,8 @@ function render() {
     const brokerage = item.listingBrokerage || item.brokerage || item.company || 'Not verified yet';
     const verifiedSource = item.verifiedSource || item.sourcePlatform || null;
     const verifiedUrl = item.verifiedUrl || item.sourceUrl || item.realtorUrl || item.brokerageUrl || null;
-    const verifiedLabel = verifiedSource ? `Verified via ${verifiedSource}` : 'Verification needed';
+    const agentVerified = Boolean((item.listingAgent || item.agent) && (item.listingBrokerage || item.brokerage || item.company));
+    const verifiedLabel = verifiedSource ? `Verified via ${verifiedSource}` : agentVerified ? 'Agent/company verified' : 'Agent/company pending';
     const photo = item.photoUrl
       ? `<img src="${escapeHtml(item.photoUrl)}" alt="Property photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
       : `<a class="photo-fallback" href="${escapeHtml(item.zillowUrl)}" target="_blank" rel="noreferrer"><strong>View Zillow photos</strong><span>County photo not found yet</span></a>`;

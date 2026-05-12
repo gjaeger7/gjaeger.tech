@@ -10,13 +10,18 @@ window.HOUSE_LISTINGS = [
     "owner": "HABERLAN, GRADY P",
     "previousSale": 259000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC15nTxvGdxdBiLIw4bgr4uA==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0603149000.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260679/0/0/0/e6ba3e726b96248668ed0842e9a461f1/0/148c9afde9641d2d2d1b4052a1a0d0c7/20260679-6ca9f526-0339-48ce-836a-a4923cd40a6e.JPG",
     "dateListed": "2026-05-12",
     "dateSource": "MLS sequence / latest seen",
     "city": "Kearney",
     "priceValue": 339500,
     "difference": 80500,
-    "differencePct": 31.1
+    "differencePct": 31.1,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/1117-5th-avenue-kearney-ne-68845-20260679",
+    "listingBrokerage": "American Real Estate & Associates",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "406 C Ave, Axtell, NE 68924",
@@ -34,7 +39,13 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "https://images-listings.coldwellbanker.com/NE_BCBR/20/26/06/69/_P/20260669_P00.jpg?width=1000",
+    "verifiedSource": "Coldwell Banker",
+    "verifiedUrl": "https://www.coldwellbanker.com/ne/axtell/406-c-ave/lid-P00800000HAZKubX7J5z7uXFjjIj5BtiLEra588O",
+    "listingAgent": "Laurie Riessland",
+    "listingBrokerage": "SRS & Company",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Coldwell Banker"
   },
   {
     "address": "5207 18th Avenue Pl, Kearney, NE 68845",
@@ -47,13 +58,18 @@ window.HOUSE_LISTINGS = [
     "owner": "BUFFALO COUNTY SCHOOL DISTRICT 10-0007 AKA KEARNEY PUBLIC SCHOOL DIST",
     "previousSale": 470000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCxfrn8X1kLdSwDCoTHshPiw==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0580147013.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260651/0/0/0/ad9e2cecf9c1e0599093d584f9f58949/0/acb8efc5179e75f15dc596b6d09b8b0f/20260651-483b4f97-1be3-4e0b-b693-62042d47abea.JPG",
     "dateListed": "2026-05-11",
     "dateSource": "search snippet",
     "city": "Kearney",
     "priceValue": 497500,
     "difference": 27500,
-    "differencePct": 5.9
+    "differencePct": 5.9,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/5207-18th-avenue-place-kearney-ne-68845-20260651",
+    "listingBrokerage": "Rooted Realty Group",
+    "isNewBuild": true,
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "1306 12th Ave, Kearney, NE 68845",
@@ -66,13 +82,17 @@ window.HOUSE_LISTINGS = [
     "owner": "BASSETT, KATHERINE & BASSETT, WILLIAM C/O BASSETT, KATHERINE",
     "previousSale": 252500,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCdO/X6ovhFUpj0hXB2pSQPA==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0605247507.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260665/0/0/0/839f958ddec7864f0392408049de6fe4/0/9d021697bf24176559cfe3a9c57c5dea/20260665-7d31ef46-0754-4160-b9f2-94ef540d1851.JPG",
     "dateListed": "2026-05-07",
     "dateSource": "search snippet",
     "city": "Kearney",
     "priceValue": 310000,
     "difference": 57500,
-    "differencePct": 22.8
+    "differencePct": 22.8,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/1306-12th-avenue-kearney-ne-68845-20260665",
+    "listingBrokerage": "C21 Midlands",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "714 3rd St, Gibbon, NE 68840",
@@ -86,13 +106,18 @@ window.HOUSE_LISTINGS = [
     "owner": "REMM, JASON D & REMM, BETHANY C PO BOX",
     "previousSale": 146000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCcFou8B8GBCK7Z7Xev1QXMA==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0604584000.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260658/0/0/0/922d684f16dd08244dd150e44f5db939/0/0c260b0bbd95a8d27478b7758adef830/20260658-4312043d-7890-4d87-8db9-d3f08016b805.JPG",
     "dateListed": "2026-05-07",
     "dateSource": "search snippet",
     "city": "Gibbon",
     "priceValue": 230000,
     "difference": 84000,
-    "differencePct": 57.5
+    "differencePct": 57.5,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/714-3rd-street-gibbon-ne-68840-20260658",
+    "listingBrokerage": "Keller Williams Heartland",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "34740 Hawk Rd, Pleasanton, NE 68844",
@@ -106,13 +131,17 @@ window.HOUSE_LISTINGS = [
     "owner": "ZIEMS, STEVEN A & MARLENE E",
     "previousSale": 63000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijClL7zif1tHIIK1GR8yBvYww==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0100070100.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260656/0/0/0/9dd388bed4a59c6257f8773895303cf5/0/5d010ced7628a32b970d64faedce514e/20260656-7c42abc3-41d2-46fc-b4e6-8eec00334177.JPG",
     "dateListed": "2026-05-06",
     "dateSource": "search snippet",
     "city": "Pleasanton",
     "priceValue": 299900,
     "difference": 236900,
-    "differencePct": 376.0
+    "differencePct": 376.0,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/34740-hawk-road-hazard-ne-68844-20260656",
+    "listingBrokerage": "NP Realty, Inc.",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "415 E 48th St, Kearney, NE 68847",
@@ -126,13 +155,17 @@ window.HOUSE_LISTINGS = [
     "owner": "CERVANTES, RHETT",
     "previousSale": 156000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCncJJEwXRI/sDwh0BbYZqQA==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0602857000.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260635/0/0/0/e9fadf4f105d2f7ed77b62a6679db4ba/0/823dffa4a492e583f2b8b06028da8ce4/20260635-7be669a6-58e7-4520-ad98-4c2fdc7d9bf9.JPG",
     "dateListed": "2026-05-05",
     "dateSource": "search snippet",
     "city": "Kearney",
     "priceValue": 389000,
     "difference": 233000,
-    "differencePct": 149.4
+    "differencePct": 149.4,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/415-e-48th-street-kearney-ne-68847-20260635",
+    "listingBrokerage": "Kearney Realty, L.L.C.",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "703 2nd Ave, Axtell, NE 68924",
@@ -146,13 +179,17 @@ window.HOUSE_LISTINGS = [
     "owner": "WALZ, LANDON C. & NICOLE A.",
     "previousSale": 210000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513djSZy4oMj4/bDsSl5wA3KfQ==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Kearney/photos/0000727750.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260593/0/0/0/7367cc7b9579fce97d66c1918b6ebf51/0/98c680d8fa17ce9103e6dacd9144581c/20260593-1a80885d-c249-4805-8305-fbd40167b78b.JPG",
     "dateListed": "2026-05-02",
     "dateSource": "MLS sequence",
     "city": "Axtell",
     "priceValue": 407500,
     "difference": 197500,
-    "differencePct": 94.0
+    "differencePct": 94.0,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/703-2nd-avenue-axtell-ne-68924-20260593",
+    "listingBrokerage": "NP Realty, Inc.",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "1207 D Ave, Kearney, NE 68847",
@@ -169,7 +206,13 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "https://images-listings.coldwellbanker.com/NE_BCBR/20/26/05/55/_P/20260555_P00.jpg?width=1000",
+    "verifiedSource": "Coldwell Banker",
+    "verifiedUrl": "https://www.coldwellbanker.com/ne/kearney/1207-d-ave/lid-P00800000H9XZjNCWVetxBbxvqNFaDDkDwHaeERq",
+    "listingAgent": "Angie O\u2019Brien",
+    "listingBrokerage": "C21 Midlands",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Coldwell Banker"
   },
   {
     "address": "20460 Maple Rd, Gibbon, NE 68840",
@@ -227,7 +270,13 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "https://images-listings.coldwellbanker.com/NE_BCBR/20/26/04/20/_P/20260420_P00.jpg?width=1000",
+    "verifiedSource": "Coldwell Banker",
+    "verifiedUrl": "https://www.coldwellbanker.com/ne/kearney/5126-e-ave/lid-P00800000H8OVnL5G5eWIsIpTypwjcDtIq9WJ2iG",
+    "listingAgent": "Susan Gierhan",
+    "listingBrokerage": "Coldwell Banker Town & Country",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Coldwell Banker"
   },
   {
     "address": "6825 58th Ave, Kearney, NE 68845",
@@ -240,13 +289,17 @@ window.HOUSE_LISTINGS = [
     "owner": "QUINTANA, ALEX E & ELIZABETH M",
     "previousSale": 27250,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCo/HWStGz1yQFDp1c/mN6Eg==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0560622165.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260399/0/0/0/d9387ca037743faba148dc09b4cec0d0/0/d918782a4be50505e0f72a1908707680/20260399-cad0408c-9ccc-4f24-b481-79ef280ebe91.JPG",
     "dateListed": "2026-04-12",
     "dateSource": "MLS sequence",
     "city": "Kearney",
     "priceValue": 669000,
     "difference": 641750,
-    "differencePct": 2355.0
+    "differencePct": 2355.0,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/6825-58th-avenue-kearney-ne-68845-20260399",
+    "listingBrokerage": "Coldwell Banker Town & Country",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "1245 W 102nd Street Pl, Kearney, NE 68845",
@@ -259,13 +312,17 @@ window.HOUSE_LISTINGS = [
     "owner": "DEALEY, TIMOTHY D",
     "previousSale": 25000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCk1Vz3LjrJoJERbYDGtOclw==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0560022311.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20260271/0/0/0/105c54032ed4327fa6e2c6e50eaf6cbd/0/a034c6d0b16c74be9f04528597aa8b0b/20260271-ac06c794-d84f-48dd-aa59-7ff9ff5a241d.JPG",
     "dateListed": "2026-04-04",
     "dateSource": "MLS sequence",
     "city": "Kearney",
     "priceValue": 689900,
     "difference": 664900,
-    "differencePct": 2659.6
+    "differencePct": 2659.6,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/1245-w-102nd-street-place-kearney-ne-68845-20260271",
+    "listingBrokerage": "C21 Midlands",
+    "photoVerifiedSource": "Nebraska Realty"
   },
   {
     "address": "688 21st Rd, Axtell, NE 68924",
@@ -320,7 +377,13 @@ window.HOUSE_LISTINGS = [
     "difference": null,
     "differencePct": null,
     "owner": "Not available",
-    "photoUrl": ""
+    "photoUrl": "https://images-listings.coldwellbanker.com/NE_BCBR/20/25/15/86/_P/20251586_P00.jpg?width=1000",
+    "verifiedSource": "Coldwell Banker",
+    "verifiedUrl": "https://www.coldwellbanker.com/ne/kearney/1014-w-42nd-st/lid-P00800000H2bzHh8v6JpZDCpfblYL0iD6hvBhyEW",
+    "listingAgent": "Scott Anderson",
+    "listingBrokerage": "Coldwell Banker Town & Country",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Coldwell Banker"
   },
   {
     "address": "700 D Ave, Axtell, NE 68924",
@@ -334,14 +397,20 @@ window.HOUSE_LISTINGS = [
     "owner": "Not available",
     "previousSale": null,
     "detailUrl": null,
-    "photoUrl": "",
+    "photoUrl": "https://images-listings.coldwellbanker.com/NE_BCBR/20/26/03/41/_P/20260341_P00.jpg?width=1000",
     "dateListed": "2026-02-20",
     "dateSource": "pending / search result",
     "city": "Axtell",
     "priceValue": 459000,
     "difference": null,
     "differencePct": null,
-    "recordNote": "Kearney County assessor search returned a rural/legal parcel that did not match 700 D Ave; suppressed until a matching situs/address record is verified."
+    "recordNote": "Kearney County assessor search returned a rural/legal parcel that did not match 700 D Ave; suppressed until a matching situs/address record is verified.",
+    "verifiedSource": "Coldwell Banker",
+    "verifiedUrl": "https://www.coldwellbanker.com/ne/axtell/700-d-ave/lid-P00800000H7ZSqFX9thgquAUuAnHp1tOlfMXe8Df",
+    "listingAgent": "Barbara Petersen",
+    "listingBrokerage": "Coldwell Banker Town & Country",
+    "isNewBuild": false,
+    "photoVerifiedSource": "Coldwell Banker"
   },
   {
     "address": "600 B Ave, Axtell, NE 68924",
@@ -464,12 +533,16 @@ window.HOUSE_LISTINGS = [
     "owner": "STAROSTKA GROUP UNLIMITED, INC",
     "previousSale": 2000000,
     "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCoVD2LEERMxM1OTmzmjOWFQ==",
-    "photoUrl": "https://nebraskaassessorsonline.us/data/Buffalo/photos/0620384016.1.jpg",
+    "photoUrl": "https://zimg.paragon.ice.com/ParagonImages/Property/PE/BUFFALO/20251494/0/0/0/ef0125338d788c6c679cc53ca10181e7/0/fdaa92e26c2d391434b30e7f5e5aab9c/20251494-05b84a3d-7797-4cd9-9e3d-e223b6c6e592.JPG",
     "dateListed": "2025-11-13",
     "dateSource": "search snippet",
     "city": "Kearney",
     "priceValue": 399900,
     "difference": -1600100,
-    "differencePct": -80.0
+    "differencePct": -80.0,
+    "verifiedSource": "Nebraska Realty",
+    "verifiedUrl": "https://www.nebraskarealty.com/properties/2103-e-41st-street-kearney-ne-68847-20251494",
+    "listingBrokerage": "Rooted Realty Group",
+    "photoVerifiedSource": "Nebraska Realty"
   }
 ];
