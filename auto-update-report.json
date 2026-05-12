@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-05-12T23:11:25.323Z",
+  "apply": false,
+  "considered": 1,
+  "added": [],
+  "skipped": [
+    {
+      "address": "6303 12th Avenue Pl, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/6303-12th-Avenue-Pl-Kearney-NE-68845/456955939_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 200,
+          "url": "https://www.zillow.com/homedetails/6303-12th-Avenue-Pl-Kearney-NE-68845/456955939_zpid/"
+        }
+      ]
+    }
+  ]
+}
