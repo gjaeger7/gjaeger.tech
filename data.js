@@ -330,17 +330,18 @@ window.HOUSE_LISTINGS = [
     "baselineSeeded": true,
     "county": "Kearney",
     "query": "700 D Ave",
-    "found": true,
-    "owner": "DEFILIPPS, CHARLES M. & ANGELA K.",
+    "found": false,
+    "owner": "Not available",
     "previousSale": null,
-    "detailUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513dc4BavEJHxiNNnwl7Bf75bA==",
+    "detailUrl": null,
     "photoUrl": "",
     "dateListed": "2026-02-20",
     "dateSource": "pending / search result",
     "city": "Axtell",
     "priceValue": 459000,
     "difference": null,
-    "differencePct": null
+    "differencePct": null,
+    "recordNote": "Kearney County assessor search returned a rural/legal parcel that did not match 700 D Ave; suppressed until a matching situs/address record is verified."
   },
   {
     "address": "600 B Ave, Axtell, NE 68924",
