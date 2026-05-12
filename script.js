@@ -181,9 +181,12 @@ function render() {
           </div>
         </div>
         <div class="card-body">
-          <div class="market-gauge ${item.intel.temp.className}" style="--gauge:${item.intel.temp.gauge}">
-            <div class="gauge-copy"><span>Market gauge</span><strong>${escapeHtml(item.intel.temp.label)}</strong><small>${escapeHtml(item.intel.temp.posture)}</small></div>
-            <div class="gauge" aria-label="Market gauge: ${escapeHtml(item.intel.temp.label)}"><i></i></div>
+          <div class="market-read ${item.intel.temp.className}" style="--gauge:${item.intel.temp.gauge}">
+            <div class="read-top">
+              <div><span>Market read</span><strong>${escapeHtml(item.intel.temp.label)}</strong></div>
+              <small>${escapeHtml(item.intel.temp.posture)}</small>
+            </div>
+            <div class="read-track" aria-label="Market read: ${escapeHtml(item.intel.temp.label)}"><i></i></div>
           </div>
           <div class="meta">
             <div>
