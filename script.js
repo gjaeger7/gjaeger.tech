@@ -129,19 +129,34 @@ function buildComps(item) {
       detailUrl: other.detailUrl,
       similarityScore: compSimilarityScore(item, other),
     }))
-    .filter((other) => {
-      if (hasSubjectCoords && typeof other.distance === 'number') return other.distance <= 2.5;
-      return true;
-    })
     .sort((a, b) => a.similarityScore - b.similarityScore);
 
-  const picked = pool.slice(0, 4);
+  let radiusLabel = 'same-town';
+  let candidates = pool;
+  if (hasSubjectCoords) {
+    candidates = pool.filter((comp) => typeof comp.distance === 'number' && comp.distance <= 2.5);
+    radiusLabel = 'within 2.5 mi';
+    if (candidates.length < 3) {
+      candidates = pool.filter((comp) => typeof comp.distance === 'number' && comp.distance <= 5);
+      radiusLabel = 'within 5 mi';
+    }
+    if (candidates.length < 3) {
+      candidates = pool.filter((comp) => typeof comp.distance === 'number' && comp.distance <= 10);
+      radiusLabel = 'within 10 mi';
+    }
+    if (!candidates.length) {
+      candidates = pool.filter((comp) => (comp.address.split(',')[1] || '').trim() === (item.address.split(',')[1] || '').trim());
+      radiusLabel = 'same-town fallback';
+    }
+  }
+
+  const picked = candidates.slice(0, 4);
   const medianComp = median(picked.map((comp) => comp.compValue));
   const medianCompPpsf = median(picked.map((comp) => comp.soldPricePerSqft));
   const subjectPpsf = pricePerSqft(item.priceValue, item.livingAreaSqft);
   const spreadPct = subjectPpsf && medianCompPpsf ? ((subjectPpsf - medianCompPpsf) / medianCompPpsf) * 100 : item.priceValue && medianComp ? ((item.priceValue - medianComp) / medianComp) * 100 : null;
-  const compQuality = hasSubjectCoords ? 'within 2.5 mi, proximity-weighted sold' : hasSubjectFacts ? 'same-town similarity-weighted sold' : 'same-town sold';
-  return { comps: picked, medianComp, medianCompPpsf, subjectPpsf, spreadPct, compQuality };
+  const compQuality = hasSubjectCoords ? `${radiusLabel}, proximity-weighted sold` : hasSubjectFacts ? 'same-town similarity-weighted sold' : 'same-town sold';
+  return { comps: picked, medianComp, medianCompPpsf, subjectPpsf, spreadPct, compQuality, radiusLabel };
 }
 
 function dealTemperature(item, intel) {
@@ -172,10 +187,9 @@ function dealTemperature(item, intel) {
   score = Math.round(Math.max(0, Math.min(100, score)));
   const gauge = Math.round(Math.max(8, Math.min(92, 100 - score)));
 
-  if (confidence.className === 'warn') return { label: 'Needs more data', className: 'neutral', score, gauge, posture: confidence.label, note: 'Comp set is thin; read cautiously', confidence };
-  if (score >= 61) return { label: 'Value watch', className: 'good', score, gauge, posture: confidence.label, note: 'List $/sqft trails nearby sold context' , confidence};
-  if (score >= 42) return { label: 'Market-aligned', className: 'neutral', score, gauge, posture: confidence.label, note: 'List $/sqft sits near nearby sold context', confidence };
-  return { label: 'Premium ask', className: 'hot', score, gauge, posture: confidence.label, note: 'List $/sqft is above nearby sold context', confidence };
+  if (score >= 61) return { label: 'Value watch', className: 'good', score, gauge, posture: confidence.label, note: confidence.className === 'warn' ? 'Directional read from a thinner comp set' : 'List $/sqft trails nearby sold context', confidence};
+  if (score >= 42) return { label: 'Market-aligned', className: 'neutral', score, gauge, posture: confidence.label, note: confidence.className === 'warn' ? 'Directional read from a thinner comp set' : 'List $/sqft sits near nearby sold context', confidence };
+  return { label: 'Premium ask', className: 'hot', score, gauge, posture: confidence.label, note: confidence.className === 'warn' ? 'Directional read from a thinner comp set' : 'List $/sqft is above nearby sold context', confidence };
 }
 
 function enrich(item) {
