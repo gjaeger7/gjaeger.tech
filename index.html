@@ -3,155 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kearney Listing Wizard | Greater Kearney Listing Intelligence</title>
-  <meta name="description" content="A beautiful live-style dashboard for the newest greater Kearney home listings, ownership records, prior sale prices, and price deltas." />
+  <title>St. George Orthodox Church | Kearney, Nebraska</title>
+  <meta name="description" content="A polished prototype website for St. George Orthodox Christian Church in Kearney, Nebraska." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+  <div class="top-ribbon">Prototype concept • Replace sample service times and contact details before public launch</div>
 
-  <header class="hero">
-    <nav class="nav">
-      <a class="brand logo-only" href="#top" aria-label="Kearney Listing Wizard home">
-        <img class="nav-logo" src="KLW_Logo.png" alt="Kearney Listing Wizard logo" />
-      </a>
-      <div class="nav-actions">
-        <a href="#listings">Listings</a>
-        <a href="#transparency">Transparency</a>
-        <a href="#method">Method</a>
-      </div>
+  <header class="nav-shell">
+    <a class="brand" href="#home" aria-label="St. George Orthodox Church home">
+      <span class="brand-seal">✚</span>
+      <span><strong>St. George</strong><em>Orthodox Christian Church</em></span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="#visit">Visit</a>
+      <a href="#services">Services</a>
+      <a href="#faith">Our Faith</a>
+      <a href="#life">Parish Life</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-    <section id="top" class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Kearney • Gibbon • Elm Creek • Pleasanton • Axtell</p>
-        <h2>Pro-Grade Navigation: Filter and organize listings exactly how a seasoned agent would.</h2>
-        <p class="lead">Skip the listing-site scavenger hunt. Listing Wizard brings the newest greater Kearney homes into one sharp view — price, owner clues, sale history, and quick links so you can spot the interesting ones faster.</p>
-        <div class="hero-buttons">
-          <a class="button primary" href="#listings">View the newest 50</a>
-          <a class="button ghost" href="https://www.zillow.com/" target="_blank" rel="noreferrer">Open Zillow</a>
-        </div>
-      </div>
-      <aside class="hero-card wizard-card" aria-label="Dashboard summary">
-        <div class="wizard-stage">
-          <img class="wizard" src="KearneyListingWizardHero.png" alt="Kearney Listing Wizard holding a small home" />
-        </div>
-        <div class="hero-card-content">
-          <div class="sparkle">✦</div>
-          <p class="card-label">Current board</p>
-          <strong id="heroCount">50</strong>
-          <span>recent listings target</span>
-          <div class="mini-stats">
-            <div><b id="avgPrice">—</b><small>Avg list</small></div>
-            <div><b id="topCity">—</b><small>Most active</small></div>
-          </div>
-        </div>
-      </aside>
-    </section>
+    <a class="nav-cta" href="#visit">Plan a Visit</a>
   </header>
 
-  <main>
-    <section class="toolbar-shell" aria-label="Listing controls">
-      <div class="toolbar">
-        <label class="search-wrap">
-          <span>Search</span>
-          <input id="searchInput" type="search" placeholder="Address, city, owner, MLS…" autocomplete="off" />
-        </label>
-        <label>
-          <span>Town</span>
-          <select id="cityFilter"><option value="all">All towns</option></select>
-        </label>
-        <label>
-          <span>Sort</span>
-          <select id="sortSelect">
-            <option value="date-desc">Newest first</option>
-            <option value="price-desc">Highest price</option>
-            <option value="price-asc">Lowest price</option>
-            <option value="delta-desc">Largest gain</option>
-            <option value="deal-desc">Deal temperature</option>
-            <option value="comp-gap-desc">Highest vs comps</option>
-            <option value="days-desc">Longest listed</option>
-          </select>
-        </label>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <div class="icon-card icon-card-one"></div>
+        <div class="icon-card icon-card-two"></div>
+        <div class="gold-disc"></div>
       </div>
-    </section>
-
-    <section class="stats" aria-label="Market summary">
-      <article><span>Total value</span><strong id="totalValue">—</strong><small>priced listings only</small></article>
-      <article><span>Median list</span><strong id="medianPrice">—</strong><small>current asking price</small></article>
-      <article><span>Largest spread</span><strong id="largestDelta">—</strong><small>list minus prior sale</small></article>
-      <article><span>Owner records</span><strong id="ownerCount">—</strong><small>county matches found</small></article>
-    </section>
-
-    <section id="listings" class="section-head">
-      <p class="eyebrow">Most recent 50</p>
-      <h2>Listing cards</h2>
-      <p>Newest homes sit at the top. Each card now experiments with comp proxies, deal temperature, owner signals, days listed, and confidence badges so we can see what actually feels useful.</p>
-    </section>
-
-    <section id="listingGrid" class="listing-grid" aria-live="polite"></section>
-
-
-
-    <section id="transparency" class="transparency">
-      <div class="section-kicker">
-        <p class="eyebrow">How to read the intelligence</p>
-        <h2>Transparent signals, not magic numbers.</h2>
-        <p>Listing Wizard is designed to make property context easier to scan, but every signal has limits. Here’s what the more advanced sections are actually looking at.</p>
+      <div class="hero-inner">
+        <p class="kicker">Antiochian Orthodox Christian Archdiocese • Kearney, Nebraska</p>
+        <h1>Ancient worship. Real community. A place to come and see.</h1>
+        <p class="lead">St. George is an Orthodox Christian parish serving Kearney and the surrounding Central Nebraska communities through prayer, sacramental life, hospitality, and the faith handed down from the apostles.</p>
+        <div class="hero-buttons">
+          <a class="button primary" href="#visit">I’m New Here</a>
+          <a class="button secondary" href="#services">Service Times</a>
+        </div>
       </div>
-      <div class="explain-grid">
-        <article>
-          <span class="explain-icon">⌁</span>
-          <h3>Market Read</h3>
-          <p>A directional pricing read based primarily on list price per square foot compared with nearby sold records. It also considers comp depth, sale recency, new-build/newer-home premiums, and confidence.</p>
-        </article>
-        <article>
-          <span class="explain-icon">◎</span>
-          <h3>Proximity-weighted sold context</h3>
-          <p>Sold records are selected by physical proximity first, then refined by square footage, year built, beds, baths, and sale recency. We start close and expand only when the comp set is too thin.</p>
-        </article>
-        <article>
-          <span class="explain-icon">◫</span>
-          <h3>Confidence levels</h3>
-          <p>Confidence rises when we have multiple nearby sold records with matching property facts. Thin comps, missing square footage, missing year built, or older sales lower confidence.</p>
-        </article>
-        <article>
-          <span class="explain-icon">⌂</span>
-          <h3>New build & property facts</h3>
-          <p>Square footage, beds, baths, year built, photos, brokerage, and agent data are pulled only when an accessible public source exposes them. New builds are marked when source data supports it.</p>
-        </article>
-        <article>
-          <span class="explain-icon">✓</span>
-          <h3>Verification</h3>
-          <p>Listing details are tied back to public sources like Nebraska Realty, Coldwell Banker, county assessor records, or other accessible platforms. If we can’t verify something, the card says so.</p>
-        </article>
-        <article>
-          <span class="explain-icon">!</span>
-          <h3>Known limits</h3>
-          <p>This is not MLS and not an appraisal. Some sites block automated access, some county records are stale, and recent upgrades may not be visible in public data yet. Treat this as a sharper first pass.</p>
-        </article>
-      </div>
+      <aside class="service-panel">
+        <span class="panel-label">This week at St. George</span>
+        <h2>Worship with us</h2>
+        <div class="service-row"><strong>Saturday</strong><span>Great Vespers</span><b>5:00 PM</b></div>
+        <div class="service-row"><strong>Sunday</strong><span>Orthros</span><b>9:00 AM</b></div>
+        <div class="service-row"><strong>Sunday</strong><span>Divine Liturgy</span><b>10:00 AM</b></div>
+        <a class="text-link" href="#calendar">View full parish calendar →</a>
+      </aside>
     </section>
 
-    <section id="method" class="method">
+    <section class="welcome-band">
       <div>
-        <p class="eyebrow">How this board is built</p>
-        <h2>Simple, useful, not pretending to be MLS.</h2>
+        <span>For visitors</span>
+        <strong>You are welcome even if you do not know the service.</strong>
       </div>
-      <p>Listing Wizard delivers high-speed context the moment a property hits your radar. Instead of digging through fragmented data, you get an immediate intelligence briefing that covers the essentials: what’s fresh on the market, precise location details, owner signals, and direct connections to official county records.<br><br>The advanced signals are experimental but increasingly evidence-based: they use verified listing sources, county sale records, property facts, geocoded proximity, and confidence labels to keep the read honest. The goal is not to replace a formal CMA or appraisal — it is to make the first pass faster, clearer, and more transparent.</p>
+      <div>
+        <span>For parishioners</span>
+        <strong>Find services, events, announcements, and giving in one place.</strong>
+      </div>
+      <div>
+        <span>For Central Nebraska</span>
+        <strong>A clear digital front door for people searching for Orthodoxy.</strong>
+      </div>
+    </section>
+
+    <section id="visit" class="section visit-section">
+      <div class="section-copy">
+        <p class="kicker">Plan your visit</p>
+        <h2>First time at an Orthodox church?</h2>
+        <p>Orthodox worship can feel unfamiliar at first — icons, candles, chanting, incense, standing, and ancient prayers. You do not need to know what to do before you come. You can simply be present, listen, and ask questions afterward.</p>
+        <a class="button primary" href="#contact">Ask a question before visiting</a>
+      </div>
+      <div class="visit-grid">
+        <article><span>01</span><h3>Come as you are</h3><p>Dress respectfully and comfortably. Visitors are not expected to know every custom.</p></article>
+        <article><span>02</span><h3>Children are welcome</h3><p>Families are part of parish life. A little movement and sound is normal.</p></article>
+        <article><span>03</span><h3>Stay afterward</h3><p>Coffee hour is often the easiest place to meet people and ask simple questions.</p></article>
+        <article><span>04</span><h3>Communion note</h3><p>Holy Communion is received by Orthodox Christians, but everyone is welcome to pray with us.</p></article>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="section-heading centered">
+        <p class="kicker">Service times</p>
+        <h2>The rhythm of parish life</h2>
+        <p>One of the most important homepage jobs is answering “When is church?” fast. This section could be manually updated or connected to a shared parish calendar.</p>
+      </div>
+      <div class="schedule-cards">
+        <article><small>Saturday evening</small><h3>Great Vespers</h3><p>Evening prayer that prepares the parish for the Lord’s Day.</p><strong>5:00 PM</strong></article>
+        <article><small>Sunday morning</small><h3>Orthros</h3><p>Morning prayers and hymns before the Divine Liturgy.</p><strong>9:00 AM</strong></article>
+        <article><small>Sunday morning</small><h3>Divine Liturgy</h3><p>The central worship service of the Orthodox Church.</p><strong>10:00 AM</strong></article>
+      </div>
+    </section>
+
+    <section id="faith" class="section faith-section">
+      <div class="faith-card">
+        <div class="faith-visual" aria-hidden="true"><span>IC</span><b>XC</b><em>✚</em></div>
+        <div>
+          <p class="kicker">Our faith</p>
+          <h2>The Orthodox Church is ancient Christianity, alive today.</h2>
+          <p>For many people in Central Nebraska, Orthodoxy may be unfamiliar. A good parish website should offer a simple, welcoming starting point: not overwhelming, not watered down, but clear enough that a curious visitor knows what to do next.</p>
+          <div class="faith-links">
+            <a href="#">What is Orthodoxy?</a>
+            <a href="#">What to expect in worship</a>
+            <a href="#">Talk with Father</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="life" class="section life-section">
+      <div class="section-heading">
+        <p class="kicker">Parish life</p>
+        <h2>A living community, not just a Sunday schedule.</h2>
+      </div>
+      <div class="life-layout">
+        <article class="large-life"><span>Hospitality</span><h3>Coffee hour, meals, conversations, and the ordinary work of becoming family.</h3></article>
+        <article><span>Formation</span><h3>Classes and resources for inquirers, catechumens, youth, and adults.</h3></article>
+        <article><span>Feasts</span><h3>The liturgical year gives shape to worship, fasting, celebration, and prayer.</h3></article>
+        <article><span>Service</span><h3>Practical ways to care for one another and the wider Kearney community.</h3></article>
+      </div>
+    </section>
+
+    <section id="calendar" class="section calendar-section">
+      <div class="section-heading centered">
+        <p class="kicker">Upcoming</p>
+        <h2>Calendar and announcements</h2>
+        <p>A real version could use Google Calendar, a website CMS calendar, or a simple weekly update block maintained by a volunteer.</p>
+      </div>
+      <div class="event-list">
+        <article><time>Sun</time><div><h3>Divine Liturgy + Coffee Hour</h3><p>Regular Sunday worship followed by fellowship.</p></div></article>
+        <article><time>Wed</time><div><h3>Inquirer Class</h3><p>A beginner-friendly evening for questions about Orthodox Christianity.</p></div></article>
+        <article><time>Fri</time><div><h3>Parish Work Night</h3><p>Cleaning, projects, setup, and practical service together.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section region-section">
+      <div class="region-card">
+        <p class="kicker">Serving beyond Kearney</p>
+        <h2>A regional parish for Central Nebraska seekers.</h2>
+        <p>Because Orthodox parishes can be far apart, the website should make it clear that people from surrounding communities are not outsiders. St. George can be presented as a spiritual home for Kearney, Hastings, Holdrege, Grand Island, Lexington, and the rural roads in between.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <p class="kicker">Contact</p>
+        <h2>Questions before you visit?</h2>
+        <p>Send a message, ask about the schedule, or let someone know you are planning to come.</p>
+        <div class="contact-grid">
+          <div><span>Location</span><strong>Kearney, Nebraska</strong></div>
+          <div><span>Email</span><strong>info@example-parish.org</strong></div>
+          <div><span>Phone</span><strong>(000) 000-0000</strong></div>
+        </div>
+        <div class="hero-buttons centered-buttons">
+          <a class="button primary" href="mailto:info@example-parish.org">Email the Parish</a>
+          <a class="button secondary" href="#home">Back to Top</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <strong>Kearney Listing Wizard</strong>
-    <span>Newest 50 target • Last refreshed from the local watch file: <time id="updatedAt">May 12, 2026</time></span>
+  <footer class="site-footer">
+    <strong>St. George Orthodox Christian Church</strong>
+    <span>Mock website prototype for design and feature exploration</span>
   </footer>
 
-  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
