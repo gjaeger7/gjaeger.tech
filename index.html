@@ -3,173 +3,419 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>St. George Orthodox Church | Kearney, Nebraska</title>
-  <meta name="description" content="A polished prototype website for St. George Orthodox Christian Church in Kearney, Nebraska." />
+  <title>A Digital Narthex | St. George Website Redesign</title>
+  <meta name="description" content="A strategic presentation for redesigning the St. George Orthodox Christian Church website into a beautiful visitor-first front door." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="top-ribbon">Prototype concept • Replace sample service times and contact details before public launch</div>
+  <div class="sanctuary-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class="nav-shell">
-    <a class="brand" href="#home" aria-label="St. George Orthodox Church home">
-      <span class="brand-seal">✚</span>
-      <span><strong>St. George</strong><em>Orthodox Christian Church</em></span>
+  <header class="topbar">
+    <a class="brand" href="#opening" aria-label="Open first slide">
+      <span class="brand-mark"><img src="st-george-logo.png" alt="St. George Orthodox Christian Church logo" /></span>
+      <span>
+        <strong>St. George Website Redesign</strong>
+        <em>A Digital Narthex</em>
+      </span>
     </a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="#visit">Visit</a>
-      <a href="#services">Services</a>
-      <a href="#faith">Our Faith</a>
-      <a href="#life">Parish Life</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#contact">Contact</a>
+    <nav class="deck-nav" aria-label="Presentation navigation">
+      <a href="#research">Research</a>
+      <a href="#goals">Goals</a>
+      <a href="#portal">Portal</a>
+      <a href="#communities">Communities</a>
+      <a href="#roadmap">Roadmap</a>
     </nav>
-    <a class="nav-cta" href="#visit">Plan a Visit</a>
   </header>
 
-  <main id="home">
-    <section class="hero">
-      <div class="hero-art" aria-hidden="true">
-        <div class="icon-card icon-card-one"></div>
-        <div class="icon-card icon-card-two"></div>
-        <div class="gold-disc"></div>
-      </div>
-      <div class="hero-inner">
-        <p class="kicker">Antiochian Orthodox Christian Archdiocese • Kearney, Nebraska</p>
-        <h1>Ancient worship. Real community. A place to come and see.</h1>
-        <p class="lead">St. George is an Orthodox Christian parish serving Kearney and the surrounding Central Nebraska communities through prayer, sacramental life, hospitality, and the faith handed down from the apostles.</p>
-        <div class="hero-buttons">
-          <a class="button primary" href="#visit">I’m New Here</a>
-          <a class="button secondary" href="#services">Service Times</a>
+  <main class="deck" id="opening">
+    <section class="slide hero-slide">
+      <div class="hero-copy">
+        <div class="hero-parish-lockup">
+          <img src="st-george-logo.png" alt="St. George Orthodox Christian Church logo" />
+          <span>St. George Orthodox Christian Church</span>
+        </div>
+        <p class="kicker">Strategic Vision</p>
+        <h1>A Digital Narthex</h1>
+        <p class="hero-lead">A beautiful, visitor-first website for St. George Orthodox Christian Church in Kearney, Nebraska.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#research">Begin presentation</a>
         </div>
       </div>
-      <aside class="service-panel">
-        <span class="panel-label">This week at St. George</span>
-        <h2>Worship with us</h2>
-        <div class="service-row"><strong>Saturday</strong><span>Great Vespers</span><b>5:00 PM</b></div>
-        <div class="service-row"><strong>Sunday</strong><span>Orthros</span><b>9:00 AM</b></div>
-        <div class="service-row"><strong>Sunday</strong><span>Divine Liturgy</span><b>10:00 AM</b></div>
-        <a class="text-link" href="#calendar">View full parish calendar →</a>
-      </aside>
-    </section>
-
-    <section class="welcome-band">
-      <div>
-        <span>For visitors</span>
-        <strong>You are welcome even if you do not know the service.</strong>
-      </div>
-      <div>
-        <span>For parishioners</span>
-        <strong>Find services, events, announcements, and giving in one place.</strong>
-      </div>
-      <div>
-        <span>For Central Nebraska</span>
-        <strong>A clear digital front door for people searching for Orthodoxy.</strong>
-      </div>
-    </section>
-
-    <section id="visit" class="section visit-section">
-      <div class="section-copy">
-        <p class="kicker">Plan your visit</p>
-        <h2>First time at an Orthodox church?</h2>
-        <p>Orthodox worship can feel unfamiliar at first — icons, candles, chanting, incense, standing, and ancient prayers. You do not need to know what to do before you come. You can simply be present, listen, and ask questions afterward.</p>
-        <a class="button primary" href="#contact">Ask a question before visiting</a>
-      </div>
-      <div class="visit-grid">
-        <article><span>01</span><h3>Come as you are</h3><p>Dress respectfully and comfortably. Visitors are not expected to know every custom.</p></article>
-        <article><span>02</span><h3>Children are welcome</h3><p>Families are part of parish life. A little movement and sound is normal.</p></article>
-        <article><span>03</span><h3>Stay afterward</h3><p>Coffee hour is often the easiest place to meet people and ask simple questions.</p></article>
-        <article><span>04</span><h3>Communion note</h3><p>Holy Communion is received by Orthodox Christians, but everyone is welcome to pray with us.</p></article>
-      </div>
-    </section>
-
-    <section id="services" class="section services-section">
-      <div class="section-heading centered">
-        <p class="kicker">Service times</p>
-        <h2>The rhythm of parish life</h2>
-        <p>One of the most important homepage jobs is answering “When is church?” fast. This section could be manually updated or connected to a shared parish calendar.</p>
-      </div>
-      <div class="schedule-cards">
-        <article><small>Saturday evening</small><h3>Great Vespers</h3><p>Evening prayer that prepares the parish for the Lord’s Day.</p><strong>5:00 PM</strong></article>
-        <article><small>Sunday morning</small><h3>Orthros</h3><p>Morning prayers and hymns before the Divine Liturgy.</p><strong>9:00 AM</strong></article>
-        <article><small>Sunday morning</small><h3>Divine Liturgy</h3><p>The central worship service of the Orthodox Church.</p><strong>10:00 AM</strong></article>
-      </div>
-    </section>
-
-    <section id="faith" class="section faith-section">
-      <div class="faith-card">
-        <div class="faith-visual" aria-hidden="true"><span>IC</span><b>XC</b><em>✚</em></div>
-        <div>
-          <p class="kicker">Our faith</p>
-          <h2>The Orthodox Church is ancient Christianity, alive today.</h2>
-          <p>For many people in Central Nebraska, Orthodoxy may be unfamiliar. A good parish website should offer a simple, welcoming starting point: not overwhelming, not watered down, but clear enough that a curious visitor knows what to do next.</p>
-          <div class="faith-links">
-            <a href="#">What is Orthodoxy?</a>
-            <a href="#">What to expect in worship</a>
-            <a href="#">Talk with Father</a>
-          </div>
+      <div class="icon-panel" aria-label="Orthodox-inspired visual motif">
+        <div class="hero-logo-medallion">
+          <img class="hero-logo" src="st-george-logo.png" alt="St. George Orthodox Christian Church logo" />
         </div>
+        <div class="arch arch-large"></div>
+        <div class="arch arch-left"></div>
+        <div class="arch arch-right"></div>
+        <div class="lamp"></div>
+        <p>Ancient Christian worship in Kearney, Nebraska</p>
       </div>
     </section>
 
-    <section id="life" class="section life-section">
+    <section class="slide thesis-slide">
+      <div>
+        <p class="kicker">The Core Shift</p>
+        <h2>Not a digital bulletin board.</h2>
+      </div>
+      <div class="split-statement">
+        <article>
+          <span>Old habit</span>
+          <h3>Internal announcements first</h3>
+          <p>PDFs, scattered links, dated updates, and parishioner-only items can make the site feel closed before a visitor ever arrives.</p>
+        </article>
+        <article class="featured">
+          <span>New goal</span>
+          <h3>A visitor-first front door</h3>
+          <p>Service times, welcome, visitor guidance, parish story, contact, and Orthodox beauty should be clear within seconds.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" id="research">
       <div class="section-heading">
-        <p class="kicker">Parish life</p>
-        <h2>A living community, not just a Sunday schedule.</h2>
+        <p class="kicker">What We Found</p>
+        <h2>Strong Orthodox parish sites do three things well.</h2>
       </div>
-      <div class="life-layout">
-        <article class="large-life"><span>Hospitality</span><h3>Coffee hour, meals, conversations, and the ordinary work of becoming family.</h3></article>
-        <article><span>Formation</span><h3>Classes and resources for inquirers, catechumens, youth, and adults.</h3></article>
-        <article><span>Feasts</span><h3>The liturgical year gives shape to worship, fasting, celebration, and prayer.</h3></article>
-        <article><span>Service</span><h3>Practical ways to care for one another and the wider Kearney community.</h3></article>
-      </div>
-    </section>
-
-    <section id="calendar" class="section calendar-section">
-      <div class="section-heading centered">
-        <p class="kicker">Upcoming</p>
-        <h2>Calendar and announcements</h2>
-        <p>A real version could use Google Calendar, a website CMS calendar, or a simple weekly update block maintained by a volunteer.</p>
-      </div>
-      <div class="event-list">
-        <article><time>Sun</time><div><h3>Divine Liturgy + Coffee Hour</h3><p>Regular Sunday worship followed by fellowship.</p></div></article>
-        <article><time>Wed</time><div><h3>Inquirer Class</h3><p>A beginner-friendly evening for questions about Orthodox Christianity.</p></div></article>
-        <article><time>Fri</time><div><h3>Parish Work Night</h3><p>Cleaning, projects, setup, and practical service together.</p></div></article>
+      <div class="three-up">
+        <article>
+          <b>1</b>
+          <h3>They welcome outsiders.</h3>
+          <p>They assume the visitor may be curious, nervous, non-Orthodox, or brand new to worship.</p>
+        </article>
+        <article>
+          <b>2</b>
+          <h3>They make worship obvious.</h3>
+          <p>Service times, location, calendar, livestream, and contact are visible without digging.</p>
+        </article>
+        <article>
+          <b>3</b>
+          <h3>They show parish life.</h3>
+          <p>Photos, ministries, education, families, feast days, and fellowship show that the Church is alive.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section region-section">
-      <div class="region-card">
-        <p class="kicker">Serving beyond Kearney</p>
-        <h2>A regional parish for Central Nebraska seekers.</h2>
-        <p>Because Orthodox parishes can be far apart, the website should make it clear that people from surrounding communities are not outsiders. St. George can be presented as a spiritual home for Kearney, Hastings, Holdrege, Grand Island, Lexington, and the rural roads in between.</p>
+    <section class="slide examples-slide">
+      <div class="section-heading">
+        <p class="kicker">Examples Reviewed</p>
+        <h2>Research lessons from other Orthodox websites</h2>
+      </div>
+      <div class="example-grid">
+        <article>
+          <span>Saint Andrew, Riverside</span>
+          <h3>Ancient Faith. Living Community.</h3>
+          <p>A modern Antiochian feel that proves reverent does not have to mean dated.</p>
+        </article>
+        <article>
+          <span>Holy Cross, Williamsport</span>
+          <h3>Come and see.</h3>
+          <p>A clear visitor path that explains the first visit without overwhelming people.</p>
+        </article>
+        <article>
+          <span>St. Dionysios</span>
+          <h3>When is church?</h3>
+          <p>The regular Divine Service schedule is immediately visible.</p>
+        </article>
+        <article>
+          <span>St. Nicholas, Bethlehem</span>
+          <h3>Useful for members.</h3>
+          <p>Detailed services, events, livestreams, and parishioner utility keep the site current.</p>
+        </article>
+        <article>
+          <span>Holy Theotokos, Hawaii</span>
+          <h3>Local warmth.</h3>
+          <p>Parish story, contact, giving, and livestream tools feel specific and personal.</p>
+        </article>
+        <article>
+          <span>Holy Trinity Cathedral, NYC</span>
+          <h3>Breadth of parish life.</h3>
+          <p>Services, youth, education, culture, charity, and fellowship are easy to see.</p>
+        </article>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="contact-card">
-        <p class="kicker">Contact</p>
-        <h2>Questions before you visit?</h2>
-        <p>Send a message, ask about the schedule, or let someone know you are planning to come.</p>
-        <div class="contact-grid">
-          <div><span>Location</span><strong>Kearney, Nebraska</strong></div>
-          <div><span>Email</span><strong>info@example-parish.org</strong></div>
-          <div><span>Phone</span><strong>(000) 000-0000</strong></div>
+    <section class="slide quote-slide">
+      <p class="kicker">Father Cal's Lens</p>
+      <blockquote>
+        <span>"Predictably beautiful and beautifully predictable."</span>
+      </blockquote>
+      <p>The website should make visitors sense what parish life should be: loved, organized, alive, family-friendly, and welcoming.</p>
+    </section>
+
+    <section class="slide" id="goals">
+      <div class="section-heading">
+        <p class="kicker">Redesign Goals</p>
+        <h2>What the new site must communicate fast</h2>
+      </div>
+      <div class="priority-list">
+        <div><strong>Identity</strong><span>St. George Orthodox Christian Church, Antiochian, Kearney, Nebraska.</span></div>
+        <div><strong>Worship</strong><span>Sunday Orthros, Divine Liturgy, Vespers, feast days, calendar.</span></div>
+        <div><strong>Welcome</strong><span>Plan Your Visit, what to expect, children, coffee hour, parking, entrance.</span></div>
+        <div><strong>Beauty</strong><span>Real parish photography, iconographic color, sacred visual restraint.</span></div>
+        <div><strong>Maintenance</strong><span>Mobile-first and easy enough for normal volunteers to update.</span></div>
+      </div>
+    </section>
+
+    <section class="slide visitor-slide">
+      <div>
+        <p class="kicker">Visitor Pathway</p>
+        <h2>Hospitality starts before they arrive.</h2>
+        <p class="body-large">A first-time visitor should not have to decode Orthodox life alone. The site should answer the quiet questions that keep people from walking in.</p>
+      </div>
+      <div class="question-stack">
+        <span>Where do I park?</span>
+        <span>Which door do I use?</span>
+        <span>What do I wear?</span>
+        <span>Can my children come?</span>
+        <span>May non-Orthodox people attend?</span>
+        <span>What happens at Communion?</span>
+      </div>
+    </section>
+
+    <section class="slide identity-slide">
+      <div class="section-heading">
+        <p class="kicker">Parish Identity</p>
+        <h2>Ancient faith, local roots</h2>
+      </div>
+      <div class="identity-board">
+        <article>
+          <h3>Clearly Orthodox</h3>
+          <p>Icons, worship, sacraments, Scripture, Tradition, feast days, and the Divine Liturgy should be presented plainly and beautifully.</p>
+        </article>
+        <article>
+          <h3>Clearly Antiochian</h3>
+          <p>Antioch connects the parish to the place where believers were first called Christians, and to the living Antiochian Archdiocese.</p>
+        </article>
+        <article>
+          <h3>Clearly Kearney</h3>
+          <p>The site should honor Syrian and Lebanese roots, Fr. Nicola Yanney, local families, and Central Nebraska life today.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide plains-slide">
+      <div>
+        <p class="kicker">Kearney Bridge</p>
+        <h2>Ancient faith, Nebraska soil.</h2>
+        <p class="body-large">The redesign should make Orthodoxy feel both ancient and close to home: the same apostolic faith, lived here among Kearney families, students, farmers, professionals, children, converts, and lifelong Orthodox Christians.</p>
+      </div>
+      <div class="bridge-copy">
+        <article>
+          <span>Homepage language</span>
+          <h3>Ancient Christian worship in Kearney, Nebraska.</h3>
+          <p>A direct line that says what the parish is, where it is, and why it matters without sounding like advertising.</p>
+        </article>
+        <article>
+          <span>Visitor language</span>
+          <h3>New to Orthodoxy? Come and see.</h3>
+          <p>A simple path for people who are curious, nervous, returning to church, new to town, or searching for depth.</p>
+        </article>
+        <article>
+          <span>Local language</span>
+          <h3>A parish home on the Great Plains.</h3>
+          <p>The site should feel rooted in Central Nebraska, not like a generic template with an Orthodox label attached.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide heritage-slide">
+      <div class="section-heading">
+        <p class="kicker">Heritage</p>
+        <h2>A frontier Orthodox story belongs on the site.</h2>
+      </div>
+      <div class="heritage-grid">
+        <article>
+          <h3>Syrian and Lebanese roots</h3>
+          <p>St. George can honor the immigrant families who carried the Antiochian Orthodox faith into Nebraska and helped build the parish community.</p>
+        </article>
+        <article>
+          <h3>Fr. Nicola Yanney</h3>
+          <p>The local story can connect to the wider mission of Orthodoxy in North America: priests, families, worship, sacrifice, and endurance on the plains.</p>
+        </article>
+        <article>
+          <h3>Living continuity</h3>
+          <p>The site should make clear that history is not nostalgia. It is the root system feeding a living parish today.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide audience-slide">
+      <div>
+        <p class="kicker">Who This Serves</p>
+        <h2>One parish home, many paths through the door.</h2>
+      </div>
+      <div class="audience-grid">
+        <article><strong>Seekers</strong><span>Plain answers about Orthodoxy, worship, icons, incense, and Communion.</span></article>
+        <article><strong>Families</strong><span>Children welcome, coffee hour, practical first-visit guidance, and family-friendly parish life.</span></article>
+        <article><strong>Students</strong><span>A clear invitation for UNK students and young adults looking for rooted community.</span></article>
+        <article><strong>New residents</strong><span>Easy local discovery for people who just moved to Kearney or Central Nebraska.</span></article>
+        <article><strong>Lifelong Orthodox</strong><span>Service times, feast days, calendar, clergy, giving, and parish life in one dependable place.</span></article>
+        <article><strong>Converts and catechumens</strong><span>Education, classes, recordings, questions, and next steps without confusion.</span></article>
+      </div>
+    </section>
+
+    <section class="slide plains-byzantine-slide">
+      <div>
+        <p class="kicker">Visual Concept</p>
+        <h2>Plains Byzantine</h2>
+        <p class="body-large">A design language that pairs Nebraska restraint with Orthodox richness: open space, warm hospitality, icon gold, deep red, blue depth, real parish photography, and dignified typography.</p>
+      </div>
+      <div class="copy-lines">
+        <p>“Rooted in the ancient Church. At home in Kearney.”</p>
+        <p>“A place for prayer, family, and the life of the Church.”</p>
+        <p>“Come worship with us, ask questions, and stay for coffee hour.”</p>
+      </div>
+    </section>
+
+    <section class="slide aesthetic-slide">
+      <div>
+        <p class="kicker">Visual Direction</p>
+        <h2>The beauty of holiness, translated for the web.</h2>
+      </div>
+      <div class="moodboard">
+        <div class="swatch wine"><span>Deep wine</span></div>
+        <div class="swatch gold"><span>Icon gold</span></div>
+        <div class="swatch ivory"><span>Warm ivory</span></div>
+        <div class="swatch blue"><span>Byzantine blue</span></div>
+      </div>
+      <p class="body-large">The design should feel reverent, warm, and approachable: dignified type, restrained ornament, rich photos, and enough quiet space to breathe.</p>
+    </section>
+
+    <section class="slide mobile-slide">
+      <div class="phone-frame">
+        <div class="phone-top"></div>
+        <div class="phone-card">
+          <span>St. George Orthodox</span>
+          <strong>Divine Liturgy<br>Sunday 10:00 AM</strong>
+          <button>Plan Your Visit</button>
         </div>
-        <div class="hero-buttons centered-buttons">
-          <a class="button primary" href="mailto:info@example-parish.org">Email the Parish</a>
-          <a class="button secondary" href="#home">Back to Top</a>
+        <div class="phone-list">
+          <span>Service Times</span>
+          <span>What to Expect</span>
+          <span>Get Directions</span>
         </div>
       </div>
+      <div>
+        <p class="kicker">Mobile-First</p>
+        <h2>If service times are hard to find on a phone, the site failed.</h2>
+        <p class="body-large">Most visitors will find the parish from a phone search. The redesign must be fast, readable, and direct on small screens.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="portal">
+      <div class="section-heading">
+        <p class="kicker">Public vs. Private</p>
+        <h2>Separate the front door from the family room.</h2>
+      </div>
+      <div class="portal-split">
+        <article>
+          <span>Public Site</span>
+          <h3>For visitors and seekers</h3>
+          <ul>
+            <li>Service times and calendar</li>
+            <li>Plan Your Visit</li>
+            <li>Orthodox Christianity</li>
+            <li>Parish story and clergy</li>
+            <li>Contact, directions, giving</li>
+          </ul>
+        </article>
+        <article>
+          <span>Member Portal</span>
+          <h3>For parishioners</h3>
+          <ul>
+            <li>Directory and family contacts</li>
+            <li>Retreat recordings</li>
+            <li>Community priority board</li>
+            <li>Ministry resources</li>
+            <li>Volunteer schedules</li>
+            <li>Internal announcements</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide communities-slide" id="communities">
+      <div class="section-heading">
+        <p class="kicker">Member Portal Concept</p>
+        <h2>A “Communities” feature can turn feedback into shared stewardship.</h2>
+      </div>
+      <div class="community-board">
+        <article class="community-feature">
+          <span>Digital Priority Board</span>
+          <h3>From suggestion box to parish roadmap</h3>
+          <p>Inside the protected member portal, parishioners can submit ideas, organize them by category, upvote shared priorities, and see what the council chooses to act on.</p>
+        </article>
+        <article>
+          <span>Why it matters</span>
+          <h3>It gives quieter members a real voice.</h3>
+          <p>The portal surfaces consensus without forcing every idea through hallway conversations, duplicate emails, or annual-meeting surprises.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide priority-board-slide">
+      <div class="section-heading">
+        <p class="kicker">How It Works</p>
+        <h2>The loop is simple, charitable, and accountable.</h2>
+      </div>
+      <div class="process-grid">
+        <article><b>1</b><h3>Submit with category</h3><p>Exterior, interior, landscaping, church culture, education, hospitality, youth, maintenance, and other council-approved categories.</p></article>
+        <article><b>2</b><h3>Offer a solution</h3><p>The prompt asks for constructive proposals, not just complaints: “What problem are you seeing, and what would help?”</p></article>
+        <article><b>3</b><h3>Upvote shared priorities</h3><p>Members can support existing ideas, which reduces duplicates and reveals where the parish already agrees.</p></article>
+        <article><b>4</b><h3>Council triage</h3><p>Top ideas are weighed against budget, feasibility, pastoral vision, urgency, and major commitments already underway.</p></article>
+      </div>
+    </section>
+
+    <section class="slide accountability-slide">
+      <div>
+        <p class="kicker">Accountability Loop</p>
+        <h2>“You asked. You upvoted. We budgeted. Here is the result.”</h2>
+        <p class="body-large">The annual meeting becomes the closing loop: completed priorities are shown clearly, selected goals are explained, and highly supported ideas that were not selected receive honest reasoning.</p>
+      </div>
+      <div class="accountability-stack">
+        <span>Transparent prioritization</span>
+        <span>Aligned financial stewardship</span>
+        <span>Fewer mystery decisions</span>
+        <span>Better trust between members and council</span>
+      </div>
+    </section>
+
+    <section class="slide privacy-slide">
+      <p class="kicker">Privacy Rule</p>
+      <h2>The parish directory should never be public.</h2>
+      <p class="body-large">A hidden link is not security. Member contact info, children and youth details, internal notes, private recordings, and member-only governance discussions belong behind real access control with clear approval and opt-out rules.</p>
+      <div class="security-band">
+        <span>Public welcome</span>
+        <span>Private trust</span>
+        <span>Clear permissions</span>
+      </div>
+    </section>
+
+    <section class="slide roadmap-slide" id="roadmap">
+      <div class="section-heading">
+        <p class="kicker">Phased Path</p>
+        <h2>Launch the public site first, then deepen it.</h2>
+      </div>
+      <div class="timeline">
+        <article><b>01</b><h3>Align</h3><p>Agree on visitor-first strategy, core pages, and platform criteria.</p></article>
+        <article><b>02</b><h3>Gather</h3><p>Photos, service times, parish history, clergy bio, ministry info, giving links.</p></article>
+        <article><b>03</b><h3>Prototype</h3><p>Home, Visit, Calendar, Parish Life, About Orthodoxy, Contact.</p></article>
+        <article><b>04</b><h3>Launch</h3><p>Publish the public site, then add a protected parishioner hub with the priority board as a later phase.</p></article>
+      </div>
+    </section>
+
+    <section class="slide closing-slide">
+      <p class="kicker">The Goal</p>
+      <h2>A site worthy of the parish it represents.</h2>
+      <p class="body-large">A beautiful invitation to the weary, a clear guide for the curious, a practical tool for the faithful, and a public witness to Orthodox Christianity in Kearney.</p>
+      <blockquote>"Come and see."</blockquote>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <strong>St. George Orthodox Christian Church</strong>
-    <span>Mock website prototype for design and feature exploration</span>
-  </footer>
 
   <script src="script.js"></script>
 </body>
