@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T11:00:22.459Z",
+  "generatedAt": "2026-05-21T11:00:23.152Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
@@ -310,10 +310,11 @@
     {
       "address": "714 3rd St, Gibbon, NE 68840",
       "mls": "20260658",
-      "confidence": "listing-source verified",
+      "confidence": "needs review",
       "checkedSources": 2,
       "blockedSources": 1,
       "conflicts": [
+        "Nebraska Realty: price",
         "Buffalo assessor: address",
         "Buffalo assessor: owner",
         "Buffalo assessor: previousSaleDate"
@@ -333,7 +334,7 @@
             },
             {
               "field": "price",
-              "matched": true
+              "matched": false
             },
             {
               "field": "mls",
@@ -352,8 +353,8 @@
               "matched": true
             }
           ],
-          "pass": 6,
-          "fail": 0,
+          "pass": 5,
+          "fail": 1,
           "error": null
         },
         {
@@ -1545,8 +1546,8 @@
     }
   ],
   "summary": {
-    "listing-source verified": 8,
+    "listing-source verified": 7,
     "blocked sources": 7,
-    "needs review": 10
+    "needs review": 11
   }
 }
