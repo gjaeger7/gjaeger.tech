@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T20:29:37.544Z",
+  "generatedAt": "2026-05-23T21:29:31.157Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
@@ -181,14 +181,9 @@
       "address": "1306 12th Ave, Kearney, NE 68845",
       "mls": "20260665",
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: sqft",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -196,37 +191,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": false
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 5,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -591,7 +561,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "checks": [],
           "pass": 0,
@@ -656,7 +626,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "checks": [],
           "pass": 0,
@@ -798,71 +768,6 @@
       ]
     },
     {
-      "address": "215 N Mill St, Elm Creek, NE 68836",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCjsr0mlPG9JxUOP/WXsMWUQ==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCjsr0mlPG9JxUOP/WXsMWUQ==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
       "address": "600 B Ave, Axtell, NE 68924",
       "mls": null,
       "confidence": "needs review",
@@ -920,6 +825,71 @@
           "status": "blocked",
           "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "215 N Mill St, Elm Creek, NE 68836",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCjsr0mlPG9JxUOP/WXsMWUQ==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCjsr0mlPG9JxUOP/WXsMWUQ==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 3,
+          "fail": 1,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "checks": [],
           "pass": 0,
           "fail": 0,
@@ -1386,6 +1356,72 @@
       ]
     },
     {
+      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC3B+I7L8lwOeDqj8XqzOqjA==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC3B+I7L8lwOeDqj8XqzOqjA==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
       "address": "4707 10th Avenue Pl, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
@@ -1707,6 +1743,270 @@
           "status": "blocked",
           "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/11272-Maple-Rd-Gibbon-NE-68840/459107792_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "LOT 17th Rd #B, Kearney, NE 68845",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/LOT-17th-Rd-B-Kearney-NE-68845/459156661_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/LOT-17th-Rd-B-Kearney-NE-68845/459156661_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "LOT 17th Rd #A, Kearney, NE 68845",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/LOT-17th-Rd-A-Kearney-NE-68845/459156662_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/LOT-17th-Rd-A-Kearney-NE-68845/459156662_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "LOT 17th Rd #D, Kearney, NE 68845",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/LOT-17th-Rd-D-Kearney-NE-68845/459156658_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/LOT-17th-Rd-D-Kearney-NE-68845/459156658_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "LOT 17th Rd #C, Kearney, NE 68845",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiOvTbivG/1qqrGERv09HPw==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/LOT-17th-Rd-C-Kearney-NE-68845/459156656_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/LOT-17th-Rd-C-Kearney-NE-68845/459156656_zpid/",
           "checks": [],
           "pass": 0,
           "fail": 0,
@@ -2043,6 +2343,6 @@
     }
   ],
   "summary": {
-    "needs review": 30
+    "needs review": 35
   }
 }
