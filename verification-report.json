@@ -1,319 +1,17 @@
 {
-  "generatedAt": "2026-05-23T21:29:31.157Z",
+  "generatedAt": "2026-05-23T22:29:43.003Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
-    {
-      "address": "607 W 25th St, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
-      "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCg1mEN8Dx0zwbn4hNgyW2gA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCg1mEN8Dx0zwbn4hNgyW2gA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/607-W-25th-St-Kearney-NE-68845/111738606_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/607-W-25th-St-Kearney-NE-68845/111738606_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "2604 W 44th St, Kearney, NE 68845",
-      "mls": "20260744",
-      "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
-      "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: agent",
-        "Zillow current snapshot plus assessor address match: sqft",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "agent",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": false
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 6,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC1td1HMClvkM5TlHRtdvLfg==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC1td1HMClvkM5TlHRtdvLfg==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "1306 12th Ave, Kearney, NE 68845",
-      "mls": "20260665",
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCdO/X6ovhFUpj0hXB2pSQPA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCdO/X6ovhFUpj0hXB2pSQPA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/1306-12th-Ave-Kearney-NE-68845/111739042_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/1306-12th-Ave-Kearney-NE-68845/111739042_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "28105 115th Rd, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCfYtInfDpQMutIZCNuHtyPA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCfYtInfDpQMutIZCNuHtyPA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/28105-115th-Rd-Kearney-NE-68845/111733247_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/28105-115th-Rd-Kearney-NE-68845/111733247_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
     {
       "address": "1803 I Ave, Kearney, NE 68847",
       "mls": "20260743",
       "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
+        "Zillow current snapshot plus assessor address match: mls",
+        "Zillow current snapshot plus assessor address match: agent",
+        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: previousSaleDate"
       ],
@@ -322,12 +20,41 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "mls",
+              "matched": false
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "agent",
+              "matched": false
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            },
+            {
+              "field": "yearBuilt",
+              "matched": false
+            }
+          ],
+          "pass": 4,
+          "fail": 3,
           "error": null
         },
         {
@@ -374,11 +101,103 @@
       ]
     },
     {
+      "address": "703 2nd Ave, Axtell, NE 68924",
+      "mls": "20260593",
+      "confidence": "needs review",
+      "checkedSources": 2,
+      "blockedSources": 1,
+      "conflicts": [
+        "Zillow current snapshot plus assessor address match: mls",
+        "Zillow current snapshot plus assessor address match: yearBuilt",
+        "Kearney assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "mls",
+              "matched": false
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            },
+            {
+              "field": "yearBuilt",
+              "matched": false
+            }
+          ],
+          "pass": 4,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Kearney assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513djSZy4oMj4/bDsSl5wA3KfQ==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513djSZy4oMj4/bDsSl5wA3KfQ==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 3,
+          "fail": 1,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
+          "status": "blocked",
+          "httpStatus": 403,
+          "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
       "address": "14 West Ave, Gibbon, NE 68840",
       "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "confidence": "listing-source verified",
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -387,11 +206,28 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [],
-          "pass": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
           "fail": 0,
           "error": null
         },
@@ -442,9 +278,11 @@
       "address": "714 3rd St, Gibbon, NE 68840",
       "mls": "20260658",
       "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
+        "Zillow current snapshot plus assessor address match: mls",
+        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: owner",
         "Buffalo assessor: previousSaleDate"
@@ -454,12 +292,37 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "mls",
+              "matched": false
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            },
+            {
+              "field": "yearBuilt",
+              "matched": false
+            }
+          ],
+          "pass": 4,
+          "fail": 2,
           "error": null
         },
         {
@@ -506,141 +369,11 @@
       ]
     },
     {
-      "address": "703 2nd Ave, Axtell, NE 68924",
-      "mls": "20260593",
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Kearney assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Kearney assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513djSZy4oMj4/bDsSl5wA3KfQ==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513djSZy4oMj4/bDsSl5wA3KfQ==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "2506 W 37th St, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCQF8XT6fvSQESgn6UA/oHNA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCQF8XT6fvSQESgn6UA/oHNA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
-          "status": "blocked",
-          "httpStatus": 403,
-          "finalUrl": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
       "address": "1311 E 33rd Dr, Kearney, NE 68847",
       "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "confidence": "listing-source verified",
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -649,11 +382,28 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [],
-          "pass": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
           "fail": 0,
           "error": null
         },
@@ -691,7 +441,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "checks": [],
           "pass": 0,
@@ -758,7 +508,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "checks": [],
           "pass": 0,
@@ -890,71 +640,6 @@
           "status": "blocked",
           "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "1322 11th Ave, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC39C5g8nU4pIYb2h1u0TVvQ==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC39C5g8nU4pIYb2h1u0TVvQ==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "checks": [],
           "pass": 0,
           "fail": 0,
@@ -1422,202 +1107,6 @@
       ]
     },
     {
-      "address": "4707 10th Avenue Pl, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: address",
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCkpCH3zapLUmiPCsRZi9kOw==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCkpCH3zapLUmiPCsRZi9kOw==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": false
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 2,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "5907 6th Ave, Kearney, NE 68845",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCLj4UMci40HIvwiREgwc8tQ==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCLj4UMci40HIvwiREgwc8tQ==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/5907-6th-Ave-Kearney-NE-68845/126695598_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/5907-6th-Ave-Kearney-NE-68845/126695598_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "4 Willow Ln, Kearney, NE 68845",
-      "mls": "20260730",
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCqdjoTzPXdAqZULJQjrGEsg==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCqdjoTzPXdAqZULJQjrGEsg==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/4-Willow-Ln-Kearney-NE-68845/111737083_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/4-Willow-Ln-Kearney-NE-68845/111737083_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
       "address": "1730 E 16th St, Kearney, NE 68847",
       "mls": null,
       "confidence": "needs review",
@@ -1676,6 +1165,333 @@
           "status": "blocked",
           "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1730-E-16th-St-Kearney-NE-68847/111735843_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCZ2sXes+JXQGFU6FxmbvEyg==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCZ2sXes+JXQGFU6FxmbvEyg==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 3,
+          "fail": 1,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: address",
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 2,
+          "fail": 2,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "3 Golfside Dr, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Buffalo assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Buffalo assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC/QrkZScNrSeEkxAra6rt2w==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC/QrkZScNrSeEkxAra6rt2w==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 3,
+          "fail": 1,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
+      "conflicts": [
+        "Kearney assessor: previousSaleDate"
+      ],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Zillow current snapshot plus assessor address match",
+          "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "county",
+          "name": "Kearney assessor",
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513dL8mjTgxwAlFYQ0WHu3SiTA==",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513dL8mjTgxwAlFYQ0WHu3SiTA==",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "owner",
+              "matched": true
+            },
+            {
+              "field": "previousSale",
+              "matched": true
+            },
+            {
+              "field": "previousSaleDate",
+              "matched": false
+            }
+          ],
+          "pass": 3,
+          "fail": 1,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
           "checks": [],
           "pass": 0,
           "fail": 0,
@@ -2013,336 +1829,10 @@
           "error": null
         }
       ]
-    },
-    {
-      "address": "27 Golfside Dr, Pleasanton, NE 68866",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: address",
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": false
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 2,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "32365 322nd Rd, Pleasanton, NE 68866",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCZ2sXes+JXQGFU6FxmbvEyg==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCZ2sXes+JXQGFU6FxmbvEyg==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "7 Golfside Dr, Pleasanton, NE 68866",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: address",
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCzin5vT1K71kznve1voaCdA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": false
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 2,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "3 Golfside Dr, Pleasanton, NE 68866",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Buffalo assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Buffalo assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC/QrkZScNrSeEkxAra6rt2w==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijC/QrkZScNrSeEkxAra6rt2w==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "address": "708 C Ave, Axtell, NE 68924",
-      "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
-      "conflicts": [
-        "Kearney assessor: previousSaleDate"
-      ],
-      "sources": [
-        {
-          "type": "listing",
-          "name": "Zillow current snapshot plus assessor address match",
-          "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        },
-        {
-          "type": "county",
-          "name": "Kearney assessor",
-          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513dL8mjTgxwAlFYQ0WHu3SiTA==",
-          "status": "checked",
-          "httpStatus": 200,
-          "finalUrl": "https://nebraskaassessorsonline.us/propdetail.aspx?e8qqO6axHIpUoo9hW4Y6DuuS42mr513dL8mjTgxwAlFYQ0WHu3SiTA==",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "owner",
-              "matched": true
-            },
-            {
-              "field": "previousSale",
-              "matched": true
-            },
-            {
-              "field": "previousSaleDate",
-              "matched": false
-            }
-          ],
-          "pass": 3,
-          "fail": 1,
-          "error": null
-        },
-        {
-          "type": "zillow",
-          "name": "Zillow",
-          "url": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
-          "status": "blocked",
-          "httpStatus": 429,
-          "finalUrl": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
-          "error": null
-        }
-      ]
     }
   ],
   "summary": {
-    "needs review": 35
+    "needs review": 24,
+    "listing-source verified": 2
   }
 }

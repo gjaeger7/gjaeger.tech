@@ -1,61 +1,7 @@
 {
-  "generatedAt": "2026-05-23T21:29:00.249Z",
+  "generatedAt": "2026-05-23T22:29:00.737Z",
   "apply": true,
   "enriched": [
-    {
-      "address": "2604 W 44th St, Kearney, NE 68845",
-      "dateListed": "2026-05-21",
-      "owner": "PELTZ, CHARLES L &~KIMBERLY K GRANTEE",
-      "previousSale": 222500
-    },
-    {
-      "address": "2506 W 37th St, Kearney, NE 68845",
-      "dateListed": "2026-05-19",
-      "owner": "FLEECS, JACOB B & WEST, KATHERINE H",
-      "previousSale": 625000
-    },
-    {
-      "address": "1306 12th Ave, Kearney, NE 68845",
-      "dateListed": "2026-05-21",
-      "owner": "BASSETT, KATHERINE & BASSETT, WILLIAM C/O BASSETT, KATHERINE",
-      "previousSale": 252500
-    },
-    {
-      "address": "28105 115th Rd, Kearney, NE 68845",
-      "dateListed": "2026-05-21",
-      "owner": "SMASH FACTOR, LLC",
-      "previousSale": 515000
-    },
-    {
-      "address": "1322 11th Ave, Kearney, NE 68845",
-      "dateListed": "2026-05-14",
-      "owner": "HOLBROOK, COOPER",
-      "previousSale": 224500
-    },
-    {
-      "address": "4707 10th Avenue Pl, Kearney, NE 68845",
-      "dateListed": "2026-01-22",
-      "owner": "FONG, DANIEL W & COOK-FONG, SANDRA K",
-      "previousSale": 230000
-    },
-    {
-      "address": "607 W 25th St, Kearney, NE 68845",
-      "dateListed": "2026-05-23",
-      "owner": "BRUNER, SARA M & NATHAN",
-      "previousSale": 104000
-    },
-    {
-      "address": "5907 6th Ave, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "DUBBS, WENDALL R & SALLY J CO-TRUSTEES OF THE DUBBS REVOCABLE LIVING TRUST",
-      "previousSale": 85500
-    },
-    {
-      "address": "4 Willow Ln, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "MCCRACKEN, WILLIAM R &~ANNE M GRANTEE",
-      "previousSale": 125500
-    },
     {
       "address": "1311 E 33rd Dr, Kearney, NE 68847",
       "dateListed": "2026-05-16",
@@ -103,6 +49,54 @@
       "dateListed": "Listed date unavailable",
       "owner": "RUNGE, GAROLD R & DONNA J GRANTEE",
       "previousSale": 137000
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "dateListed": "Listed date unavailable",
+      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
+      "previousSale": 157750
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "dateListed": "Listed date unavailable",
+      "owner": "SWIER, TRAVIS & SWIER, KATHERINE",
+      "previousSale": 623000
+    },
+    {
+      "address": "311 W Cedar St, Pleasanton, NE 68866",
+      "dateListed": "2026-05-07",
+      "owner": "RIESSLAND, BRENT A.",
+      "previousSale": 102500
+    },
+    {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "dateListed": "Listed date unavailable",
+      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
+      "previousSale": 157750
+    },
+    {
+      "address": "3 Golfside Dr, Pleasanton, NE 68866",
+      "dateListed": "Listed date unavailable",
+      "owner": "FRITZ, CYNTHIA R",
+      "previousSale": 481000
+    },
+    {
+      "address": "600 B Ave, Axtell, NE 68924",
+      "dateListed": "2026-05-16",
+      "owner": "HAMMOND, ASHLEY BEAU",
+      "previousSale": 141500
+    },
+    {
+      "address": "703 2nd Ave, Axtell, NE 68924",
+      "dateListed": "2026-05-20",
+      "owner": "WALZ, LANDON C. & NICOLE A.",
+      "previousSale": 210000
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "dateListed": "Listed date unavailable",
+      "owner": "KROPP, JAY W. & MEYERS, ASHLEY R.",
+      "previousSale": 275000
     },
     {
       "address": "14 West Ave, Gibbon, NE 68840",
@@ -163,54 +157,6 @@
       "dateListed": "Listed date unavailable",
       "owner": "CARMAN, JOSEPH R & KELLY J GRANTEE",
       "previousSale": 114800
-    },
-    {
-      "address": "27 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
-      "previousSale": 157750
-    },
-    {
-      "address": "32365 322nd Rd, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "SWIER, TRAVIS & SWIER, KATHERINE",
-      "previousSale": 623000
-    },
-    {
-      "address": "311 W Cedar St, Pleasanton, NE 68866",
-      "dateListed": "2026-05-07",
-      "owner": "RIESSLAND, BRENT A.",
-      "previousSale": 102500
-    },
-    {
-      "address": "7 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
-      "previousSale": 157750
-    },
-    {
-      "address": "3 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "FRITZ, CYNTHIA R",
-      "previousSale": 481000
-    },
-    {
-      "address": "600 B Ave, Axtell, NE 68924",
-      "dateListed": "2026-05-16",
-      "owner": "HAMMOND, ASHLEY BEAU",
-      "previousSale": 141500
-    },
-    {
-      "address": "703 2nd Ave, Axtell, NE 68924",
-      "dateListed": "2026-05-20",
-      "owner": "WALZ, LANDON C. & NICOLE A.",
-      "previousSale": 210000
-    },
-    {
-      "address": "708 C Ave, Axtell, NE 68924",
-      "dateListed": "Listed date unavailable",
-      "owner": "KROPP, JAY W. & MEYERS, ASHLEY R.",
-      "previousSale": 275000
     }
   ],
   "skipped": [
@@ -222,69 +168,6 @@
       "hasOwner": false,
       "hasPreviousSale": false,
       "hasDetailUrl": false
-    },
-    {
-      "address": "20460 Maple Rd, Gibbon, NE 68840",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "Listed date unavailable",
-      "hasOwner": true,
-      "hasPreviousSale": false,
-      "hasDetailUrl": true
-    },
-    {
-      "address": "0 Keystone Rd, Gibbon, NE 68840",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "Listed date unavailable",
-      "hasOwner": true,
-      "hasPreviousSale": false,
-      "hasDetailUrl": true
-    },
-    {
-      "address": "45655 67th Rd, Gibbon, NE 68840",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "2024-10-02",
-      "hasOwner": false,
-      "hasPreviousSale": false,
-      "hasDetailUrl": false
-    },
-    {
-      "address": "1735 Keystone Rd, Gibbon, NE 68840",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "Listed date unavailable",
-      "hasOwner": false,
-      "hasPreviousSale": false,
-      "hasDetailUrl": true
-    },
-    {
-      "address": "125 W Pacific Dr, Elm Creek, NE 68836",
-      "reason": "missing required field after enrichment",
-      "hasPrice": false,
-      "dateListed": "2026-04-23",
-      "hasOwner": true,
-      "hasPreviousSale": true,
-      "hasDetailUrl": true
-    },
-    {
-      "address": "LOT N Eagle Rdg, Kearney, NE 68845",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "Listed date unavailable",
-      "hasOwner": false,
-      "hasPreviousSale": false,
-      "hasDetailUrl": false
-    },
-    {
-      "address": "LOT Eagle Rd #B, Kearney, NE 68845",
-      "reason": "missing required field after enrichment",
-      "hasPrice": true,
-      "dateListed": "Listed date unavailable",
-      "hasOwner": false,
-      "hasPreviousSale": false,
-      "hasDetailUrl": true
     },
     {
       "address": "Prairie Hls, Pleasanton, NE 68866",
@@ -348,7 +231,61 @@
       "hasOwner": false,
       "hasPreviousSale": false,
       "hasDetailUrl": false
+    },
+    {
+      "address": "20460 Maple Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": true,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "0 Keystone Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": true,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "45655 67th Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "2024-10-01",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "1735 Keystone Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "LOT N Eagle Rdg, Kearney, NE 68845",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "LOT Eagle Rd #B, Kearney, NE 68845",
+      "reason": "missing required field after enrichment",
+      "hasPrice": true,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
     }
   ],
-  "publishedCount": 35
+  "publishedCount": 26
 }
