@@ -1,165 +1,29 @@
 {
-  "generatedAt": "2026-05-23T23:28:58.497Z",
-  "apply": true,
-  "enriched": [
+  "generatedAt": "2026-05-23T23:46:44.878Z",
+  "apply": false,
+  "approvedKept": 26,
+  "enriched": [],
+  "skipped": [
     {
       "address": "1311 E 33rd Dr, Kearney, NE 68847",
-      "dateListed": "2026-05-16",
-      "owner": "SAWIN, JACQUELINE J GRANTEE",
-      "previousSale": 112900
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "6905 M Avenue Pl, Kearney, NE 68847",
-      "dateListed": "2026-05-16",
-      "owner": "PENNINGTON, MICHAEL W & ALEXIS M",
-      "previousSale": 203800
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "1803 I Ave, Kearney, NE 68847",
-      "dateListed": "2026-05-21",
-      "owner": "BOLIN, CHASE J.",
-      "previousSale": 120000
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "314 Central Ave, Kearney, NE 68847",
-      "dateListed": "2026-04-29",
-      "owner": "PUSH, WM EARL & CINDY L GRANTEE",
-      "previousSale": 189000
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "320 E 27th St, Kearney, NE 68847",
-      "dateListed": "2026-04-29",
-      "owner": "HOOTS, SHAY M",
-      "previousSale": 193000
+      "reason": "already approved; kept existing listing without rechecking"
     },
-    {
-      "address": "6308 Q Avenue Pl, Kearney, NE 68847",
-      "dateListed": "2026-05-14",
-      "owner": "NAU, DALLAS M & ANNE M",
-      "previousSale": 199900
-    },
-    {
-      "address": "3703 E Ave, Kearney, NE 68847",
-      "dateListed": "2026-05-12",
-      "owner": "SMB RENTALS, LLC",
-      "previousSale": 175000
-    },
-    {
-      "address": "1730 E 16th St, Kearney, NE 68847",
-      "dateListed": "Listed date unavailable",
-      "owner": "RUNGE, GAROLD R & DONNA J GRANTEE",
-      "previousSale": 137000
-    },
-    {
-      "address": "27 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
-      "previousSale": 157750
-    },
-    {
-      "address": "32365 322nd Rd, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "SWIER, TRAVIS & SWIER, KATHERINE",
-      "previousSale": 623000
-    },
-    {
-      "address": "311 W Cedar St, Pleasanton, NE 68866",
-      "dateListed": "2026-05-07",
-      "owner": "RIESSLAND, BRENT A.",
-      "previousSale": 102500
-    },
-    {
-      "address": "7 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "WILKE, LLOYD A & SHERRYL J GRANTEE",
-      "previousSale": 157750
-    },
-    {
-      "address": "3 Golfside Dr, Pleasanton, NE 68866",
-      "dateListed": "Listed date unavailable",
-      "owner": "FRITZ, CYNTHIA R",
-      "previousSale": 481000
-    },
-    {
-      "address": "600 B Ave, Axtell, NE 68924",
-      "dateListed": "2026-05-16",
-      "owner": "HAMMOND, ASHLEY BEAU",
-      "previousSale": 141500
-    },
-    {
-      "address": "703 2nd Ave, Axtell, NE 68924",
-      "dateListed": "2026-05-20",
-      "owner": "WALZ, LANDON C. & NICOLE A.",
-      "previousSale": 210000
-    },
-    {
-      "address": "708 C Ave, Axtell, NE 68924",
-      "dateListed": "Listed date unavailable",
-      "owner": "KROPP, JAY W. & MEYERS, ASHLEY R.",
-      "previousSale": 275000
-    },
-    {
-      "address": "14 West Ave, Gibbon, NE 68840",
-      "dateListed": "2026-05-20",
-      "owner": "LABRIE, WALTER L III & LYNN M",
-      "previousSale": 135000
-    },
-    {
-      "address": "714 3rd St, Gibbon, NE 68840",
-      "dateListed": "2026-05-20",
-      "owner": "REMM, JASON D & REMM, BETHANY C PO BOX",
-      "previousSale": 146000
-    },
-    {
-      "address": "11272 Maple Rd, Gibbon, NE 68840",
-      "dateListed": "Listed date unavailable",
-      "owner": "KIMBLE LEWIS QUARTER HORSES, LLC",
-      "previousSale": 149100
-    },
-    {
-      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
-      "dateListed": "2026-03-08",
-      "owner": "VELASQUEZ VELASQUEZ, JOSE ALBERTO",
-      "previousSale": 5000
-    },
-    {
-      "address": "215 N Mill St, Elm Creek, NE 68836",
-      "dateListed": "2026-05-15",
-      "owner": "JOURNEY, VICTOR & CARLA GRANTEE",
-      "previousSale": 13500
-    },
-    {
-      "address": "W Elm Ave, Elm Creek, NE 68836",
-      "dateListed": "2026-03-10",
-      "owner": "CRISS, RONALD C. & CAROL~A. GRANTEE",
-      "previousSale": 95000
-    },
-    {
-      "address": "LOT 17th Rd #B, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "CARMAN, JOSEPH R & KELLY J GRANTEE",
-      "previousSale": 114800
-    },
-    {
-      "address": "LOT 17th Rd #A, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "CARMAN, JOSEPH R & KELLY J GRANTEE",
-      "previousSale": 114800
-    },
-    {
-      "address": "LOT 17th Rd #D, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "CARMAN, JOSEPH R & KELLY J GRANTEE",
-      "previousSale": 114800
-    },
-    {
-      "address": "LOT 17th Rd #C, Kearney, NE 68845",
-      "dateListed": "Listed date unavailable",
-      "owner": "CARMAN, JOSEPH R & KELLY J GRANTEE",
-      "previousSale": 114800
-    }
-  ],
-  "skipped": [
     {
       "address": "41 Summerhaven Lk, Kearney, NE 68847",
       "reason": "missing required field after enrichment",
@@ -168,6 +32,30 @@
       "hasOwner": false,
       "hasPreviousSale": false,
       "hasDetailUrl": false
+    },
+    {
+      "address": "6308 Q Avenue Pl, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "3703 E Ave, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1730 E 16th St, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "311 W Cedar St, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "Prairie Hls, Pleasanton, NE 68866",
@@ -179,6 +67,14 @@
       "hasDetailUrl": false
     },
     {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "3 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
       "address": "816 20th Rd, Axtell, NE 68924",
       "reason": "missing required field after enrichment",
       "hasPrice": true,
@@ -188,6 +84,14 @@
       "hasDetailUrl": false
     },
     {
+      "address": "600 B Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "703 2nd Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
       "address": "688 21st Rd, Axtell, NE 68924",
       "reason": "missing required field after enrichment",
       "hasPrice": true,
@@ -195,6 +99,10 @@
       "hasOwner": false,
       "hasPreviousSale": false,
       "hasDetailUrl": false
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "2 Quail Run, Axtell, NE 68924",
@@ -233,6 +141,14 @@
       "hasDetailUrl": false
     },
     {
+      "address": "14 West Ave, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "714 3rd St, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
       "address": "20460 Maple Rd, Gibbon, NE 68840",
       "reason": "missing required field after enrichment",
       "hasPrice": true,
@@ -240,6 +156,10 @@
       "hasOwner": true,
       "hasPreviousSale": false,
       "hasDetailUrl": true
+    },
+    {
+      "address": "11272 Maple Rd, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "0 Keystone Rd, Gibbon, NE 68840",
@@ -267,6 +187,34 @@
       "hasOwner": false,
       "hasPreviousSale": false,
       "hasDetailUrl": true
+    },
+    {
+      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "215 N Mill St, Elm Creek, NE 68836",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "W Elm Ave, Elm Creek, NE 68836",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "LOT 17th Rd #B, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "LOT 17th Rd #A, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "LOT 17th Rd #D, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "LOT 17th Rd #C, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
     },
     {
       "address": "LOT N Eagle Rdg, Kearney, NE 68845",
