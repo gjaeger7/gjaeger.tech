@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-23T23:46:44.878Z",
-  "apply": false,
-  "approvedKept": 26,
+  "generatedAt": "2026-05-23T23:51:29.355Z",
+  "apply": true,
+  "approvedKept": 35,
   "enriched": [],
   "skipped": [
     {
@@ -235,5 +235,5 @@
       "hasDetailUrl": true
     }
   ],
-  "publishedCount": 26
+  "publishedCount": 35
 }
