@@ -85,6 +85,9 @@ function verifyCandidate(candidate, sourceResults) {
   const passes = [];
   const priceValue = parsePrice(candidate.price || candidate.priceValue || candidate.listingPrice);
   const priceDigits = priceValue ? String(priceValue) : null;
+  const hasOwner = Boolean(candidate.owner && candidate.owner !== 'Not available');
+  const hasPriorSale = Boolean(parsePrice(candidate.previousSale));
+  const hasCountyRecord = Boolean(candidate.detailUrl && hasOwner && hasPriorSale);
 
   for (const source of sourceResults) {
     if (source.status !== 'checked') continue;
@@ -111,10 +114,29 @@ function verifyCandidate(candidate, sourceResults) {
 
   const listingSource = sourceResults.find((source) => source.type === 'listing' && source.status === 'checked');
   const listingPass = passes.some((pass) => pass.fields.includes('address') && (pass.fields.includes('price') || pass.fields.includes('mls')));
+  const countySource = sourceResults.find((source) => source.type === 'county' && source.status === 'checked');
+  const countyAddressPass = passes.some((pass) => /assessor/i.test(pass.source) && pass.fields.includes('address'));
   return {
-    accepted: Boolean(candidate.address && (candidate.price || candidate.priceValue) && candidate.zillowUrl && listingSource && listingPass && !failures.some((f) => /listing.*address/i.test(f))),
+    accepted: Boolean(
+      candidate.address
+      && (candidate.price || candidate.priceValue)
+      && candidate.zillowUrl
+      && listingSource
+      && listingPass
+      && hasCountyRecord
+      && countySource
+      && countyAddressPass
+      && !failures.some((f) => /listing.*address/i.test(f))
+    ),
     passes,
-    failures,
+    failures: [
+      ...failures,
+      ...(!hasOwner ? ['missing owner'] : []),
+      ...(!hasPriorSale ? ['missing previous sale'] : []),
+      ...(!candidate.detailUrl ? ['missing assessor detail URL'] : []),
+      ...(!countySource ? ['assessor source not checked'] : []),
+      ...(countySource && !countyAddressPass ? ['assessor address not verified'] : []),
+    ],
     blockedSources: sourceResults.filter((source) => source.status === 'blocked').map((source) => source.name),
   };
 }
@@ -160,7 +182,7 @@ function buildListing(candidate) {
 const listings = await readListings();
 const watch = JSON.parse(await fs.readFile(WATCH_PATH, 'utf8'));
 const existingKeys = new Set(listings.flatMap((item) => [normalize(item.address), normalizeUrl(item.zillowUrl), item.mls ? `mls:${item.mls}` : null].filter(Boolean)));
-const candidates = [...(watch.pendingSiteIngest || []), ...(watch.unverifiedCandidates || [])]
+const candidates = [...(watch.pendingSiteIngest || [])]
   .filter((candidate) => candidate && candidate.address && candidate.zillowUrl)
   .filter((candidate) => !existingKeys.has(normalize(candidate.address)) && !existingKeys.has(normalizeUrl(candidate.zillowUrl)) && !(candidate.mls && existingKeys.has(`mls:${candidate.mls}`)));
 
