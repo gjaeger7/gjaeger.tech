@@ -26,6 +26,18 @@ function formatPrice(value) { const n = parsePrice(value); return n ? '$' + n.to
 function cityFromAddress(address = '') { return String(address).split(',')[1]?.trim() || ''; }
 function countyFor(item) { return normalize(item.address).includes('axtell') ? 'Kearney' : (item.county || 'Buffalo'); }
 function streetQuery(address = '') { return String(address).split(',')[0].replace(/\bTRAILER\b.*$/i, '').replace(/\bLOT\b/gi, '').replace(/#\w+/g, '').trim(); }
+function listingKeys(item = {}) {
+  return [
+    item.address ? 'address:' + normalize(item.address) : null,
+    item.zillowUrl ? 'url:' + normalizeUrl(item.zillowUrl) : null,
+    item.mls ? 'mls:' + String(item.mls).trim().toLowerCase() : null,
+  ].filter(Boolean);
+}
+function sortListings(listings) {
+  return [...listings].sort((a, b) => {
+    return String(b.dateSort || '').localeCompare(String(a.dateSort || ''));
+  });
+}
 function htmlText(html = '') {
   return String(html).replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
@@ -127,13 +139,24 @@ const byAddress = new Map();
 for (const source of [history, existing, watch.seenListings || [], watch.pendingSiteIngest || [], watch.unverifiedCandidates || []]) {
   for (const item of source) byAddress.set(normalize(item.address), mergeByAddress(byAddress.get(normalize(item.address)), item));
 }
-const report = { generatedAt: new Date().toISOString(), apply: APPLY, enriched: [], skipped: [] };
-const output = [];
+const report = { generatedAt: new Date().toISOString(), apply: APPLY, approvedKept: existing.length, enriched: [], skipped: [] };
+const output = [...existing];
+const approvedKeys = new Set(output.flatMap(listingKeys));
 const seenUrls = new Set();
 for (const base of snapshot.targetListings || []) {
-  if (output.length >= MAX_LISTINGS) break;
   if (!base.address || !base.zillowUrl || seenUrls.has(normalizeUrl(base.zillowUrl))) continue;
+  seenUrls.add(normalizeUrl(base.zillowUrl));
+  const keys = listingKeys(base);
+  if (keys.some((key) => approvedKeys.has(key))) {
+    report.skipped.push({ address: base.address, reason: 'already approved; kept existing listing without rechecking' });
+    continue;
+  }
   const merged = mergeByAddress(byAddress.get(normalize(base.address)), base);
+  const mergedKeys = listingKeys(merged);
+  if (mergedKeys.some((key) => approvedKeys.has(key))) {
+    report.skipped.push({ address: merged.address, reason: 'already approved after metadata merge; kept existing listing without rechecking' });
+    continue;
+  }
   const priceValue = parsePrice(merged.price || merged.priceValue);
   const dateSort = absoluteListingDate(merged.dateListed, snapshot.fetchedAtUtc) || absoluteListingDate(merged.firstSeenUtc, snapshot.fetchedAtUtc);
   const dateListed = dateSort || merged.dateListed || 'Listed date unavailable';
@@ -168,9 +191,10 @@ for (const base of snapshot.targetListings || []) {
     propertyFactsSource: 'Zillow current snapshot',
   };
   output.push(listing); seenUrls.add(normalizeUrl(merged.zillowUrl));
+  for (const key of listingKeys(listing)) approvedKeys.add(key);
   report.enriched.push({ address: listing.address, dateListed, owner: listing.owner, previousSale: listing.previousSale });
 }
-output.sort((a, b) => String(b.dateSort || '').localeCompare(String(a.dateSort || '')));
-if (APPLY) await fs.writeFile(DATA_PATH, 'window.HOUSE_LISTINGS = ' + JSON.stringify(output, null, 2) + ';\n');
-await fs.writeFile(REPORT_PATH, JSON.stringify({ ...report, publishedCount: output.length }, null, 2) + '\n');
-console.log(JSON.stringify({ apply: APPLY, publishedCount: output.length, enriched: report.enriched.length, skipped: report.skipped.length }, null, 2));
+const published = sortListings(output).slice(0, MAX_LISTINGS);
+if (APPLY) await fs.writeFile(DATA_PATH, 'window.HOUSE_LISTINGS = ' + JSON.stringify(published, null, 2) + ';\n');
+await fs.writeFile(REPORT_PATH, JSON.stringify({ ...report, publishedCount: published.length }, null, 2) + '\n');
+console.log(JSON.stringify({ apply: APPLY, approvedKept: existing.length, publishedCount: published.length, enriched: report.enriched.length, skipped: report.skipped.length }, null, 2));
