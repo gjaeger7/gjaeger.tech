@@ -1,7 +1,773 @@
 {
-  "generatedAt": "2026-05-22T11:00:21.547Z",
+  "generatedAt": "2026-05-23T13:32:59.926Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
+    {
+      "address": "L1b2 Craneview 3rd Subdivison, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            }
+          ],
+          "pass": 3,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/L1b2-Craneview-3rd-Subdivison-Axtell-NE-68924/2067504041_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/L1b2-Craneview-3rd-Subdivison-Axtell-NE-68924/2067504041_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "3 Quail Run, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/3-Quail-Run-Axtell-NE-68924/459675564_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/3-Quail-Run-Axtell-NE-68924/459675564_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "4 Quail Run, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/4-Quail-Run-Axtell-NE-68924/459675590_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/4-Quail-Run-Axtell-NE-68924/459675590_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "2 Quail Run, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/2-Quail-Run-Axtell-NE-68924/459675563_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/2-Quail-Run-Axtell-NE-68924/459675563_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "Prairie Hls, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/Prairie-Hls-Pleasanton-NE-68866/459108910_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/Prairie-Hls-Pleasanton-NE-68866/459108910_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "311 W Cedar St, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/311-W-Cedar-St-Pleasanton-NE-68866/243039655_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/311-W-Cedar-St-Pleasanton-NE-68866/243039655_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            }
+          ],
+          "pass": 3,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "mls": null,
+      "confidence": "blocked sources",
+      "checkedSources": 0,
+      "blockedSources": 2,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "28105 115th Rd, Kearney, NE 68845",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            }
+          ],
+          "pass": 3,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/28105-115th-Rd-Kearney-NE-68845/111733247_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/28105-115th-Rd-Kearney-NE-68845/111733247_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "W Elm Ave, Elm Creek, NE 68836",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/W-Elm-Ave-Elm-Creek-NE-68836/2057893501_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/W-Elm-Ave-Elm-Creek-NE-68836/2057893501_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "215 N Mill St, Elm Creek, NE 68836",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "1730 E 16th St, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            }
+          ],
+          "pass": 3,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/1730-E-16th-St-Kearney-NE-68847/111735843_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/1730-E-16th-St-Kearney-NE-68847/111735843_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "41 Summerhaven Lk, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/41-Summerhaven-Lk-Kearney-NE-68847/113886418_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/41-Summerhaven-Lk-Kearney-NE-68847/113886418_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "320 E 27th St, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/320-E-27th-St-Kearney-NE-68847/243042108_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/320-E-27th-St-Kearney-NE-68847/243042108_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "314 Central Ave, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/314-Central-Ave-Kearney-NE-68847/243040531_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/314-Central-Ave-Kearney-NE-68847/243040531_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "address": "1311 E 33rd Dr, Kearney, NE 68847",
+      "mls": null,
+      "confidence": "listing-source verified",
+      "checkedSources": 1,
+      "blockedSources": 1,
+      "conflicts": [],
+      "sources": [
+        {
+          "type": "listing",
+          "name": "Verified public listing source",
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "status": "checked",
+          "httpStatus": 200,
+          "finalUrl": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
+          "fail": 0,
+          "error": null
+        },
+        {
+          "type": "zillow",
+          "name": "Zillow",
+          "url": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
+          "status": "blocked",
+          "httpStatus": 429,
+          "finalUrl": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": null
+        }
+      ]
+    },
     {
       "address": "1117 5th Ave, Kearney, NE 68845",
       "mls": "20260679",
@@ -83,7 +849,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1117-5th-Ave-Kearney-NE-68845/111736865_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1117-5th-Ave-Kearney-NE-68845/111736865_zpid/",
           "checks": [],
           "pass": 0,
@@ -117,7 +883,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/406-C-Ave-Axtell-NE-68924/115905811_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/406-C-Ave-Axtell-NE-68924/115905811_zpid/",
           "checks": [],
           "pass": 0,
@@ -208,7 +974,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/5207-18th-Avenue-Pl-Kearney-NE-68845/295072114_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/5207-18th-Avenue-Pl-Kearney-NE-68845/295072114_zpid/",
           "checks": [],
           "pass": 0,
@@ -299,7 +1065,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1306-12th-Ave-Kearney-NE-68845/111739042_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1306-12th-Ave-Kearney-NE-68845/111739042_zpid/",
           "checks": [],
           "pass": 0,
@@ -392,7 +1158,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/714-3rd-St-Gibbon-NE-68840/243042607_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/714-3rd-St-Gibbon-NE-68840/243042607_zpid/",
           "checks": [],
           "pass": 0,
@@ -485,7 +1251,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/34740-Hawk-Rd-Pleasanton-NE-68844/295009699_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/34740-Hawk-Rd-Pleasanton-NE-68844/295009699_zpid/",
           "checks": [],
           "pass": 0,
@@ -575,7 +1341,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/415-E-48th-St-Kearney-NE-68847/111736602_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/415-E-48th-St-Kearney-NE-68847/111736602_zpid/",
           "checks": [],
           "pass": 0,
@@ -665,7 +1431,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "checks": [],
           "pass": 0,
@@ -699,7 +1465,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1207-D-Ave-Kearney-NE-68847/455129881_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1207-D-Ave-Kearney-NE-68847/455129881_zpid/",
           "checks": [],
           "pass": 0,
@@ -748,7 +1514,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/20460-Maple-Rd-Gibbon-NE-68840/243039851_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/20460-Maple-Rd-Gibbon-NE-68840/243039851_zpid/",
           "checks": [],
           "pass": 0,
@@ -801,7 +1567,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/113-Center-St-Gibbon-NE-68840/243042687_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/113-Center-St-Gibbon-NE-68840/243042687_zpid/",
           "checks": [],
           "pass": 0,
@@ -835,7 +1601,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/5126-E-Ave-Kearney-NE-68847/111738870_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/5126-E-Ave-Kearney-NE-68847/111738870_zpid/",
           "checks": [],
           "pass": 0,
@@ -926,7 +1692,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6825-58th-Ave-Kearney-NE-68845/117479703_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/6825-58th-Ave-Kearney-NE-68845/117479703_zpid/",
           "checks": [],
           "pass": 0,
@@ -1017,7 +1783,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1245-W-102nd-Street-Pl-Kearney-NE-68845/111733417_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1245-W-102nd-Street-Pl-Kearney-NE-68845/111733417_zpid/",
           "checks": [],
           "pass": 0,
@@ -1039,7 +1805,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/688-21st-Rd-Axtell-NE-68924/113886075_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/688-21st-Rd-Axtell-NE-68924/113886075_zpid/",
           "checks": [],
           "pass": 0,
@@ -1084,7 +1850,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/335-N-Beecroft-St-Elm-Creek-NE-68836/243040138_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/335-N-Beecroft-St-Elm-Creek-NE-68836/243040138_zpid/",
           "checks": [],
           "pass": 0,
@@ -1118,7 +1884,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1014-W-42nd-St-Kearney-NE-68845/339799209_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1014-W-42nd-St-Kearney-NE-68845/339799209_zpid/",
           "checks": [],
           "pass": 0,
@@ -1152,7 +1918,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/700-D-Ave-Axtell-NE-68924/347259628_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/700-D-Ave-Axtell-NE-68924/347259628_zpid/",
           "checks": [],
           "pass": 0,
@@ -1205,7 +1971,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "checks": [],
           "pass": 0,
@@ -1227,7 +1993,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/5006-15th-Avenue-Pl-Kearney-NE-68845/461754036_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/5006-15th-Avenue-Pl-Kearney-NE-68845/461754036_zpid/",
           "checks": [],
           "pass": 0,
@@ -1281,7 +2047,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
           "checks": [],
           "pass": 0,
@@ -1336,7 +2102,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/5710-53rd-Ave-Kearney-NE-68845/123386041_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/5710-53rd-Ave-Kearney-NE-68845/123386041_zpid/",
           "checks": [],
           "pass": 0,
@@ -1391,7 +2157,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/11272-Maple-Rd-Gibbon-NE-68840/459107792_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/11272-Maple-Rd-Gibbon-NE-68840/459107792_zpid/",
           "checks": [],
           "pass": 0,
@@ -1446,7 +2212,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/W-70th-St-Kearney-NE-68845/456613322_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/W-70th-St-Kearney-NE-68845/456613322_zpid/",
           "checks": [],
           "pass": 0,
@@ -1536,7 +2302,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/2103-E-41st-St-Kearney-NE-68847/458211827_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/2103-E-41st-St-Kearney-NE-68847/458211827_zpid/",
           "checks": [],
           "pass": 0,
@@ -1547,8 +2313,8 @@
     }
   ],
   "summary": {
-    "listing-source verified": 6,
-    "blocked sources": 7,
+    "listing-source verified": 16,
+    "blocked sources": 15,
     "needs review": 12
   }
 }

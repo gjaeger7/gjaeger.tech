@@ -1,9 +1,1310 @@
 {
-  "generatedAt": "2026-05-12T23:12:28.313Z",
+  "generatedAt": "2026-05-23T13:31:39.025Z",
   "apply": true,
-  "considered": 1,
-  "added": [],
+  "considered": 56,
+  "added": [
+    {
+      "address": "41 Summerhaven Lk, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/41-Summerhaven-Lk-Kearney-NE-68847/113886418_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "1730 E 16th St, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/1730-E-16th-St-Kearney-NE-68847/111735843_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "215 N Mill St, Elm Creek, NE 68836",
+      "zillowUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "W Elm Ave, Elm Creek, NE 68836",
+      "zillowUrl": "https://www.zillow.com/homedetails/W-Elm-Ave-Elm-Creek-NE-68836/2057893501_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "28105 115th Rd, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/28105-115th-Rd-Kearney-NE-68845/111733247_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/27-Golfside-Dr-Pleasanton-NE-68866/111731996_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/32365-322nd-Rd-Pleasanton-NE-68866/111740743_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "311 W Cedar St, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/311-W-Cedar-St-Pleasanton-NE-68866/243039655_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "Prairie Hls, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/Prairie-Hls-Pleasanton-NE-68866/459108910_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/7-Golfside-Dr-Pleasanton-NE-68866/2104321177_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/708-C-Ave-Axtell-NE-68924/448998989_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "2 Quail Run, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/2-Quail-Run-Axtell-NE-68924/459675563_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "4 Quail Run, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/4-Quail-Run-Axtell-NE-68924/459675590_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "3 Quail Run, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/3-Quail-Run-Axtell-NE-68924/459675564_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    },
+    {
+      "address": "L1b2 Craneview 3rd Subdivison, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/L1b2-Craneview-3rd-Subdivison-Axtell-NE-68924/2067504041_zpid/",
+      "verification": {
+        "accepted": true,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address",
+              "price"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      }
+    }
+  ],
   "skipped": [
+    {
+      "address": "3911 Pony Express Rd, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/3911-Pony-Express-Rd-Kearney-NE-68847/111734219_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3911-Pony-Express-Rd-Kearney-NE-68847/111734219_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3911-Pony-Express-Rd-Kearney-NE-68847/111734219_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3911-Pony-Express-Rd-Kearney-NE-68847/111734219_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "1407 W 40th St, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/1407-W-40th-St-Kearney-NE-68845/111740053_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1407-W-40th-St-Kearney-NE-68845/111740053_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1407-W-40th-St-Kearney-NE-68845/111740053_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1407-W-40th-St-Kearney-NE-68845/111740053_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2103 C Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/2103-C-Ave-Kearney-NE-68847/462608794_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2103-C-Ave-Kearney-NE-68847/462608794_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2103-C-Ave-Kearney-NE-68847/462608794_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2103-C-Ave-Kearney-NE-68847/462608794_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2604 W 44th St, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2604-W-44th-St-Kearney-NE-68845/111737355_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "1803 I Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2506 W 37th St, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "1322 11th Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "816 20th Rd, Axtell, NE 68924",
+      "zillowUrl": "https://www.zillow.com/homedetails/816-20th-Rd-Axtell-NE-68924/123819163_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Kearney assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/816-20th-Rd-Axtell-NE-68924/123819163_zpid/"
+        },
+        {
+          "name": "Kearney assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/816-20th-Rd-Axtell-NE-68924/123819163_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/816-20th-Rd-Axtell-NE-68924/123819163_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow direct for-sale page",
+          "Buffalo assessor",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow direct for-sale page",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "6308 Q Avenue Pl, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCc4KMerTg+LKSktC1pMq/ug=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "1507 13th Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/1507-13th-Ave-Kearney-NE-68845/111739068_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1507-13th-Ave-Kearney-NE-68845/111739068_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCgi1Ef/qyf/OFOsTZoJN7bg=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1507-13th-Ave-Kearney-NE-68845/111739068_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "6905 M Avenue Pl, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCxB0DPIkjThht3L7tZHGxyw=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "3703 E Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCffL2OdrgRZOAhTwZRcZg4w=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "3506 13th Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/3506-13th-Ave-Kearney-NE-68845/111737749_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3506-13th-Ave-Kearney-NE-68845/111737749_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCgzFqHfib4VN2WHQUhcL+Vw=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3506-13th-Ave-Kearney-NE-68845/111737749_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "5207 I Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/5207-I-Ave-Kearney-NE-68847/462418748_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/5207-I-Ave-Kearney-NE-68847/462418748_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCW3VuBILFo8L0Eyzp+1dp+w=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/5207-I-Ave-Kearney-NE-68847/462418748_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "6304 11th Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/6304-11th-Ave-Kearney-NE-68845/462477509_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6304-11th-Ave-Kearney-NE-68845/462477509_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCl2CKpcZVqlQjJdeuBDEUfg=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6304-11th-Ave-Kearney-NE-68845/462477509_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "5715 R Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/5715-R-Ave-Kearney-NE-68847/461754017_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/5715-R-Ave-Kearney-NE-68847/461754017_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCc4KMerTg+LJTXCnTYBNP8A=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/5715-R-Ave-Kearney-NE-68847/461754017_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "3 Seminole Ln, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/3-Seminole-Ln-Kearney-NE-68847/111734240_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": []
+          }
+        ],
+        "failures": [
+          "Buffalo assessor: address"
+        ],
+        "blockedSources": [
+          "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3-Seminole-Ln-Kearney-NE-68847/111734240_zpid/"
+        },
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCQVLFLsFlEtZmtnAjC/Q9ew=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3-Seminole-Ln-Kearney-NE-68847/111734240_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "3619 E Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/3619-E-Ave-Kearney-NE-68847/2062505442_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3619-E-Ave-Kearney-NE-68847/2062505442_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "520 W 27th St, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/520-W-27th-St-Kearney-NE-68845/247921183_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/520-W-27th-St-Kearney-NE-68845/247921183_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "125 W Pacific Dr, Elm Creek, NE 68836",
+      "zillowUrl": "https://www.zillow.com/homedetails/125-W-Pacific-Dr-Elm-Creek-NE-68836/123385980_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/125-W-Pacific-Dr-Elm-Creek-NE-68836/123385980_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "6811 M Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/6811-M-Ave-Kearney-NE-68847/117479694_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6811-M-Ave-Kearney-NE-68847/117479694_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2108 E 41st St, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/2108-E-41st-St-Kearney-NE-68847/455588010_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2108-E-41st-St-Kearney-NE-68847/455588010_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "4628 Linden Dr, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/4628-Linden-Dr-Kearney-NE-68847/111736660_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/4628-Linden-Dr-Kearney-NE-68847/111736660_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "Antelope Ave, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/Antelope-Ave-Kearney-NE-68847/450712426_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/Antelope-Ave-Kearney-NE-68847/450712426_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "43 Rolling Hills Rd, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/43-Rolling-Hills-Rd-Kearney-NE-68845/243040483_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCiP4Y5IMhW9ZbT2G2GvYl1Q=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/43-Rolling-Hills-Rd-Kearney-NE-68845/243040483_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "5308 11th Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/5308-11th-Ave-Kearney-NE-68845/460541848_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCpeS3xAFq2td3Vf6NaLSObg=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/5308-11th-Ave-Kearney-NE-68845/460541848_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "4 Willow Ln, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/4-Willow-Ln-Kearney-NE-68845/111737083_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Buffalo assessor",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Buffalo assessor",
+          "type": "county",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://nebraskaassessorsonline.us/propdetail.aspx?Zb1g61N3/ahg2A/cO09iQra3tSaKGijCqdjoTzPXdAqZULJQjrGEsg=="
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/4-Willow-Ln-Kearney-NE-68845/111737083_zpid/"
+        }
+      ]
+    },
     {
       "address": "6303 12th Avenue Pl, Kearney, NE 68845",
       "zillowUrl": "https://www.zillow.com/homedetails/6303-12th-Avenue-Pl-Kearney-NE-68845/456955939_zpid/",
@@ -21,8 +1322,344 @@
           "name": "Zillow",
           "type": "zillow",
           "status": "blocked",
-          "httpStatus": 200,
+          "httpStatus": 429,
           "url": "https://www.zillow.com/homedetails/6303-12th-Avenue-Pl-Kearney-NE-68845/456955939_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "6245 53rd Ave, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/6245-53rd-Ave-Kearney-NE-68845/111733580_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/6245-53rd-Ave-Kearney-NE-68845/111733580_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "4504 15th Avenue Pl, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/4504-15th-Avenue-Pl-Kearney-NE-68845/461029850_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/4504-15th-Avenue-Pl-Kearney-NE-68845/461029850_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "506 W Rd, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/506-W-Rd-Kearney-NE-68845/455768120_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/506-W-Rd-Kearney-NE-68845/455768120_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "506 W Rd Lot 2, Kearney, NE 68845",
+      "zillowUrl": "https://www.zillow.com/homedetails/506-W-Rd-LOT-2-Kearney-NE-68845/461608766_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/506-W-Rd-LOT-2-Kearney-NE-68845/461608766_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "2102 E 41st St, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/2102-E-41st-St-Kearney-NE-68847/455587914_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/2102-E-41st-St-Kearney-NE-68847/455587914_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "815 G Avenue Pl, Kearney, NE 68847",
+      "zillowUrl": "https://www.zillow.com/homedetails/815-G-Avenue-Pl-Kearney-NE-68847/2058347338_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/815-G-Avenue-Pl-Kearney-NE-68847/2058347338_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "45324 Kilgore Rd, Gibbon, NE 68840",
+      "zillowUrl": "https://www.zillow.com/homedetails/45324-Kilgore-Rd-Gibbon-NE-68840/247903327_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/45324-Kilgore-Rd-Gibbon-NE-68840/247903327_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "14 West Ave, Gibbon, NE 68840",
+      "zillowUrl": "https://www.zillow.com/homedetails/14-West-Ave-Gibbon-NE-68840/243042773_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [
+          "Candidate listing source: price"
+        ],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Candidate listing source",
+          "type": "listing",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/gibbon-ne/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/14-West-Ave-Gibbon-NE-68840/243042773_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "0 Keystone Rd, Gibbon, NE 68840",
+      "zillowUrl": "https://www.zillow.com/homedetails/0-Keystone-Rd-Gibbon-NE-68840/461991712_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [
+          "Candidate listing source: price"
+        ],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Candidate listing source",
+          "type": "listing",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/gibbon-ne/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/0-Keystone-Rd-Gibbon-NE-68840/461991712_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "45655 67th Rd, Gibbon, NE 68840",
+      "zillowUrl": "https://www.zillow.com/homedetails/45655-67th-Rd-Gibbon-NE-68840/2067531135_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [
+          "Candidate listing source: price"
+        ],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Candidate listing source",
+          "type": "listing",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/gibbon-ne/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/45655-67th-Rd-Gibbon-NE-68840/2067531135_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "1735 Keystone Rd, Gibbon, NE 68840",
+      "zillowUrl": "https://www.zillow.com/homedetails/1735-Keystone-Rd-Gibbon-NE-68840/348182350_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [
+          {
+            "source": "Candidate listing source",
+            "fields": [
+              "address"
+            ]
+          }
+        ],
+        "failures": [
+          "Candidate listing source: price"
+        ],
+        "blockedSources": [
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Candidate listing source",
+          "type": "listing",
+          "status": "checked",
+          "httpStatus": 200,
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/gibbon-ne/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/1735-Keystone-Rd-Gibbon-NE-68840/348182350_zpid/"
+        }
+      ]
+    },
+    {
+      "address": "3 Golfside Dr, Pleasanton, NE 68866",
+      "zillowUrl": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/",
+      "reason": "Not enough accessible public-source evidence to auto-publish",
+      "verification": {
+        "accepted": false,
+        "passes": [],
+        "failures": [],
+        "blockedSources": [
+          "Candidate listing source",
+          "Zillow"
+        ]
+      },
+      "sourceStatuses": [
+        {
+          "name": "Candidate listing source",
+          "type": "listing",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://r.jina.ai/http://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/"
+        },
+        {
+          "name": "Zillow",
+          "type": "zillow",
+          "status": "blocked",
+          "httpStatus": 429,
+          "url": "https://www.zillow.com/homedetails/3-Golfside-Dr-Pleasanton-NE-68866/2104321176_zpid/"
         }
       ]
     }
