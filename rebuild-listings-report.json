@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T19:38:04.910Z",
+  "generatedAt": "2026-05-23T20:28:59.280Z",
   "apply": true,
   "enriched": [
     {
@@ -123,12 +123,6 @@
       "previousSale": 149100
     },
     {
-      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
-      "dateListed": "2026-03-09",
-      "owner": "VELASQUEZ VELASQUEZ, JOSE ALBERTO",
-      "previousSale": 5000
-    },
-    {
       "address": "215 N Mill St, Elm Creek, NE 68836",
       "dateListed": "2026-05-16",
       "owner": "JOURNEY, VICTOR & CARLA GRANTEE",
@@ -236,6 +230,15 @@
       "hasDetailUrl": true
     },
     {
+      "address": "125 W Pacific Dr, Elm Creek, NE 68836",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-23",
+      "hasOwner": true,
+      "hasPreviousSale": true,
+      "hasDetailUrl": true
+    },
+    {
       "address": "Prairie Hls, Pleasanton, NE 68866",
       "reason": "missing required field after enrichment",
       "hasPrice": true,
@@ -299,5 +302,5 @@
       "hasDetailUrl": false
     }
   ],
-  "publishedCount": 31
+  "publishedCount": 30
 }
