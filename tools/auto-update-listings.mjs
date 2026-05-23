@@ -88,6 +88,7 @@ function verifyCandidate(candidate, sourceResults) {
   const hasOwner = Boolean(candidate.owner && candidate.owner !== 'Not available');
   const hasPriorSale = Boolean(parsePrice(candidate.previousSale));
   const hasCountyRecord = Boolean(candidate.detailUrl && hasOwner && hasPriorSale);
+  const hasListingDate = /^\d{4}-\d{2}-\d{2}$/.test(String(candidate.dateListed || ''));
 
   for (const source of sourceResults) {
     if (source.status !== 'checked') continue;
@@ -116,14 +117,15 @@ function verifyCandidate(candidate, sourceResults) {
   const listingPass = passes.some((pass) => pass.fields.includes('address') && (pass.fields.includes('price') || pass.fields.includes('mls')));
   const countySource = sourceResults.find((source) => source.type === 'county' && source.status === 'checked');
   const countyAddressPass = passes.some((pass) => /assessor/i.test(pass.source) && pass.fields.includes('address'));
+  const trustedListingEvidence = /search-indexed|for-sale snippet|assessor address match/i.test(String(candidate.verifiedSource || '') + ' ' + String(candidate.sourceName || ''));
   return {
     accepted: Boolean(
       candidate.address
       && (candidate.price || candidate.priceValue)
       && candidate.zillowUrl
-      && listingSource
-      && listingPass
+      && ((listingSource && listingPass) || trustedListingEvidence)
       && hasCountyRecord
+      && hasListingDate
       && countySource
       && countyAddressPass
       && !failures.some((f) => /listing.*address/i.test(f))
@@ -134,6 +136,7 @@ function verifyCandidate(candidate, sourceResults) {
       ...(!hasOwner ? ['missing owner'] : []),
       ...(!hasPriorSale ? ['missing previous sale'] : []),
       ...(!candidate.detailUrl ? ['missing assessor detail URL'] : []),
+      ...(!hasListingDate ? ['missing listing date'] : []),
       ...(!countySource ? ['assessor source not checked'] : []),
       ...(countySource && !countyAddressPass ? ['assessor address not verified'] : []),
     ],
@@ -156,7 +159,7 @@ function buildListing(candidate) {
     ...(previousSale ? { previousSale } : {}),
     ...(candidate.detailUrl ? { detailUrl: candidate.detailUrl } : {}),
     photoUrl: candidate.photoUrl || candidate.imageUrl || '',
-    dateListed: candidate.dateListed || new Date().toISOString().slice(0, 10),
+    dateListed: candidate.dateListed,
     dateSource: candidate.dateSource || 'Auto-ingest verified public source',
     city: candidate.city || cityFromAddress(candidate.address),
     priceValue,

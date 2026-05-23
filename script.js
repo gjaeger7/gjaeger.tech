@@ -1,13 +1,35 @@
 const LISTING_LIMIT = 50;
-const listings = (window.HOUSE_LISTINGS || []).slice(0, LISTING_LIMIT).map((home, index) => ({ ...home, rank: index + 1 }));
+const listings = (window.HOUSE_LISTINGS || [])
+  .slice()
+  .sort((a, b) => listingTime(b.dateListed) - listingTime(a.dateListed))
+  .slice(0, LISTING_LIMIT)
+  .map((home, index) => ({ ...home, rank: index + 1 }));
 
 const $ = (id) => document.getElementById(id);
 const money = (value) => {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
   return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Number(value));
 };
-const dateFmt = (value) => new Date(`${value}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+
+function listingTime(value) {
+  if (!value) return 0;
+  const iso = String(value).match(/\d{4}-\d{2}-\d{2}/)?.[0];
+  if (iso) return new Date(`${iso}T12:00:00`).getTime();
+  const shortDate = String(value).match(/\b(\d{1,2})\/(\d{1,2})\b/);
+  if (shortDate) {
+    const year = new Date().getFullYear();
+    return new Date(year, Number(shortDate[1]) - 1, Number(shortDate[2]), 12).getTime();
+  }
+  return 0;
+}
+
+function dateLabel(value) {
+  if (!value) return '—';
+  const iso = String(value).match(/\d{4}-\d{2}-\d{2}/)?.[0];
+  if (!iso) return String(value);
+  return new Date(`${iso}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
 
 function cityFromAddress(address) {
   return (address.split(',')[1] || 'Unknown').trim();
@@ -54,7 +76,7 @@ function render() {
     if (sort === 'price-desc') return (b.priceValue || 0) - (a.priceValue || 0);
     if (sort === 'price-asc') return (a.priceValue || Infinity) - (b.priceValue || Infinity);
     if (sort === 'delta-desc') return (b.difference ?? -Infinity) - (a.difference ?? -Infinity);
-    return new Date(b.dateListed) - new Date(a.dateListed);
+    return listingTime(b.dateListed) - listingTime(a.dateListed);
   });
 
   const grid = $('listingGrid');
@@ -78,7 +100,7 @@ function render() {
           ${photo}
           <div class="badge-row">
             <span class="badge green">#${item.rank} newest</span>
-            <span class="badge">${escapeHtml(dateFmt(item.dateListed))}</span>
+            <span class="badge">${escapeHtml(dateLabel(item.dateListed))}</span>
           </div>
         </div>
         <div class="card-body">
@@ -96,7 +118,7 @@ function render() {
           <div class="facts">
             <div class="fact"><span>Previous sale</span><b>${previous}</b></div>
             <div class="fact delta ${diffClass}"><span>Difference</span><b>${diffLabel}</b></div>
-            <div class="fact"><span>Date listed</span><b>${escapeHtml(dateFmt(item.dateListed))}</b></div>
+            <div class="fact"><span>Date listed</span><b>${escapeHtml(dateLabel(item.dateListed))}</b></div>
             <div class="fact"><span>Source</span><b>${escapeHtml(item.dateSource || 'Zillow index')}</b></div>
           </div>
           <div class="owner"><strong>Current owner:</strong><br>${escapeHtml(item.owner || 'Not available')}</div>
