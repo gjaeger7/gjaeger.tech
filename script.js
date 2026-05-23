@@ -94,6 +94,7 @@ function render() {
     const diffLabel = typeof item.difference === 'number' ? `${item.difference > 0 ? '+' : ''}${money(item.difference)}` : '—';
     const price = item.price || money(item.priceValue);
     const previous = item.previousSale ? money(item.previousSale) : '—';
+    const previousDate = item.previousSaleDate ? dateLabel(item.previousSaleDate) : null;
     const city = item.city || cityFromAddress(item.address);
     const photo = item.photoUrl
       ? `<img src="${escapeHtml(item.photoUrl)}" alt="County record photo for ${escapeHtml(item.address)}" loading="lazy" onerror="this.parentElement.classList.add('no-photo');this.remove();" />`
@@ -120,7 +121,7 @@ function render() {
             <div class="city">${escapeHtml(city)}${item.county ? ` • ${escapeHtml(item.county)} County` : ''}</div>
           </div>
           <div class="facts">
-            <div class="fact"><span>Previous sale</span><b>${previous}</b></div>
+            <div class="fact"><span>Previous sale</span><b>${previous}</b>${previousDate ? `<small>Sold ${escapeHtml(previousDate)}</small>` : ''}</div>
             <div class="fact delta ${diffClass}"><span>Difference</span><b>${diffLabel}</b></div>
             <div class="fact"><span>Date listed</span><b>${escapeHtml(dateLabel(item.dateListed))}</b></div>
             <div class="fact"><span>Source</span><b>${escapeHtml(item.dateSource || 'Zillow index')}</b></div>
