@@ -24,6 +24,10 @@ function listingTime(value) {
   return 0;
 }
 
+function itemTime(item) {
+  return listingTime(item.dateSort || item.dateListed);
+}
+
 function dateLabel(value) {
   if (!value) return '—';
   const iso = String(value).match(/\d{4}-\d{2}-\d{2}/)?.[0];
@@ -76,7 +80,7 @@ function render() {
     if (sort === 'price-desc') return (b.priceValue || 0) - (a.priceValue || 0);
     if (sort === 'price-asc') return (a.priceValue || Infinity) - (b.priceValue || Infinity);
     if (sort === 'delta-desc') return (b.difference ?? -Infinity) - (a.difference ?? -Infinity);
-    return listingTime(b.dateListed) - listingTime(a.dateListed);
+    return itemTime(b) - itemTime(a);
   });
 
   const grid = $('listingGrid');
