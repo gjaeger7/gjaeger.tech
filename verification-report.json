@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T18:29:21.780Z",
+  "generatedAt": "2026-05-24T19:29:22.220Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
@@ -181,14 +181,9 @@
       "address": "1306 12th Ave, Kearney, NE 68845",
       "mls": "20260665",
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: sqft",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -196,37 +191,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": false
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 5,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -276,11 +246,9 @@
       "address": "28105 115th Rd, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: sqft",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -288,29 +256,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 2,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -360,12 +311,9 @@
       "address": "1803 I Ave, Kearney, NE 68847",
       "mls": "20260743",
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: agent",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: previousSaleDate"
       ],
@@ -374,41 +322,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "agent",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 4,
-          "fail": 3,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -457,9 +376,9 @@
     {
       "address": "14 West Ave, Gibbon, NE 68840",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -468,28 +387,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -540,11 +442,9 @@
       "address": "714 3rd St, Gibbon, NE 68840",
       "mls": "20260658",
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: owner",
         "Buffalo assessor: previousSaleDate"
@@ -554,37 +454,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 4,
-          "fail": 2,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -1013,7 +888,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "checks": [],
           "pass": 0,
@@ -1078,7 +953,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "checks": [],
           "pass": 0,
@@ -1145,7 +1020,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/",
           "checks": [],
           "pass": 0,
@@ -1211,7 +1086,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/",
           "checks": [],
           "pass": 0,
@@ -2533,7 +2408,6 @@
     }
   ],
   "summary": {
-    "needs review": 35,
-    "listing-source verified": 1
+    "needs review": 36
   }
 }
