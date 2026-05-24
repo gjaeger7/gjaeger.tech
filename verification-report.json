@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-05-24T14:29:00.255Z",
+  "generatedAt": "2026-05-24T16:29:26.307Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
       "address": "607 W 25th St, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 2,
+      "checkedSources": 1,
       "blockedSources": 1,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -17,22 +16,13 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "unavailable",
+          "httpStatus": 0,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 1,
-          "error": null
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": "This operation was aborted"
         },
         {
           "type": "county",
@@ -360,12 +350,9 @@
       "address": "1803 I Ave, Kearney, NE 68847",
       "mls": "20260743",
       "confidence": "needs review",
-      "checkedSources": 2,
+      "checkedSources": 1,
       "blockedSources": 1,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: agent",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: previousSaleDate"
       ],
@@ -374,42 +361,13 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "unavailable",
+          "httpStatus": 0,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "agent",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 4,
-          "fail": 3,
-          "error": null
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": "This operation was aborted"
         },
         {
           "type": "county",
@@ -458,12 +416,9 @@
       "address": "14 West Ave, Gibbon, NE 68840",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 2,
+      "checkedSources": 1,
       "blockedSources": 1,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: sqft",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -471,30 +426,13 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "unavailable",
+          "httpStatus": 0,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": false
-            }
-          ],
-          "pass": 1,
-          "fail": 3,
-          "error": null
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": "This operation was aborted"
         },
         {
           "type": "county",
@@ -543,13 +481,9 @@
       "address": "714 3rd St, Gibbon, NE 68840",
       "mls": "20260658",
       "confidence": "needs review",
-      "checkedSources": 2,
+      "checkedSources": 1,
       "blockedSources": 1,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: address",
         "Buffalo assessor: owner",
         "Buffalo assessor: previousSaleDate"
@@ -559,38 +493,13 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "unavailable",
+          "httpStatus": 0,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/gibbon-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 4,
-          "error": null
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
+          "error": "This operation was aborted"
         },
         {
           "type": "county",
@@ -718,7 +627,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "checks": [],
           "pass": 0,
@@ -807,7 +716,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "checks": [],
           "pass": 0,
@@ -889,7 +798,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "checks": [],
           "pass": 0,
@@ -983,7 +892,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "checks": [],
           "pass": 0,
@@ -1065,7 +974,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "checks": [],
           "pass": 0,
@@ -1077,9 +986,9 @@
     {
       "address": "215 N Mill St, Elm Creek, NE 68836",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1088,28 +997,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "status": "checked",
+          "status": "blocked",
           "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1147,7 +1039,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "checks": [],
           "pass": 0,
@@ -1235,7 +1127,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "checks": [],
           "pass": 0,
@@ -1328,7 +1220,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/6308-Q-Avenue-Pl-Kearney-NE-68847/111735721_zpid/",
           "checks": [],
           "pass": 0,
@@ -1424,7 +1316,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/3703-E-Ave-Kearney-NE-68847/111738729_zpid/",
           "checks": [],
           "pass": 0,
@@ -1436,9 +1328,9 @@
     {
       "address": "311 W Cedar St, Pleasanton, NE 68866",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1447,28 +1339,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1506,7 +1381,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/311-W-Cedar-St-Pleasanton-NE-68866/243039655_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/311-W-Cedar-St-Pleasanton-NE-68866/243039655_zpid/",
           "checks": [],
           "pass": 0,
@@ -1518,9 +1393,9 @@
     {
       "address": "314 Central Ave, Kearney, NE 68847",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1529,28 +1404,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1588,7 +1446,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/314-Central-Ave-Kearney-NE-68847/243040531_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/314-Central-Ave-Kearney-NE-68847/243040531_zpid/",
           "checks": [],
           "pass": 0,
@@ -1600,9 +1458,9 @@
     {
       "address": "320 E 27th St, Kearney, NE 68847",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1611,28 +1469,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1670,7 +1511,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/320-E-27th-St-Kearney-NE-68847/243042108_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/320-E-27th-St-Kearney-NE-68847/243042108_zpid/",
           "checks": [],
           "pass": 0,
@@ -1682,9 +1523,9 @@
     {
       "address": "W Elm Ave, Elm Creek, NE 68836",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1693,28 +1534,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1752,7 +1576,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/W-Elm-Ave-Elm-Creek-NE-68836/2057893501_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/W-Elm-Ave-Elm-Creek-NE-68836/2057893501_zpid/",
           "checks": [],
           "pass": 0,
@@ -1818,7 +1642,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/2701-Grand-Ave-TRAILER-51-Kearney-NE-68847/460922352_zpid/",
           "checks": [],
           "pass": 0,
@@ -1884,7 +1708,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/4707-10th-Avenue-Pl-Kearney-NE-68845/117479754_zpid/",
           "checks": [],
           "pass": 0,
@@ -1908,7 +1732,7 @@
           "name": "Zillow search-indexed for-sale snippet plus Buffalo County assessor address match",
           "url": "https://www.zillow.com/homedetails/43-Rolling-Hills-Rd-Kearney-NE-68845/243040483_zpid/",
           "status": "blocked",
-          "httpStatus": 403,
+          "httpStatus": 429,
           "finalUrl": "https://www.zillow.com/homedetails/43-Rolling-Hills-Rd-Kearney-NE-68845/243040483_zpid/",
           "checks": [],
           "pass": 0,
@@ -1962,9 +1786,11 @@
       "address": "5907 6th Ave, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
+        "Zillow current snapshot plus assessor address match: address",
+        "Zillow current snapshot plus assessor address match: price",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -1972,12 +1798,21 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [],
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "price",
+              "matched": false
+            }
+          ],
           "pass": 0,
-          "fail": 0,
+          "fail": 2,
           "error": null
         },
         {
@@ -2291,9 +2126,11 @@
       "address": "LOT 17th Rd #A, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
+        "Zillow current snapshot plus assessor address match: address",
+        "Zillow current snapshot plus assessor address match: price",
         "Buffalo assessor: address",
         "Buffalo assessor: previousSaleDate"
       ],
@@ -2302,12 +2139,25 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/elm-creek-ne/",
-          "checks": [],
-          "pass": 0,
-          "fail": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": false
+            },
+            {
+              "field": "price",
+              "matched": false
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            }
+          ],
+          "pass": 1,
+          "fail": 2,
           "error": null
         },
         {
@@ -2697,7 +2547,7 @@
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/pleasanton-ne/",
           "checks": [],
           "pass": 0,
@@ -2750,9 +2600,9 @@
     {
       "address": "708 C Ave, Axtell, NE 68924",
       "mls": null,
-      "confidence": "needs review",
-      "checkedSources": 1,
-      "blockedSources": 2,
+      "confidence": "listing-source verified",
+      "checkedSources": 2,
+      "blockedSources": 1,
       "conflicts": [
         "Kearney assessor: previousSaleDate"
       ],
@@ -2761,11 +2611,28 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "status": "blocked",
-          "httpStatus": 429,
+          "status": "checked",
+          "httpStatus": 200,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "checks": [],
-          "pass": 0,
+          "checks": [
+            {
+              "field": "address",
+              "matched": true
+            },
+            {
+              "field": "price",
+              "matched": true
+            },
+            {
+              "field": "brokerage",
+              "matched": true
+            },
+            {
+              "field": "sqft",
+              "matched": true
+            }
+          ],
+          "pass": 4,
           "fail": 0,
           "error": null
         },
@@ -2814,7 +2681,7 @@
     }
   ],
   "summary": {
-    "needs review": 29,
-    "listing-source verified": 7
+    "needs review": 33,
+    "listing-source verified": 3
   }
 }
