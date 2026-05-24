@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T17:29:10.748Z",
+  "generatedAt": "2026-05-24T18:29:21.780Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
@@ -634,11 +634,9 @@
       "address": "703 2nd Ave, Axtell, NE 68924",
       "mls": "20260593",
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: mls",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Kearney assessor: previousSaleDate"
       ],
       "sources": [
@@ -646,37 +644,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/axtell-ne/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "mls",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 4,
-          "fail": 2,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {
@@ -726,12 +699,9 @@
       "address": "2506 W 37th St, Kearney, NE 68845",
       "mls": null,
       "confidence": "needs review",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
-        "Zillow current snapshot plus assessor address match: price",
-        "Zillow current snapshot plus assessor address match: brokerage",
-        "Zillow current snapshot plus assessor address match: yearBuilt",
         "Buffalo assessor: previousSaleDate"
       ],
       "sources": [
@@ -739,33 +709,12 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68845/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": false
-            },
-            {
-              "field": "brokerage",
-              "matched": false
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            },
-            {
-              "field": "yearBuilt",
-              "matched": false
-            }
-          ],
-          "pass": 2,
-          "fail": 3,
+          "checks": [],
+          "pass": 0,
+          "fail": 0,
           "error": null
         },
         {

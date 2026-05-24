@@ -1,8 +1,274 @@
 {
-  "generatedAt": "2026-05-24T17:29:00.295Z",
+  "generatedAt": "2026-05-24T18:28:59.709Z",
   "apply": true,
   "approvedKept": 36,
   "enriched": [],
-  "skipped": [],
+  "skipped": [
+    {
+      "address": "2604 W 44th St, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "2506 W 37th St, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "4707 10th Avenue Pl, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1407 W 40th St, Kearney, NE 68845",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-21",
+      "hasOwner": true,
+      "hasPreviousSale": true,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "1322 11th Ave, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "607 W 25th St, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1306 12th Ave, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "28105 115th Rd, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "4 Willow Ln, Kearney, NE 68845",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1311 E 33rd Dr, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1803 I Ave, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "6905 M Avenue Pl, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "320 E 27th St, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "1207 D Ave, Kearney, NE 68847",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "3911 Pony Express Rd, Kearney, NE 68847",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-15",
+      "hasOwner": true,
+      "hasPreviousSale": true,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "6308 Q Avenue Pl, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "Antelope Ave, Kearney, NE 68847",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-24",
+      "hasOwner": true,
+      "hasPreviousSale": true,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "314 Central Ave, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "14 West Ave, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "714 3rd St, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "20460 Maple Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": true,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "41 Summerhaven Lk, Kearney, NE 68847",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "11272 Maple Rd, Gibbon, NE 68840",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "0 Keystone Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": true,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "1735 Keystone Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "45655 67th Rd, Gibbon, NE 68840",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "599 days on Zillow",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "2701 Grand Ave Trailer 51, Kearney, NE 68847",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "215 N Mill St, Elm Creek, NE 68836",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "W Elm Ave, Elm Creek, NE 68836",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "125 W Pacific Dr, Elm Creek, NE 68836",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-23",
+      "hasOwner": true,
+      "hasPreviousSale": true,
+      "hasDetailUrl": true
+    },
+    {
+      "address": "27 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "32365 322nd Rd, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "311 W Cedar St, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "Prairie Hls, Pleasanton, NE 68866",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "3 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "7 Golfside Dr, Pleasanton, NE 68866",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "816 20th Rd, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "2026-05-12",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "600 B Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "703 2nd Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "688 21st Rd, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "708 C Ave, Axtell, NE 68924",
+      "reason": "already approved; kept existing listing without rechecking"
+    },
+    {
+      "address": "S Rd, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "27 days on Zillow",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "4 Quail Run, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "4 Quail Run, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    },
+    {
+      "address": "4 Quail Run, Axtell, NE 68924",
+      "reason": "missing required field after enrichment",
+      "hasPrice": false,
+      "dateListed": "Listed date unavailable",
+      "hasOwner": false,
+      "hasPreviousSale": false,
+      "hasDetailUrl": false
+    }
+  ],
   "publishedCount": 36
 }
