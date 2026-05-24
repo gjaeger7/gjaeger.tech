@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T11:31:00.891Z",
+  "generatedAt": "2026-05-24T12:29:09.097Z",
   "note": "Public-source consistency check. Blocked sources are recorded as blocked, not treated as contradictions.",
   "listings": [
     {
@@ -445,7 +445,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/1803-I-Ave-Kearney-NE-68847/462583243_zpid/",
           "checks": [],
           "pass": 0,
@@ -530,7 +530,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/14-West-Ave-Gibbon-NE-68840/243042773_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/14-West-Ave-Gibbon-NE-68840/243042773_zpid/",
           "checks": [],
           "pass": 0,
@@ -626,7 +626,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/714-3rd-St-Gibbon-NE-68840/243042607_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/714-3rd-St-Gibbon-NE-68840/243042607_zpid/",
           "checks": [],
           "pass": 0,
@@ -718,7 +718,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/703-2nd-Ave-Axtell-NE-68924/108894589_zpid/",
           "checks": [],
           "pass": 0,
@@ -807,7 +807,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/2506-W-37th-St-Kearney-NE-68845/243043591_zpid/",
           "checks": [],
           "pass": 0,
@@ -889,7 +889,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/1311-E-33rd-Dr-Kearney-NE-68847/111739726_zpid/",
           "checks": [],
           "pass": 0,
@@ -956,7 +956,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/6905-M-Avenue-Pl-Kearney-NE-68847/111733527_zpid/",
           "checks": [],
           "pass": 0,
@@ -1021,7 +1021,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/600-B-Ave-Axtell-NE-68924/108899503_zpid/",
           "checks": [],
           "pass": 0,
@@ -1086,7 +1086,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/215-N-Mill-St-Elm-Creek-NE-68836/243040080_zpid/",
           "checks": [],
           "pass": 0,
@@ -1151,7 +1151,7 @@
           "name": "Zillow",
           "url": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "status": "blocked",
-          "httpStatus": 429,
+          "httpStatus": 403,
           "finalUrl": "https://www.zillow.com/homedetails/1322-11th-Ave-Kearney-NE-68845/111738961_zpid/",
           "checks": [],
           "pass": 0,
@@ -1361,9 +1361,9 @@
     {
       "address": "314 Central Ave, Kearney, NE 68847",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1372,28 +1372,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -1443,9 +1426,9 @@
     {
       "address": "320 E 27th St, Kearney, NE 68847",
       "mls": null,
-      "confidence": "listing-source verified",
-      "checkedSources": 2,
-      "blockedSources": 1,
+      "confidence": "needs review",
+      "checkedSources": 1,
+      "blockedSources": 2,
       "conflicts": [
         "Buffalo assessor: previousSaleDate"
       ],
@@ -1454,28 +1437,11 @@
           "type": "listing",
           "name": "Zillow current snapshot plus assessor address match",
           "url": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "status": "checked",
-          "httpStatus": 200,
+          "status": "blocked",
+          "httpStatus": 429,
           "finalUrl": "https://r.jina.ai/http://https://www.zillow.com/kearney-ne-68847/",
-          "checks": [
-            {
-              "field": "address",
-              "matched": true
-            },
-            {
-              "field": "price",
-              "matched": true
-            },
-            {
-              "field": "brokerage",
-              "matched": true
-            },
-            {
-              "field": "sqft",
-              "matched": true
-            }
-          ],
-          "pass": 4,
+          "checks": [],
+          "pass": 0,
           "fail": 0,
           "error": null
         },
@@ -2640,7 +2606,7 @@
     }
   ],
   "summary": {
-    "needs review": 33,
-    "listing-source verified": 3
+    "needs review": 35,
+    "listing-source verified": 1
   }
 }
