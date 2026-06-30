@@ -578,7 +578,6 @@
     <script>
       const choices = ["Speed Queen", "Maytag"];
       const maxVotes = 8;
-      const storageKey = "st-george-equipment-poll-votes";
       const state = {
         votes: [],
         selectedChoice: null,
@@ -681,19 +680,6 @@
           });
       }
 
-      function saveLocalVotes() {
-        localStorage.setItem(storageKey, JSON.stringify(state.votes));
-      }
-
-      function loadLocalVotes() {
-        try {
-          const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
-          return Array.isArray(saved) ? saved.filter((vote) => choices.includes(vote.choice)) : [];
-        } catch {
-          return [];
-        }
-      }
-
       async function fetchVotes() {
         const response = await fetch("/api/votes", { cache: "no-store" });
         if (!response.ok) throw new Error("Vote API unavailable");
@@ -701,6 +687,7 @@
         if (!Array.isArray(payload.votes)) throw new Error("Unexpected vote response");
         state.apiMode = true;
         state.votes = payload.votes;
+        localStorage.removeItem("st-george-equipment-poll-votes");
         saveStatus.textContent = "Shared votes";
       }
 
@@ -721,29 +708,7 @@
           return;
         }
 
-        state.votes.push(vote);
-        state.votes = state.votes.slice(0, maxVotes);
-        saveLocalVotes();
-        saveStatus.textContent = "Vote recorded";
-      }
-
-      async function migrateLocalVotesIfNeeded() {
-        const localVotes = loadLocalVotes();
-        if (!state.apiMode || state.votes.length || !localVotes.length) return;
-
-        saveStatus.textContent = "Syncing saved votes";
-        const response = await fetch("/api/votes", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ votes: localVotes })
-        });
-
-        if (!response.ok) throw new Error("Local votes were not synced");
-        const payload = await response.json();
-        if (!Array.isArray(payload.votes)) throw new Error("Unexpected vote response");
-
-        state.votes = payload.votes;
-        saveStatus.textContent = "Shared votes";
+        throw new Error("Shared voting is temporarily unavailable. Please refresh and try again.");
       }
 
       function openModal(choice) {
@@ -808,11 +773,10 @@
       (async function init() {
         try {
           await fetchVotes();
-          await migrateLocalVotesIfNeeded();
         } catch {
           state.apiMode = false;
-          state.votes = loadLocalVotes();
-          saveStatus.textContent = "Local votes";
+          state.votes = [];
+          saveStatus.textContent = "Shared voting unavailable";
         }
         render();
       })();
