@@ -264,6 +264,13 @@
         box-shadow: 0 14px 28px rgba(32, 35, 43, 0.18);
       }
 
+      .vote-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.58;
+        transform: none;
+        box-shadow: none;
+      }
+
       .vote-button:focus-visible,
       .modal-card button:focus-visible,
       input:focus-visible {
@@ -510,7 +517,7 @@
           </div>
           <div class="total-count">
             <strong id="totalVotes">0</strong>
-            <span>Votes</span>
+            <span id="totalLabel">of 8 votes</span>
           </div>
         </div>
 
@@ -570,6 +577,7 @@
 
     <script>
       const choices = ["Speed Queen", "Maytag"];
+      const maxVotes = 8;
       const storageKey = "st-george-equipment-poll-votes";
       const state = {
         votes: [],
@@ -579,6 +587,7 @@
 
       const leaderName = document.querySelector("#leaderName");
       const totalVotes = document.querySelector("#totalVotes");
+      const totalLabel = document.querySelector("#totalLabel");
       const optionCards = [...document.querySelectorAll(".option-card")];
       const voteList = document.querySelector("#voteList");
       const saveStatus = document.querySelector("#saveStatus");
@@ -625,6 +634,8 @@
 
         leaderName.textContent = leader;
         totalVotes.textContent = total;
+        totalLabel.textContent = `of ${maxVotes} votes`;
+        const pollFull = total >= maxVotes;
 
         optionCards.forEach((card) => {
           const choice = card.dataset.choice;
@@ -637,6 +648,9 @@
           card.querySelector("[data-percent]").textContent = `${percent}%`;
           card.querySelector("[data-fill]").style.width = `${percent}%`;
           card.querySelector("[data-badge]").textContent = isWinning ? "Winning" : leader === "Tie" && total ? "Tied" : "Waiting";
+          const voteButton = card.querySelector("[data-vote]");
+          voteButton.disabled = pollFull;
+          voteButton.textContent = pollFull ? "Voting Complete" : `Vote ${choice}`;
         });
 
         voteList.innerHTML = "";
@@ -697,7 +711,10 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(vote)
           });
-          if (!response.ok) throw new Error("Vote was not saved");
+          if (!response.ok) {
+            const errorPayload = await response.json().catch(() => ({}));
+            throw new Error(errorPayload.error || "Vote was not saved");
+          }
           const payload = await response.json();
           state.votes = payload.votes;
           saveStatus.textContent = "Vote recorded";
@@ -705,6 +722,7 @@
         }
 
         state.votes.push(vote);
+        state.votes = state.votes.slice(0, maxVotes);
         saveLocalVotes();
         saveStatus.textContent = "Vote recorded";
       }
@@ -771,14 +789,19 @@
           return;
         }
 
+        if (state.votes.length >= maxVotes) {
+          formError.textContent = "All 8 votes have already been recorded.";
+          return;
+        }
+
         const vote = makeLocalVote(first, last, state.selectedChoice);
 
         try {
           await recordVote(vote);
           closeModal();
           render();
-        } catch {
-          formError.textContent = "The vote could not be saved. Please try again.";
+        } catch (error) {
+          formError.textContent = error.message || "The vote could not be saved. Please try again.";
         }
       });
 

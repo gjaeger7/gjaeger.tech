@@ -2,6 +2,7 @@ const { randomUUID } = require("crypto");
 
 const STORE_URL = "https://jsonblob.com/api/jsonBlob/019f19b3-7d45-7eb8-9e77-6a7a8422d932";
 const CHOICES = new Set(["Speed Queen", "Maytag"]);
+const MAX_VOTES = 8;
 
 function send(res, status, payload) {
   res.setHeader("Cache-Control", "no-store, max-age=0");
@@ -66,6 +67,10 @@ function voteKey(vote) {
   ].join("|");
 }
 
+function voterKey(vote) {
+  return `${vote.firstName.toLowerCase()}|${vote.lastName.toLowerCase()}`;
+}
+
 async function readStore() {
   const response = await fetch(STORE_URL, {
     headers: { Accept: "application/json" },
@@ -106,7 +111,7 @@ module.exports = async function handler(req, res) {
   try {
     if (req.method === "GET") {
       const store = await readStore();
-      return send(res, 200, { votes: store.votes, updatedAt: store.updatedAt });
+      return send(res, 200, { votes: store.votes, maxVotes: MAX_VOTES, updatedAt: store.updatedAt });
     }
 
     if (req.method === "POST") {
@@ -115,23 +120,38 @@ module.exports = async function handler(req, res) {
 
       if (Array.isArray(body.votes)) {
         const existing = new Set(store.votes.map(voteKey));
+        const existingVoters = new Set(store.votes.map(voterKey));
+        let importedCount = 0;
         const importedVotes = body.votes
           .map((vote) => sanitizeVote(vote, true))
           .filter(Boolean)
           .filter((vote) => {
             const key = voteKey(vote);
+            const person = voterKey(vote);
             if (existing.has(key)) return false;
+            if (existingVoters.has(person)) return false;
+            if (store.votes.length + importedCount >= MAX_VOTES) return false;
             existing.add(key);
+            existingVoters.add(person);
+            importedCount += 1;
             return true;
           });
 
-        const saved = await writeStore({ votes: [...store.votes, ...importedVotes] });
+        const saved = await writeStore({ votes: [...store.votes, ...importedVotes].slice(0, MAX_VOTES) });
         return send(res, 200, { votes: saved.votes, imported: importedVotes.length });
       }
 
       const vote = sanitizeVote(body, false);
       if (!vote) {
         return send(res, 400, { error: "First name, last name, and a valid choice are required." });
+      }
+
+      if (store.votes.length >= MAX_VOTES) {
+        return send(res, 409, { error: "All 8 votes have already been recorded." });
+      }
+
+      if (store.votes.some((existingVote) => voterKey(existingVote) === voterKey(vote))) {
+        return send(res, 409, { error: "A vote has already been recorded for that name." });
       }
 
       const saved = await writeStore({ votes: [...store.votes, vote] });
