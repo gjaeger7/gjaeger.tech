@@ -709,6 +709,25 @@
         saveStatus.textContent = "Vote recorded";
       }
 
+      async function migrateLocalVotesIfNeeded() {
+        const localVotes = loadLocalVotes();
+        if (!state.apiMode || state.votes.length || !localVotes.length) return;
+
+        saveStatus.textContent = "Syncing saved votes";
+        const response = await fetch("/api/votes", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ votes: localVotes })
+        });
+
+        if (!response.ok) throw new Error("Local votes were not synced");
+        const payload = await response.json();
+        if (!Array.isArray(payload.votes)) throw new Error("Unexpected vote response");
+
+        state.votes = payload.votes;
+        saveStatus.textContent = "Shared votes";
+      }
+
       function openModal(choice) {
         state.selectedChoice = choice;
         selectedChoice.textContent = choice;
@@ -766,6 +785,7 @@
       (async function init() {
         try {
           await fetchVotes();
+          await migrateLocalVotesIfNeeded();
         } catch {
           state.apiMode = false;
           state.votes = loadLocalVotes();
