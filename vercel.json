@@ -1,12 +1,17 @@
 {
-  "crons": [
+  "cleanUrls": true,
+  "headers": [
     {
-      "path": "/api/keepalive",
-      "schedule": "0 0 * * *"
+      "source": "/fonts/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     },
     {
-      "path": "/api/keepalive",
-      "schedule": "0 12 * * *"
+      "source": "/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ]
 }
